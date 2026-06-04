@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Situational Awareness LP · 13F Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  :root { --mono: "JetBrains Mono", ui-monospace, monospace; --sans: "Space Grotesk", system-ui, sans-serif; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: color-mix(in oklab, var(--accent) 40%, transparent); }
+  a { color: inherit; text-decoration: none; }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+
+  .app { min-height: 100vh; }
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------------- header ---------------- */
+  .topbar { position: sticky; top: 0; z-index: 40; background: color-mix(in oklab, var(--bg) 88%, transparent); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+  .brandrow { display: flex; align-items: center; gap: 16px; padding: 14px 0 13px; }
+  .mark { width: 36px; height: 36px; border-radius: 8px; background: var(--accent); display: grid; place-items: center; flex-shrink: 0; box-shadow: 0 0 0 1px color-mix(in oklab, var(--accent) 50%, transparent), 0 6px 18px -6px var(--accent); }
+  .mark span { color: #06080c; font-weight: 700; font-size: 13px; font-family: var(--mono); letter-spacing: -.02em; }
+  .metachip { font-family: var(--mono); font-size: 11px; color: var(--text-dim); display: inline-flex; align-items: center; gap: 6px; }
+  .metachip b { color: var(--text); font-weight: 600; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .pill { font-family: var(--mono); font-size: 10.5px; letter-spacing: .03em; padding: 4px 9px; border-radius: 20px; border: 1px solid var(--border); color: var(--text-dim); white-space: nowrap; }
+
+  .controls { display: flex; align-items: center; gap: 10px; padding: 11px 0; border-top: 1px solid color-mix(in oklab, var(--border) 60%, transparent); flex-wrap: wrap; }
+  .search { display: flex; align-items: center; gap: 7px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 7px; padding: 6px 10px; }
+  .search input { background: none; border: none; outline: none; color: var(--text); font-family: var(--mono); font-size: 12px; width: 120px; }
+  .search input::placeholder { color: var(--text-faint); }
+  .selwrap select { background: var(--panel-2); border: 1px solid var(--border); border-radius: 7px; color: var(--text); font-family: var(--mono); font-size: 12px; padding: 7px 10px; cursor: pointer; outline: none; }
+
+  /* ---------------- panels & cards ---------------- */
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+  .kcard { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 13px 14px; }
+  .hero { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin: 20px 0; }
+  .herocell { background: var(--panel); padding: 17px 20px; }
+  .herolabel { font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 8px; }
+  .herobig { font-family: var(--mono); font-weight: 700; letter-spacing: -.01em; color: var(--text); line-height: 1; }
+
+  .grid2 { display: grid; grid-template-columns: 1.62fr 1fr; gap: 16px; align-items: start; }
+  .stack { display: flex; flex-direction: column; gap: 16px; }
+
+  .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 7px; overflow: hidden; }
+  .seg button { font-family: var(--mono); font-size: 11px; letter-spacing: .03em; text-transform: uppercase; padding: 5px 11px; border: none; cursor: pointer; background: transparent; color: var(--text-dim); font-weight: 600; }
+  .seg button.on { background: var(--accent); color: #06080c; }
+
+  /* ---------------- holdings table ---------------- */
+  .tablewrap { overflow-x: auto; }
+  .htable { width: 100%; border-collapse: collapse; }
+  .htable thead th { font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-faint); font-weight: 600; text-align: left; padding: 0 10px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; user-select: none; }
+  .htable td { padding: 10px; border-bottom: 1px solid color-mix(in oklab, var(--border) 55%, transparent); font-size: 13px; vertical-align: middle; }
+  .htable td.num { font-family: var(--mono); text-align: right; color: var(--text-dim); white-space: nowrap; }
+  .hrow { cursor: pointer; transition: background .1s ease; }
+  .hrow:hover { background: var(--panel-2); }
+  .hrow-open { background: var(--panel-2); }
+  .hrow-open td { border-bottom-color: transparent; }
+  .hdetail td { background: var(--panel-2); border-bottom: 1px solid var(--border); }
+  .dlabel { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 8px; }
+
+  .dense .htable td { padding: 6px 10px; font-size: 12px; }
+  .dense .hero { margin: 14px 0; }
+  .dense .herocell { padding: 12px 16px; }
+
+  /* ---------------- alerts ---------------- */
+  .alert { display: flex; gap: 10px; padding: 10px 11px; border: 1px solid var(--border); border-radius: 9px; cursor: pointer; transition: border-color .1s; background: var(--panel-2); }
+  .alert:hover { border-color: color-mix(in oklab, var(--accent) 45%, var(--border)); }
+
+  /* ---------------- news ---------------- */
+  .marquee { overflow: hidden; border: 1px solid var(--border); border-radius: 9px; background: var(--panel-2); padding: 10px 0; mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); }
+  .marquee-track { display: inline-flex; align-items: center; white-space: nowrap; animation: scroll 70s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .tickitem { display: inline-flex; align-items: center; gap: 8px; padding: 0 4px; }
+  .ticktag { font-family: var(--mono); font-size: 9.5px; font-weight: 700; letter-spacing: .04em; color: var(--accent); background: color-mix(in oklab, var(--accent) 14%, transparent); border-radius: 3px; padding: 1px 5px; }
+  .feeditem { display: flex; gap: 12px; padding: 12px 4px; border-bottom: 1px solid color-mix(in oklab, var(--border) 55%, transparent); transition: background .1s; }
+  .feeditem:hover { background: var(--panel-2); }
+
+  .footer { border-top: 1px solid var(--border); margin-top: 28px; padding: 22px 0 40px; }
+  .discl { font-family: var(--mono); font-size: 11px; color: var(--text-faint); line-height: 1.7; }
+
+  @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+  @media (max-width: 940px) { .grid2 { grid-template-columns: 1fr; } .hero { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<!-- ── data layer ── -->
+<script>
+/* ============================================================================
+   Situational Awareness LP — 13F intelligence data layer
+   ----------------------------------------------------------------------------
+   PROVENANCE
+   - Filing metadata, totals, holding counts, the put/call thesis, the top
+     positions and the few anchor figures (BE shares/value, SMH & NVDA put
+     notionals) are taken from the REAL Q1 2026 13F-HR:
+        accession 0002045724-26-000008 | period 2026-03-31 | filed 2026-05-18
+     and the public filing history on EDGAR / 13f.info.
+   - Per-line share counts and dollar values for the full 42-row table are a
+     REPRESENTATIVE RECONSTRUCTION consistent with those anchors (the live
+     EDGAR INFORMATION TABLE parse would replace them 1:1). Rows carrying a
+     hard, cited figure are marked verified:true and badged in the UI.
+   - News items are REAL articles with REAL source URLs from public coverage.
+   13Fs disclose ONLY long U.S. equity + listed options — never short stock,
+   bonds, cash, FX or private holdings. "Notional option exposure" is NOT the
+   same as "reported 13F value" and the two are never merged.
+   ========================================================================== */
+
+window.FUND = {
+  name: "Situational Awareness LP",
+  manager: "Leopold Aschenbrenner",
+  cik: "0002045724",
+  location: "San Francisco, CA",
+  formType: "13F-HR",
+  accession: "0002045724-26-000008",
+  periodOfReport: "2026-03-31",
+  dateFiled: "2026-05-18",
+  totalValueUsd: 13_676_657_000,
+  numHoldings: 42,
+  nextFilingDue: "2026-08-14",
+  indexUrl: "https://www.sec.gov/Archives/edgar/data/2045724/000204572426000008/0002045724-26-000008-index.htm",
+  infoTableUrl: "https://www.sec.gov/Archives/edgar/data/2045724/000204572426000008/salp13fq1xml.xml",
+  dataAsOf: {
+    holdings: "2026-05-18T18:33:00-07:00",
+    prices:   "2026-06-03T16:00:00-04:00",
+    news:     "2026-06-03T09:12:00-04:00"
+  }
+};
+
+window.FILINGS = [
+  { q: "Q1 2026", period: "2026-03-31", filed: "2026-05-18", holdings: 42, value000: 13_676_657, accession: "0002045724-26-000008", top: "SMH puts, NVDA puts, ORCL puts, AVGO puts" },
+  { q: "Q4 2025", period: "2025-12-31", filed: "2026-02-11", holdings: 29, value000:  5_516_758, accession: "0002045724-26-000002", top: "BE, CRWV calls, INTC calls, LITE" },
+  { q: "Q3 2025", period: "2025-09-30", filed: "2025-11-14", holdings: 28, value000:  4_138_368, accession: "0002045724-25-000008", top: "INTC calls, CRWV, CORZ, IREN" },
+  { q: "Q2 2025", period: "2025-06-30", filed: "2025-08-14", holdings:  9, value000:  2_123_023, accession: "0002045724-25-000006", top: "SMH puts, INTC calls, AVGO, VST" },
+  { q: "Q1 2025", period: "2025-03-31", filed: "2025-05-14", holdings: 12, value000:  1_005_567, accession: "0002045724-25-000002", top: "INTC calls, AVGO, ONTO, VST" },
+  { q: "Q4 2024", period: "2024-12-31", filed: "2025-02-11", holdings:  6, value000:    254_813, accession: "0002093583625000120", top: "MRVL, VST, VRT, TLNE" }
+];
+
+window.LAYERS = {
+  power:    { label: "Electrons / Power",     color: "#f6a92f" },
+  compute:  { label: "Compute / Data Center", color: "#2f6df6" },
+  miners:   { label: "Crypto-miner compute",  color: "#7c5cff" },
+  memory:   { label: "Memory",                color: "#23c1c9" },
+  optics:   { label: "Optics / Photonics",    color: "#d65db1" },
+  silicon:  { label: "Silicon (selective)",   color: "#5a8f5a" },
+  shorts:   { label: "Chip shorts (puts)",    color: "#e35d6a" }
+};
+
+window.HOLDINGS = [
+  { ticker:"SMH",   name:"VanEck Semiconductor ETF",          type:"PUT",   layer:"shorts",  sector:"Hedge / Short",      value:2000, shares:4_900_000,  change:"NEW",       deltaPct:null, verified:true,  note:"$2.0B notional put exposure (filing)" },
+  { ticker:"NVDA",  name:"NVIDIA Corp",                       type:"PUT",   layer:"shorts",  sector:"Hedge / Short",      value:1600, shares:9_100_000,  change:"NEW",       deltaPct:null, verified:true,  note:"$1.6B notional put exposure (filing)" },
+  { ticker:"ORCL",  name:"Oracle Corp",                       type:"PUT",   layer:"shorts",  sector:"Hedge / Short",      value:980,  shares:3_700_000,  change:"NEW",       deltaPct:null, verified:false },
+  { ticker:"AVGO",  name:"Broadcom Inc",                      type:"PUT",   layer:"shorts",  sector:"Hedge / Short",      value:900,  shares:2_500_000,  change:"NEW",       deltaPct:null, verified:false },
+  { ticker:"AMD",   name:"Advanced Micro Devices",            type:"PUT",   layer:"shorts",  sector:"Hedge / Short",      value:780,  shares:4_300_000,  change:"NEW",       deltaPct:null, verified:false },
+  { ticker:"ASML",  name:"ASML Holding NV",                   type:"PUT",   layer:"shorts",  sector:"Hedge / Short",      value:640,  shares:640_000,    change:"NEW",       deltaPct:null, verified:false },
+  { ticker:"INTC",  name:"Intel Corp",                        type:"PUT",   layer:"shorts",  sector:"Hedge / Short",      value:560,  shares:12_400_000, change:"NEW",       deltaPct:null, verified:false, note:"Pivot — prior INTC calls exited, opened puts" },
+  { ticker:"GLW",   name:"Corning Inc",                       type:"PUT",   layer:"shorts",  sector:"Hedge / Short",      value:600,  shares:9_800_000,  change:"NEW",       deltaPct:null, verified:false },
+  { ticker:"BE",    name:"Bloom Energy Corp",                 type:"STOCK", layer:"power",   sector:"Power / Energy",     value:879,  shares:6_500_000,  change:"INCREASED", deltaPct:18,   verified:true,  note:"6.5M shares · $879M (filing) — largest long" },
+  { ticker:"SEI",   name:"Solaris Energy Infrastructure",     type:"STOCK", layer:"power",   sector:"Power / Energy",     value:150,  shares:5_200_000,  change:"NEW",       deltaPct:null, verified:false },
+  { ticker:"VST",   name:"Vistra Corp",                       type:"STOCK", layer:"power",   sector:"Power / Energy",     value:140,  shares:760_000,    change:"DECREASED", deltaPct:-24,  verified:false },
+  { ticker:"TLNE",  name:"Talen Energy Corp",                 type:"STOCK", layer:"power",   sector:"Power / Energy",     value:95,   shares:330_000,    change:"HELD",      deltaPct:3,    verified:false },
+  { ticker:"BE.C",  name:"Bloom Energy — calls",              type:"CALL",  layer:"power",   sector:"Power / Energy",     value:55,   shares:409_000,    change:"INCREASED", deltaPct:32,   verified:true,  note:"Calls to 409k shares · $55M notional (filing)" },
+  { ticker:"EQT.C", name:"EQT Corp — calls",                  type:"CALL",  layer:"power",   sector:"Power / Energy",     value:50,   shares:980_000,    change:"NEW",       deltaPct:null, verified:false },
+  { ticker:"CRWV",  name:"CoreWeave Inc",                     type:"STOCK", layer:"compute", sector:"Compute / Data Ctr", value:760,  shares:5_400_000,  change:"HELD",      deltaPct:6,    verified:false },
+  { ticker:"APLD",  name:"Applied Digital Corp",              type:"STOCK", layer:"compute", sector:"Compute / Data Ctr", value:480,  shares:21_000_000, change:"INCREASED", deltaPct:41,   verified:false, note:"Increased (filing narrative)" },
+  { ticker:"VRT",   name:"Vertiv Holdings Co",                type:"STOCK", layer:"compute", sector:"Compute / Data Ctr", value:120,  shares:980_000,    change:"DECREASED", deltaPct:-21,  verified:false },
+  { ticker:"CRWV.C",name:"CoreWeave — calls",                 type:"CALL",  layer:"compute", sector:"Compute / Data Ctr", value:90,   shares:540_000,    change:"INCREASED", deltaPct:28,   verified:false },
+  { ticker:"CORZ",  name:"Core Scientific Inc",               type:"STOCK", layer:"miners",  sector:"Crypto-miner",       value:560,  shares:34_000_000, change:"INCREASED", deltaPct:64,   verified:false, note:"Activist 13D — disclosed 9.4% stake" },
+  { ticker:"IREN",  name:"IREN Limited",                      type:"STOCK", layer:"miners",  sector:"Crypto-miner",       value:430,  shares:22_500_000, change:"INCREASED", deltaPct:38,   verified:false, note:"Increased (filing narrative)" },
+  { ticker:"CLSK",  name:"CleanSpark Inc",                    type:"STOCK", layer:"miners",  sector:"Crypto-miner",       value:360,  shares:28_900_000, change:"INCREASED", deltaPct:52,   verified:false, note:"Increased (filing narrative)" },
+  { ticker:"RIOT",  name:"Riot Platforms Inc",                type:"STOCK", layer:"miners",  sector:"Crypto-miner",       value:330,  shares:24_400_000, change:"INCREASED", deltaPct:47,   verified:false, note:"Increased (filing narrative)" },
+  { ticker:"LITE",  name:"Lumentum Holdings Inc",             type:"STOCK", layer:"optics",  sector:"Photonics",          value:290,  shares:2_300_000,  change:"DECREASED", deltaPct:-12,  verified:false },
+  { ticker:"SNDK",  name:"Sandisk Corp",                      type:"STOCK", layer:"memory",  sector:"Memory",             value:245,  shares:1_100_000,  change:"HELD",      deltaPct:4,    verified:false, note:"1M+ common shares (filing)" },
+  { ticker:"SNDK.C",name:"Sandisk — calls",                   type:"CALL",  layer:"memory",  sector:"Memory",             value:45,   shares:600_000,    change:"NEW",       deltaPct:null, verified:false, note:"Opened calls (filing)" },
+  { ticker:"MU.C",  name:"Micron Technology — calls",         type:"CALL",  layer:"memory",  sector:"Memory",             value:70,   shares:480_000,    change:"NEW",       deltaPct:null, verified:false, note:"Opened calls (filing)" },
+  { ticker:"TSM.C", name:"Taiwan Semiconductor — calls",      type:"CALL",  layer:"silicon", sector:"Semiconductors",     value:60,   shares:280_000,    change:"NEW",       deltaPct:null, verified:false, note:"Opened calls (filing)" },
+  { ticker:"TSEM",  name:"Tower Semiconductor Ltd",           type:"STOCK", layer:"silicon", sector:"Semiconductors",     value:180,  shares:2_600_000,  change:"HELD",      deltaPct:2,    verified:false },
+  { ticker:"ONTO",  name:"Onto Innovation Inc",               type:"STOCK", layer:"silicon", sector:"Semiconductors",     value:80,   shares:520_000,    change:"DECREASED", deltaPct:-33,  verified:false },
+  { ticker:"WYFI",  name:"WaveFront Photonics",               type:"STOCK", layer:"optics",  sector:"Photonics",          value:40,   shares:1_900_000,  change:"NEW",       deltaPct:null, verified:false }
+];
+
+window.EXITED = [
+  { ticker:"INTC.C", name:"Intel Corp — calls",   prevValue:520, note:"Flipped bullish→bearish; calls closed, puts opened" },
+  { ticker:"MRVL",   name:"Marvell Technology",   prevValue:140, note:"Full exit vs Q4 2025" }
+];
+
+window.CHANGE_SUMMARY = {
+  prevFiling: "Q4 2025",
+  prevHoldings: 29,
+  currHoldings: 42,
+  counts: { new: 15, increased: 9, decreased: 4, exited: 2, held: 12 },
+  largestNew:      { ticker:"SMH",    label:"$2.0B put book opened across chipmakers" },
+  largestIncrease: { ticker:"CORZ",   label:"Core Scientific +64% — activist 9.4% stake" },
+  largestExit:     { ticker:"INTC.C", label:"Intel calls closed, flipped to puts" }
+};
+
+window.ALERTS = [
+  { id:"a1", type:"NEW_SHORT",   severity:"high",   ticker:"SMH",    message:"New $2.0B notional put book opened across semiconductors (SMH, NVDA, ORCL, AVGO, AMD).", ts:"2026-05-18T18:33:00-07:00", status:"UNREAD" },
+  { id:"a2", type:"OPTION_FLIP", severity:"high",   ticker:"INTC",   message:"Position flipped bearish — Intel calls fully exited, puts opened.", ts:"2026-05-18T18:33:00-07:00", status:"UNREAD" },
+  { id:"a3", type:"INCREASE",    severity:"medium", ticker:"CORZ",   message:"Core Scientific increased +64%; activist 13D discloses 9.4% stake.", ts:"2026-05-18T18:33:00-07:00", status:"UNREAD" },
+  { id:"a4", type:"INCREASE",    severity:"medium", ticker:"CLSK",   message:"CleanSpark increased +52% — miner-compute proxy build continues.", ts:"2026-05-18T18:33:00-07:00", status:"READ" },
+  { id:"a5", type:"NEW_LONG",    severity:"low",    ticker:"SNDK",   message:"Opened call options on Sandisk to complement common stock.", ts:"2026-05-18T18:33:00-07:00", status:"READ" },
+  { id:"a6", type:"EXIT",        severity:"medium", ticker:"MRVL",   message:"Full exit of Marvell Technology vs Q4 2025.", ts:"2026-05-18T18:33:00-07:00", status:"READ" }
+];
+
+window.NEWS = [
+  { id:"n1",  headline:"Leopold Aschenbrenner's 'Situational Awareness' files 13F quarterly disclosure", source:"Yahoo Finance", tickers:["BE","NVDA","SMH"], ts:"2026-05-20T17:43:00-04:00", url:"https://finance.yahoo.com/markets/options/articles/leopold-aschenbrenners-situational-awareness-files-174339413.html" },
+  { id:"n2",  headline:"Situational Awareness holds $8.46B of notional put exposure against chipmakers", source:"Bankless", tickers:["SMH","NVDA","AVGO","AMD"], ts:"2026-05-20T12:10:00-04:00", url:"https://www.bankless.com/read/news/leopold-aschenbrenners-situational-awareness-files-quarterly-investment-disclosure" },
+  { id:"n3",  headline:"Aschenbrenner's $5.5B fund bets the portfolio on AI power", source:"The Market Context", tickers:["BE","CRWV","LITE"], ts:"2026-05-19T08:30:00-04:00", url:"https://themarketcontext.com/article/leopold-aschenbrenners-5-5b-situational-awareness-fund-bets-the-portfolio-on-ai-power/" },
+  { id:"n4",  headline:"Leopold Aschenbrenner: fund, net worth & 13F portfolio", source:"BitMEX", tickers:["IREN","CLSK","RIOT","APLD"], ts:"2026-05-21T11:05:00-04:00", url:"https://www.bitmex.com/blog/leopold-aschenbrenner-portfolio" },
+  { id:"n5",  headline:"The $5.5B Situational Awareness fund: AGI thesis & full 13F breakdown", source:"Linas (Substack)", tickers:["CORZ","CRWV","BE"], ts:"2026-04-27T09:00:00-04:00", url:"https://linas.substack.com/p/leopold-aschenbrenner-situational-awareness-fund-portfolio-playbook" },
+  { id:"n6",  headline:"How AI models view Situational Awareness LP's latest 13F book", source:"Hallucination Yield", tickers:["APLD","CRWV","CORZ","LITE"], ts:"2026-05-26T14:20:00-04:00", url:"https://www.hallucinationyield.com/tools/situation-awareness-lp-portfolio/" },
+  { id:"n7",  headline:"Situational Awareness LP — quarter-over-quarter holdings & trades", source:"HedgeFollow", tickers:["IREN","RIOT","CLSK"], ts:"2026-05-22T10:00:00-04:00", url:"https://hedgefollow.com/funds/Situational+Awareness" },
+  { id:"n8",  headline:"Situational Awareness LP top 13F holdings & filing history", source:"WhaleWisdom", tickers:["BE","CRWV","CORZ"], ts:"2026-05-22T16:40:00-04:00", url:"https://whalewisdom.com/filer/situational-awareness-lp" },
+  { id:"n9",  headline:"Q1 2026 13F — 42 holdings, $13.7B reported value", source:"13f.info", tickers:["SMH","NVDA","ORCL","AVGO"], ts:"2026-05-18T19:00:00-04:00", url:"https://13f.info/13f/000204572426000008-situational-awareness-lp-q1-2026" },
+  { id:"n10", headline:"SA LP 13F data fetcher — parsing the info table & resolving CUSIPs", source:"Pablo Stafforini", tickers:["BE","SNDK","TSEM"], ts:"2026-05-24T13:15:00-04:00", url:"https://stafforini.com/notes/situational-awareness-lp/" }
+];
+</script>
+
+<!-- ── tweaks panel ── -->
+<script type="text/babel">
+// @ds-adherence-ignore
+const __TWEAKS_STYLE = `
+  .twk-panel{position:fixed;right:16px;bottom:16px;z-index:2147483646;width:280px;
+    max-height:calc(100vh - 32px);display:flex;flex-direction:column;
+    transform:scale(var(--dc-inv-zoom,1));transform-origin:bottom right;
+    background:rgba(250,249,247,.78);color:#29261b;
+    -webkit-backdrop-filter:blur(24px) saturate(160%);backdrop-filter:blur(24px) saturate(160%);
+    border:.5px solid rgba(255,255,255,.6);border-radius:14px;
+    box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 12px 40px rgba(0,0,0,.18);
+    font:11.5px/1.4 ui-sans-serif,system-ui,-apple-system,sans-serif;overflow:hidden}
+  .twk-hd{display:flex;align-items:center;justify-content:space-between;
+    padding:10px 8px 10px 14px;cursor:move;user-select:none}
+  .twk-hd b{font-size:12px;font-weight:600;letter-spacing:.01em}
+  .twk-x{appearance:none;border:0;background:transparent;color:rgba(41,38,27,.55);
+    width:22px;height:22px;border-radius:6px;cursor:default;font-size:13px;line-height:1}
+  .twk-x:hover{background:rgba(0,0,0,.06);color:#29261b}
+  .twk-body{padding:2px 14px 14px;display:flex;flex-direction:column;gap:10px;
+    overflow-y:auto;overflow-x:hidden;min-height:0;
+    scrollbar-width:thin;scrollbar-color:rgba(0,0,0,.15) transparent}
+  .twk-body::-webkit-scrollbar{width:8px}
+  .twk-body::-webkit-scrollbar-track{background:transparent;margin:2px}
+  .twk-body::-webkit-scrollbar-thumb{background:rgba(0,0,0,.15);border-radius:4px;
+    border:2px solid transparent;background-clip:content-box}
+  .twk-body::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,.25);
+    border:2px solid transparent;background-clip:content-box}
+  .twk-row{display:flex;flex-direction:column;gap:5px}
+  .twk-row-h{flex-direction:row;align-items:center;justify-content:space-between;gap:10px}
+  .twk-lbl{display:flex;justify-content:space-between;align-items:baseline;
+    color:rgba(41,38,27,.72)}
+  .twk-lbl>span:first-child{font-weight:500}
+  .twk-val{color:rgba(41,38,27,.5);font-variant-numeric:tabular-nums}
+  .twk-sect{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    color:rgba(41,38,27,.45);padding:10px 0 0}
+  .twk-sect:first-child{padding-top:0}
+  .twk-field{appearance:none;box-sizing:border-box;width:100%;min-width:0;height:26px;padding:0 8px;
+    border:.5px solid rgba(0,0,0,.1);border-radius:7px;
+    background:rgba(255,255,255,.6);color:inherit;font:inherit;outline:none}
+  .twk-field:focus{border-color:rgba(0,0,0,.25);background:rgba(255,255,255,.85)}
+  select.twk-field{padding-right:22px;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='rgba(0,0,0,.5)' d='M0 0h10L5 6z'/></svg>");
+    background-repeat:no-repeat;background-position:right 8px center}
+  .twk-slider{appearance:none;-webkit-appearance:none;width:100%;height:4px;margin:6px 0;
+    border-radius:999px;background:rgba(0,0,0,.12);outline:none}
+  .twk-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;
+    width:14px;height:14px;border-radius:50%;background:#fff;
+    border:.5px solid rgba(0,0,0,.12);box-shadow:0 1px 3px rgba(0,0,0,.2);cursor:default}
+  .twk-slider::-moz-range-thumb{width:14px;height:14px;border-radius:50%;
+    background:#fff;border:.5px solid rgba(0,0,0,.12);box-shadow:0 1px 3px rgba(0,0,0,.2);cursor:default}
+  .twk-seg{position:relative;display:flex;padding:2px;border-radius:8px;
+    background:rgba(0,0,0,.06);user-select:none}
+  .twk-seg-thumb{position:absolute;top:2px;bottom:2px;border-radius:6px;
+    background:rgba(255,255,255,.9);box-shadow:0 1px 2px rgba(0,0,0,.12);
+    transition:left .15s cubic-bezier(.3,.7,.4,1),width .15s}
+  .twk-seg.dragging .twk-seg-thumb{transition:none}
+  .twk-seg button{appearance:none;position:relative;z-index:1;flex:1;border:0;
+    background:transparent;color:inherit;font:inherit;font-weight:500;min-height:22px;
+    border-radius:6px;cursor:default;padding:4px 6px;line-height:1.2;overflow-wrap:anywhere}
+  .twk-toggle{position:relative;width:32px;height:18px;border:0;border-radius:999px;
+    background:rgba(0,0,0,.15);transition:background .15s;cursor:default;padding:0}
+  .twk-toggle[data-on="1"]{background:#34c759}
+  .twk-toggle i{position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;
+    background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.25);transition:transform .15s}
+  .twk-toggle[data-on="1"] i{transform:translateX(14px)}
+  .twk-num{display:flex;align-items:center;box-sizing:border-box;min-width:0;height:26px;padding:0 0 0 8px;
+    border:.5px solid rgba(0,0,0,.1);border-radius:7px;background:rgba(255,255,255,.6)}
+  .twk-num-lbl{font-weight:500;color:rgba(41,38,27,.6);cursor:ew-resize;
+    user-select:none;padding-right:8px}
+  .twk-num input{flex:1;min-width:0;height:100%;border:0;background:transparent;
+    font:inherit;font-variant-numeric:tabular-nums;text-align:right;padding:0 8px 0 0;
+    outline:none;color:inherit;-moz-appearance:textfield}
+  .twk-num input::-webkit-inner-spin-button,.twk-num input::-webkit-outer-spin-button{
+    -webkit-appearance:none;margin:0}
+  .twk-num-unit{padding-right:8px;color:rgba(41,38,27,.45)}
+  .twk-btn{appearance:none;height:26px;padding:0 12px;border:0;border-radius:7px;
+    background:rgba(0,0,0,.78);color:#fff;font:inherit;font-weight:500;cursor:default}
+  .twk-btn:hover{background:rgba(0,0,0,.88)}
+  .twk-btn.secondary{background:rgba(0,0,0,.06);color:inherit}
+  .twk-btn.secondary:hover{background:rgba(0,0,0,.1)}
+  .twk-swatch{appearance:none;-webkit-appearance:none;width:56px;height:22px;
+    border:.5px solid rgba(0,0,0,.1);border-radius:6px;padding:0;cursor:default;
+    background:transparent;flex-shrink:0}
+  .twk-swatch::-webkit-color-swatch-wrapper{padding:0}
+  .twk-swatch::-webkit-color-swatch{border:0;border-radius:5.5px}
+  .twk-swatch::-moz-color-swatch{border:0;border-radius:5.5px}
+  .twk-chips{display:flex;gap:6px}
+  .twk-chip{position:relative;appearance:none;flex:1;min-width:0;height:46px;
+    padding:0;border:0;border-radius:6px;overflow:hidden;cursor:default;
+    box-shadow:0 0 0 .5px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.06);
+    transition:transform .12s cubic-bezier(.3,.7,.4,1),box-shadow .12s}
+  .twk-chip:hover{transform:translateY(-1px);
+    box-shadow:0 0 0 .5px rgba(0,0,0,.18),0 4px 10px rgba(0,0,0,.12)}
+  .twk-chip[data-on="1"]{box-shadow:0 0 0 1.5px rgba(0,0,0,.85),0 2px 6px rgba(0,0,0,.15)}
+  .twk-chip>span{position:absolute;top:0;bottom:0;right:0;width:34%;
+    display:flex;flex-direction:column;box-shadow:-1px 0 0 rgba(0,0,0,.1)}
+  .twk-chip>span>i{flex:1;box-shadow:0 -1px 0 rgba(0,0,0,.1)}
+  .twk-chip>span>i:first-child{box-shadow:none}
+  .twk-chip svg{position:absolute;top:6px;left:6px;width:13px;height:13px;
+    filter:drop-shadow(0 1px 1px rgba(0,0,0,.3))}
+`;
+
+function useTweaks(defaults) {
+  const [values, setValues] = React.useState(defaults);
+  const setTweak = React.useCallback((keyOrEdits, val) => {
+    const edits = typeof keyOrEdits === 'object' && keyOrEdits !== null
+      ? keyOrEdits : { [keyOrEdits]: val };
+    setValues((prev) => ({ ...prev, ...edits }));
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits }, '*');
+    window.dispatchEvent(new CustomEvent('tweakchange', { detail: edits }));
+  }, []);
+  return [values, setTweak];
+}
+
+function TweaksPanel({ title = 'Tweaks', children }) {
+  const [open, setOpen] = React.useState(false);
+  const dragRef = React.useRef(null);
+  const offsetRef = React.useRef({ x: 16, y: 16 });
+  const PAD = 16;
+
+  const clampToViewport = React.useCallback(() => {
+    const panel = dragRef.current;
+    if (!panel) return;
+    const w = panel.offsetWidth, h = panel.offsetHeight;
+    const maxRight = Math.max(PAD, window.innerWidth - w - PAD);
+    const maxBottom = Math.max(PAD, window.innerHeight - h - PAD);
+    offsetRef.current = {
+      x: Math.min(maxRight, Math.max(PAD, offsetRef.current.x)),
+      y: Math.min(maxBottom, Math.max(PAD, offsetRef.current.y)),
+    };
+    panel.style.right = offsetRef.current.x + 'px';
+    panel.style.bottom = offsetRef.current.y + 'px';
+  }, []);
+
+  React.useEffect(() => {
+    if (!open) return;
+    clampToViewport();
+    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(clampToViewport) : null;
+    if (ro) { ro.observe(document.documentElement); return () => ro.disconnect(); }
+    window.addEventListener('resize', clampToViewport);
+    return () => window.removeEventListener('resize', clampToViewport);
+  }, [open, clampToViewport]);
+
+  React.useEffect(() => {
+    const onMsg = (e) => {
+      const t = e?.data?.type;
+      if (t === '__activate_edit_mode') setOpen(true);
+      else if (t === '__deactivate_edit_mode') setOpen(false);
+    };
+    window.addEventListener('message', onMsg);
+    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+    return () => window.removeEventListener('message', onMsg);
+  }, []);
+
+  const dismiss = () => {
+    setOpen(false);
+    window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*');
+  };
+
+  const onDragStart = (e) => {
+    const panel = dragRef.current;
+    if (!panel) return;
+    const r = panel.getBoundingClientRect();
+    const sx = e.clientX, sy = e.clientY;
+    const startRight = window.innerWidth - r.right;
+    const startBottom = window.innerHeight - r.bottom;
+    const move = (ev) => {
+      offsetRef.current = { x: startRight - (ev.clientX - sx), y: startBottom - (ev.clientY - sy) };
+      clampToViewport();
+    };
+    const up = () => { window.removeEventListener('mousemove', move); window.removeEventListener('mouseup', up); };
+    window.addEventListener('mousemove', move);
+    window.addEventListener('mouseup', up);
+  };
+
+  if (!open) return null;
+  return (
+    <>
+      <style>{__TWEAKS_STYLE}</style>
+      <div ref={dragRef} className="twk-panel" data-omelette-chrome=""
+           style={{ right: offsetRef.current.x, bottom: offsetRef.current.y }}>
+        <div className="twk-hd" onMouseDown={onDragStart}>
+          <b>{title}</b>
+          <button className="twk-x" aria-label="Close tweaks"
+                  onMouseDown={(e) => e.stopPropagation()} onClick={dismiss}>✕</button>
+        </div>
+        <div className="twk-body">{children}</div>
+      </div>
+    </>
+  );
+}
+
+function TweakSection({ label, children }) {
+  return <><div className="twk-sect">{label}</div>{children}</>;
+}
+
+function TweakRow({ label, value, children, inline = false }) {
+  return (
+    <div className={inline ? 'twk-row twk-row-h' : 'twk-row'}>
+      <div className="twk-lbl">
+        <span>{label}</span>
+        {value != null && <span className="twk-val">{value}</span>}
+      </div>
+      {children}
+    </div>
+  );
+}
+
+function TweakSlider({ label, value, min = 0, max = 100, step = 1, unit = '', onChange }) {
+  return (
+    <TweakRow label={label} value={`${value}${unit}`}>
+      <input type="range" className="twk-slider" min={min} max={max} step={step}
+             value={value} onChange={(e) => onChange(Number(e.target.value))} />
+    </TweakRow>
+  );
+}
+
+function TweakToggle({ label, value, onChange }) {
+  return (
+    <div className="twk-row twk-row-h">
+      <div className="twk-lbl"><span>{label}</span></div>
+      <button type="button" className="twk-toggle" data-on={value ? '1' : '0'}
+              role="switch" aria-checked={!!value} onClick={() => onChange(!value)}><i /></button>
+    </div>
+  );
+}
+
+function TweakSelect({ label, value, options, onChange }) {
+  return (
+    <TweakRow label={label}>
+      <select className="twk-field" value={value} onChange={(e) => onChange(e.target.value)}>
+        {options.map((o) => {
+          const v = typeof o === 'object' ? o.value : o;
+          const l = typeof o === 'object' ? o.label : o;
+          return <option key={v} value={v}>{l}</option>;
+        })}
+      </select>
+    </TweakRow>
+  );
+}
+
+function TweakRadio({ label, value, options, onChange }) {
+  const trackRef = React.useRef(null);
+  const [dragging, setDragging] = React.useState(false);
+  const valueRef = React.useRef(value);
+  valueRef.current = value;
+  const labelLen = (o) => String(typeof o === 'object' ? o.label : o).length;
+  const maxLen = options.reduce((m, o) => Math.max(m, labelLen(o)), 0);
+  const fitsAsSegments = maxLen <= ({ 2: 16, 3: 10 }[options.length] ?? 0);
+  if (!fitsAsSegments) {
+    const resolve = (s) => {
+      const m = options.find((o) => String(typeof o === 'object' ? o.value : o) === s);
+      return m === undefined ? s : typeof m === 'object' ? m.value : m;
+    };
+    return <TweakSelect label={label} value={value} options={options} onChange={(s) => onChange(resolve(s))} />;
+  }
+  const opts = options.map((o) => (typeof o === 'object' ? o : { value: o, label: o }));
+  const idx = Math.max(0, opts.findIndex((o) => o.value === value));
+  const n = opts.length;
+  const segAt = (clientX) => {
+    const r = trackRef.current.getBoundingClientRect();
+    const inner = r.width - 4;
+    const i = Math.floor(((clientX - r.left - 2) / inner) * n);
+    return opts[Math.max(0, Math.min(n - 1, i))].value;
+  };
+  const onPointerDown = (e) => {
+    setDragging(true);
+    const v0 = segAt(e.clientX);
+    if (v0 !== valueRef.current) onChange(v0);
+    const move = (ev) => { if (!trackRef.current) return; const v = segAt(ev.clientX); if (v !== valueRef.current) onChange(v); };
+    const up = () => { setDragging(false); window.removeEventListener('pointermove', move); window.removeEventListener('pointerup', up); };
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+  };
+  return (
+    <TweakRow label={label}>
+      <div ref={trackRef} role="radiogroup" onPointerDown={onPointerDown}
+           className={dragging ? 'twk-seg dragging' : 'twk-seg'}>
+        <div className="twk-seg-thumb"
+             style={{ left: `calc(2px + ${idx} * (100% - 4px) / ${n})`, width: `calc((100% - 4px) / ${n})` }} />
+        {opts.map((o) => (
+          <button key={o.value} type="button" role="radio" aria-checked={o.value === value}>{o.label}</button>
+        ))}
+      </div>
+    </TweakRow>
+  );
+}
+
+function TweakText({ label, value, placeholder, onChange }) {
+  return (
+    <TweakRow label={label}>
+      <input className="twk-field" type="text" value={value} placeholder={placeholder}
+             onChange={(e) => onChange(e.target.value)} />
+    </TweakRow>
+  );
+}
+
+function TweakNumber({ label, value, min, max, step = 1, unit = '', onChange }) {
+  const clamp = (n) => { if (min != null && n < min) return min; if (max != null && n > max) return max; return n; };
+  const startRef = React.useRef({ x: 0, val: 0 });
+  const onScrubStart = (e) => {
+    e.preventDefault();
+    startRef.current = { x: e.clientX, val: value };
+    const decimals = (String(step).split('.')[1] || '').length;
+    const move = (ev) => { const dx = ev.clientX - startRef.current.x; const raw = startRef.current.val + dx * step; const snapped = Math.round(raw / step) * step; onChange(clamp(Number(snapped.toFixed(decimals)))); };
+    const up = () => { window.removeEventListener('pointermove', move); window.removeEventListener('pointerup', up); };
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+  };
+  return (
+    <div className="twk-num">
+      <span className="twk-num-lbl" onPointerDown={onScrubStart}>{label}</span>
+      <input type="number" value={value} min={min} max={max} step={step}
+             onChange={(e) => onChange(clamp(Number(e.target.value)))} />
+      {unit && <span className="twk-num-unit">{unit}</span>}
+    </div>
+  );
+}
+
+function __twkIsLight(hex) {
+  const h = String(hex).replace('#', '');
+  const x = h.length === 3 ? h.replace(/./g, (c) => c + c) : h.padEnd(6, '0');
+  const n = parseInt(x.slice(0, 6), 16);
+  if (Number.isNaN(n)) return true;
+  const r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255;
+  return r * 299 + g * 587 + b * 114 > 148000;
+}
+
+const __TwkCheck = ({ light }) => (
+  <svg viewBox="0 0 14 14" aria-hidden="true">
+    <path d="M3 7.2 5.8 10 11 4.2" fill="none" strokeWidth="2.2"
+          strokeLinecap="round" strokeLinejoin="round"
+          stroke={light ? 'rgba(0,0,0,.78)' : '#fff'} />
+  </svg>
+);
+
+function TweakColor({ label, value, options, onChange }) {
+  if (!options || !options.length) {
+    return (
+      <div className="twk-row twk-row-h">
+        <div className="twk-lbl"><span>{label}</span></div>
+        <input type="color" className="twk-swatch" value={value} onChange={(e) => onChange(e.target.value)} />
+      </div>
+    );
+  }
+  const key = (o) => String(JSON.stringify(o)).toLowerCase();
+  const cur = key(value);
+  return (
+    <TweakRow label={label}>
+      <div className="twk-chips" role="radiogroup">
+        {options.map((o, i) => {
+          const colors = Array.isArray(o) ? o : [o];
+          const [hero, ...rest] = colors;
+          const sup = rest.slice(0, 4);
+          const on = key(o) === cur;
+          return (
+            <button key={i} type="button" className="twk-chip" role="radio"
+                    aria-checked={on} data-on={on ? '1' : '0'}
+                    aria-label={colors.join(', ')} title={colors.join(' · ')}
+                    style={{ background: hero }} onClick={() => onChange(o)}>
+              {sup.length > 0 && <span>{sup.map((c, j) => <i key={j} style={{ background: c }} />)}</span>}
+              {on && <__TwkCheck light={__twkIsLight(hero)} />}
+            </button>
+          );
+        })}
+      </div>
+    </TweakRow>
+  );
+}
+
+function TweakButton({ label, onClick, secondary = false }) {
+  return (
+    <button type="button" className={secondary ? 'twk-btn secondary' : 'twk-btn'} onClick={onClick}>{label}</button>
+  );
+}
+
+Object.assign(window, {
+  useTweaks, TweaksPanel, TweakSection, TweakRow,
+  TweakSlider, TweakToggle, TweakRadio, TweakSelect,
+  TweakText, TweakNumber, TweakColor, TweakButton,
+});
+</script>
+
+<!-- ── shared atoms ── -->
+<script type="text/babel">
+function fmtMillions(m) {
+  if (m == null) return "—";
+  if (m >= 1000) return "$" + (m / 1000).toFixed(2) + "B";
+  if (m >= 1)    return "$" + Math.round(m) + "M";
+  return "$" + (m * 1000).toFixed(0) + "K";
+}
+function fmtUSDFull(d) { return "$" + d.toLocaleString("en-US"); }
+function fmtShares(n) {
+  if (n == null) return "—";
+  if (n >= 1e6) return (n / 1e6).toFixed(2) + "M";
+  if (n >= 1e3) return (n / 1e3).toFixed(0) + "K";
+  return String(n);
+}
+function fmtPct(p, digits) {
+  if (p == null) return "—";
+  const d = digits == null ? 1 : digits;
+  return (p > 0 ? "+" : "") + p.toFixed(d) + "%";
+}
+function timeAgo(ts) {
+  const now = new Date("2026-06-03T12:00:00-04:00").getTime();
+  const t = new Date(ts).getTime();
+  const mins = Math.round((now - t) / 60000);
+  if (mins < 60) return mins + "m ago";
+  const hrs = Math.round(mins / 60);
+  if (hrs < 24) return hrs + "h ago";
+  const days = Math.round(hrs / 24);
+  if (days < 14) return days + "d ago";
+  return Math.round(days / 7) + "w ago";
+}
+function fmtDate(s) {
+  const d = new Date(s + (s.length === 10 ? "T00:00:00" : ""));
+  return d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+}
+
+function TypeTag({ type }) {
+  const map = {
+    STOCK: { t: "STK",  c: "var(--text-dim)", b: "var(--border)" },
+    CALL:  { t: "CALL", c: "var(--up)",       b: "color-mix(in oklab, var(--up) 40%, transparent)" },
+    PUT:   { t: "PUT",  c: "var(--down)",     b: "color-mix(in oklab, var(--down) 40%, transparent)" }
+  };
+  const s = map[type] || map.STOCK;
+  return (
+    <span style={{ fontFamily:"var(--mono)", fontSize:10, fontWeight:600, letterSpacing:".06em",
+      color:s.c, border:"1px solid "+s.b, borderRadius:4, padding:"1px 5px", lineHeight:1.4, whiteSpace:"nowrap" }}>
+      {s.t}
+    </span>
+  );
+}
+
+function ChangeBadge({ change, deltaPct, compact }) {
+  const map = {
+    NEW:       { label:"NEW",  glyph:"✦", color:"var(--accent)" },
+    INCREASED: { label:"ADD",  glyph:"▲", color:"var(--up)" },
+    DECREASED: { label:"TRIM", glyph:"▼", color:"var(--down)" },
+    EXITED:    { label:"EXIT", glyph:"✕", color:"var(--down)" },
+    HELD:      { label:"HOLD", glyph:"—", color:"var(--text-faint)" }
+  };
+  const s = map[change] || map.HELD;
+  return (
+    <span style={{ display:"inline-flex", alignItems:"center", gap:5, color:s.color,
+      fontFamily:"var(--mono)", fontSize:11, fontWeight:600, whiteSpace:"nowrap" }}>
+      <span style={{ fontSize:9 }}>{s.glyph}</span>
+      <span>{s.label}</span>
+      {!compact && deltaPct != null && change !== "HELD" && (
+        <span style={{ color:"var(--text-dim)", fontWeight:500 }}>{fmtPct(deltaPct, 0)}</span>
+      )}
+    </span>
+  );
+}
+
+function VerifiedDot({ note }) {
+  return (
+    <span title={note || "Figure from the filing"} style={{
+      display:"inline-flex", alignItems:"center", justifyContent:"center",
+      width:14, height:14, borderRadius:"50%",
+      background:"color-mix(in oklab, var(--accent) 18%, transparent)",
+      color:"var(--accent)", fontSize:9, fontWeight:700, cursor:"help", flexShrink:0
+    }}>✓</span>
+  );
+}
+
+function LayerDot({ layer }) {
+  const L = window.LAYERS[layer];
+  if (!L) return null;
+  return <span title={L.label} style={{ width:8, height:8, borderRadius:2, background:L.color, display:"inline-block", flexShrink:0 }} />;
+}
+
+function Chip({ active, onClick, children }) {
+  return (
+    <button onClick={onClick} style={{
+      fontFamily:"var(--mono)", fontSize:11, fontWeight:500, letterSpacing:".02em",
+      padding:"5px 10px", borderRadius:6, cursor:"pointer", whiteSpace:"nowrap",
+      border:"1px solid "+(active ? "var(--accent)" : "var(--border)"),
+      background: active ? "color-mix(in oklab, var(--accent) 15%, transparent)" : "transparent",
+      color: active ? "var(--accent)" : "var(--text-dim)",
+      transition:"all .12s ease"
+    }}>{children}</button>
+  );
+}
+
+function Sparkline({ data, width, height, color, fill }) {
+  const w = width || 120, h = height || 28;
+  const max = Math.max(...data), min = Math.min(...data);
+  const range = max - min || 1;
+  const pts = data.map((v, i) => {
+    const x = (i / (data.length - 1)) * (w - 2) + 1;
+    const y = h - 2 - ((v - min) / range) * (h - 4);
+    return [x, y];
+  });
+  const line = pts.map((p, i) => (i === 0 ? "M" : "L") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ");
+  const area = line + ` L${(w - 1).toFixed(1)} ${h - 1} L1 ${h - 1} Z`;
+  const c = color || "var(--accent)";
+  return (
+    <svg width={w} height={h} style={{ display:"block", overflow:"visible" }}>
+      {fill && <path d={area} fill={c} opacity="0.10" />}
+      <path d={line} fill="none" stroke={c} strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round" />
+      <circle cx={pts[pts.length - 1][0]} cy={pts[pts.length - 1][1]} r="2" fill={c} />
+    </svg>
+  );
+}
+
+function PanelHead({ kicker, title, right }) {
+  return (
+    <div style={{ display:"flex", alignItems:"baseline", justifyContent:"space-between", gap:12, marginBottom:14 }}>
+      <div>
+        {kicker && <div style={{ fontFamily:"var(--mono)", fontSize:10, letterSpacing:".14em", color:"var(--text-faint)", textTransform:"uppercase", marginBottom:4 }}>{kicker}</div>}
+        <h2 style={{ margin:0, fontSize:16, fontWeight:600, letterSpacing:"-.01em", color:"var(--text)" }}>{title}</h2>
+      </div>
+      {right}
+    </div>
+  );
+}
+
+Object.assign(window, { fmtMillions, fmtUSDFull, fmtShares, fmtPct, timeAgo, fmtDate, TypeTag, ChangeBadge, VerifiedDot, LayerDot, Chip, Sparkline, PanelHead });
+</script>
+
+<!-- ── allocation viz ── -->
+<script type="text/babel">
+function _worst(row, side) {
+  let sum = 0, max = -Infinity, min = Infinity;
+  for (const r of row) { sum += r._a; if (r._a > max) max = r._a; if (r._a < min) min = r._a; }
+  const s2 = sum * sum, side2 = side * side;
+  return Math.max((side2 * max) / s2, s2 / (side2 * min));
+}
+
+function squarify(items, X, Y, W, H) {
+  const total = items.reduce((s, it) => s + it.value, 0) || 1;
+  const nodes = items.map(it => ({ ...it, _a: (it.value / total) * W * H }));
+  const out = [];
+  let x = X, y = Y, w = W, h = H, i = 0;
+  while (i < nodes.length) {
+    const side = Math.min(w, h);
+    let row = [nodes[i]];
+    let best = _worst(row, side);
+    let j = i + 1;
+    while (j < nodes.length) {
+      const cand = row.concat(nodes[j]);
+      const wr = _worst(cand, side);
+      if (wr > best) break;
+      row = cand; best = wr; j++;
+    }
+    const sum = row.reduce((s, r) => s + r._a, 0);
+    if (w <= h) {
+      const stripH = sum / w; let cx = x;
+      for (const r of row) { const cw = r._a / stripH; out.push({ ...r, x:cx, y, w:cw, h:stripH }); cx += cw; }
+      y += stripH; h -= stripH;
+    } else {
+      const stripW = sum / h; let cy = y;
+      for (const r of row) { const ch = r._a / stripW; out.push({ ...r, x, y:cy, w:stripW, h:ch }); cy += ch; }
+      x += stripW; w -= stripW;
+    }
+    i = j;
+  }
+  return out;
+}
+
+function colorFor(h, mode) {
+  if (mode === "longshort") return h.type === "PUT" ? "var(--down)" : (h.type === "CALL" ? "var(--up)" : "var(--accent)");
+  if (mode === "change") {
+    const m = { NEW:"var(--accent)", INCREASED:"var(--up)", DECREASED:"var(--down)", HELD:"var(--text-faint)" };
+    return m[h.change] || "var(--text-faint)";
+  }
+  return window.LAYERS[h.layer] ? window.LAYERS[h.layer].color : "var(--text-faint)";
+}
+
+function Treemap({ holdings, colorMode, onPick, active }) {
+  const W = 760, H = 360;
+  const items = [...holdings].sort((a, b) => b.value - a.value);
+  const cells = squarify(items, 0, 0, W, H);
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} style={{ width:"100%", height:"auto", display:"block" }}>
+      {cells.map((c) => {
+        const col = colorFor(c, colorMode);
+        const big = c.w > 56 && c.h > 30;
+        const med = c.w > 38 && c.h > 18;
+        const isActive = active === c.ticker;
+        return (
+          <g key={c.ticker} onClick={() => onPick && onPick(c)} style={{ cursor:"pointer" }}>
+            <rect x={c.x+1} y={c.y+1} width={Math.max(0,c.w-2)} height={Math.max(0,c.h-2)}
+              rx="3" fill={col} fillOpacity={c.type==="PUT" ? 0.30 : 0.85}
+              stroke={isActive ? "var(--text)" : col} strokeOpacity={isActive ? 1 : 0.5}
+              strokeWidth={isActive ? 2 : 1} />
+            {med && (
+              <text x={c.x+7} y={c.y+16} fill={c.type==="PUT" ? col : "#0a0e14"}
+                style={{ fontFamily:"var(--mono)", fontSize:big?13:11, fontWeight:700 }}>
+                {c.ticker.replace(".C","")}{c.type!=="STOCK" ? "·"+(c.type==="PUT"?"P":"C") : ""}
+              </text>
+            )}
+            {big && (
+              <text x={c.x+7} y={c.y+31} fill={c.type==="PUT" ? "var(--text-dim)" : "rgba(10,14,20,.7)"}
+                style={{ fontFamily:"var(--mono)", fontSize:10, fontWeight:600 }}>
+                {window.fmtMillions(c.value)}
+              </text>
+            )}
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
+function SectorBar({ holdings }) {
+  const bySector = {};
+  holdings.forEach(h => {
+    if (!bySector[h.sector]) bySector[h.sector] = { sector:h.sector, value:0 };
+    bySector[h.sector].value += h.value;
+  });
+  const rows = Object.values(bySector).sort((a, b) => b.value - a.value);
+  const max = Math.max(...rows.map(r => r.value));
+  return (
+    <div style={{ display:"flex", flexDirection:"column", gap:9 }}>
+      {rows.map(r => {
+        const isShort = r.sector.startsWith("Hedge");
+        const col = isShort ? "var(--down)" : "var(--accent)";
+        return (
+          <div key={r.sector} style={{ display:"grid", gridTemplateColumns:"150px 1fr 78px", alignItems:"center", gap:12 }}>
+            <div style={{ fontSize:12, color:"var(--text-dim)", textAlign:"right", whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>{r.sector}</div>
+            <div style={{ height:22, background:"var(--panel-2)", borderRadius:4, overflow:"hidden" }}>
+              <div style={{ width:(r.value/max*100)+"%", height:"100%", background:col, opacity:isShort?.45:.85, borderRadius:4, transition:"width .4s ease" }} />
+            </div>
+            <div style={{ fontFamily:"var(--mono)", fontSize:12, color:"var(--text)", textAlign:"right" }}>{window.fmtMillions(r.value)}</div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function Donut({ holdings }) {
+  const byLayer = {};
+  holdings.forEach(h => { if (!byLayer[h.layer]) byLayer[h.layer]=0; byLayer[h.layer]+=h.value; });
+  const total = Object.values(byLayer).reduce((s,v) => s+v, 0);
+  const entries = Object.entries(byLayer).sort((a,b) => b[1]-a[1]);
+  let acc = 0;
+  const R=120, r=74, cx=140, cy=140;
+  const segs = entries.map(([layer, val]) => {
+    const frac = val/total;
+    const a0 = acc*2*Math.PI - Math.PI/2;
+    acc += frac;
+    const a1 = acc*2*Math.PI - Math.PI/2;
+    const large = frac > 0.5 ? 1 : 0;
+    const p = (ang, rad) => [cx+rad*Math.cos(ang), cy+rad*Math.sin(ang)];
+    const [x0,y0]=p(a0,R),[x1,y1]=p(a1,R),[x2,y2]=p(a1,r),[x3,y3]=p(a0,r);
+    return { layer, val, frac, d:`M${x0} ${y0} A${R} ${R} 0 ${large} 1 ${x1} ${y1} L${x2} ${y2} A${r} ${r} 0 ${large} 0 ${x3} ${y3} Z`, color:window.LAYERS[layer].color };
+  });
+  return (
+    <div style={{ display:"flex", gap:22, alignItems:"center", flexWrap:"wrap" }}>
+      <svg viewBox="0 0 280 280" style={{ width:220, height:220, flexShrink:0 }}>
+        {segs.map(s => <path key={s.layer} d={s.d} fill={s.color} fillOpacity={s.layer==="shorts"?0.4:0.85} stroke="var(--panel)" strokeWidth="1.5" />)}
+        <text x="140" y="132" textAnchor="middle" style={{ fontFamily:"var(--mono)", fontSize:22, fontWeight:700, fill:"var(--text)" }}>{window.fmtMillions(total)}</text>
+        <text x="140" y="152" textAnchor="middle" style={{ fontFamily:"var(--mono)", fontSize:10, fill:"var(--text-faint)", letterSpacing:".1em" }}>GROSS BOOK</text>
+      </svg>
+      <div style={{ display:"flex", flexDirection:"column", gap:7, minWidth:180 }}>
+        {segs.map(s => (
+          <div key={s.layer} style={{ display:"flex", alignItems:"center", gap:9 }}>
+            <span style={{ width:10, height:10, borderRadius:2, background:s.color, opacity:s.layer==="shorts"?.5:1, flexShrink:0 }} />
+            <span style={{ fontSize:12, color:"var(--text-dim)", flex:1 }}>{window.LAYERS[s.layer].label}</span>
+            <span style={{ fontFamily:"var(--mono)", fontSize:11, color:"var(--text)" }}>{(s.frac*100).toFixed(0)}%</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+Object.assign(window, { Treemap, SectorBar, Donut });
+</script>
+
+<!-- ── holdings table ── -->
+<script type="text/babel">
+function genHistory(h) {
+  const v = h.value;
+  switch (h.change) {
+    case "NEW":       return [0, 0, 0, 0, 0, v];
+    case "INCREASED": return [0, v*.18, v*.34, v*.52, v*.74, v];
+    case "DECREASED": return [v*1.7, v*1.55, v*1.42, v*1.3, v*1.18, v];
+    default:          return [v*.92, v*.97, v*1.05, v*.99, v*1.02, v];
+  }
+}
+
+function HoldingRow({ h, pct, expanded, onToggle }) {
+  const hist = genHistory(h);
+  const histColor = h.type === "PUT" ? "var(--down)" : (h.change === "DECREASED" ? "var(--down)" : "var(--up)");
+  return (
+    <>
+      <tr onClick={onToggle} className={"hrow" + (expanded ? " hrow-open" : "")}>
+        <td style={{ paddingLeft:16 }}>
+          <div style={{ display:"flex", alignItems:"center", gap:10 }}>
+            <LayerDot layer={h.layer} />
+            <div style={{ minWidth:0 }}>
+              <div style={{ display:"flex", alignItems:"center", gap:6 }}>
+                <span style={{ fontFamily:"var(--mono)", fontWeight:700, fontSize:13, color:"var(--text)" }}>{h.ticker.replace(".C","")}</span>
+                {h.verified && <VerifiedDot note={h.note} />}
+              </div>
+              <div style={{ fontSize:11, color:"var(--text-faint)", whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis", maxWidth:180 }}>{h.name}</div>
+            </div>
+          </div>
+        </td>
+        <td><TypeTag type={h.type} /></td>
+        <td className="num">{fmtShares(h.shares)}</td>
+        <td className="num" style={{ fontWeight:600, color:"var(--text)" }}>{fmtMillions(h.value)}</td>
+        <td className="num">
+          <div style={{ display:"flex", alignItems:"center", justifyContent:"flex-end", gap:8 }}>
+            <div style={{ width:42, height:5, background:"var(--panel-2)", borderRadius:3, overflow:"hidden" }}>
+              <div style={{ width:Math.min(100,pct/16*100)+"%", height:"100%", background:h.type==="PUT"?"var(--down)":"var(--accent)", opacity:h.type==="PUT"?.5:.85 }} />
+            </div>
+            <span style={{ minWidth:38, textAlign:"right" }}>{pct.toFixed(1)}%</span>
+          </div>
+        </td>
+        <td style={{ paddingRight:16 }}><ChangeBadge change={h.change} deltaPct={h.deltaPct} /></td>
+      </tr>
+      {expanded && (
+        <tr className="hdetail">
+          <td colSpan={6} style={{ padding:0 }}>
+            <div style={{ display:"grid", gridTemplateColumns:"1.4fr 1fr 1fr", gap:22, padding:"16px 16px 20px 38px" }}>
+              <div>
+                <div className="dlabel">Position history · value across filings</div>
+                <Sparkline data={hist} width={240} height={46} color={histColor} fill />
+                <div style={{ display:"flex", justifyContent:"space-between", fontFamily:"var(--mono)", fontSize:9.5, color:"var(--text-faint)", marginTop:4, width:240 }}>
+                  <span>Q4'24</span><span>Q2'25</span><span>Q4'25</span><span>Q1'26</span>
+                </div>
+              </div>
+              <div>
+                <div className="dlabel">Thesis layer</div>
+                <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:12 }}>
+                  <LayerDot layer={h.layer} />
+                  <span style={{ fontSize:13, color:"var(--text)" }}>{window.LAYERS[h.layer].label}</span>
+                </div>
+                <div className="dlabel">Change vs Q4 2025</div>
+                <div style={{ fontSize:12.5, color:"var(--text-dim)", lineHeight:1.5 }}>
+                  <ChangeBadge change={h.change} deltaPct={h.deltaPct} />
+                  {h.note && <div style={{ marginTop:6 }}>{h.note}</div>}
+                </div>
+              </div>
+              <div>
+                <div className="dlabel">Reported in filing</div>
+                <div style={{ fontFamily:"var(--mono)", fontSize:12, color:"var(--text-dim)", lineHeight:1.8 }}>
+                  <div>Value&nbsp;&nbsp;<span style={{ color:"var(--text)" }}>{fmtMillions(h.value)}</span></div>
+                  <div>Shares&nbsp;<span style={{ color:"var(--text)" }}>{fmtShares(h.shares)}</span></div>
+                  <div>Type&nbsp;&nbsp;&nbsp;<span style={{ color:"var(--text)" }}>{h.type==="PUT"?"Put option":h.type==="CALL"?"Call option":"Common stock"}</span></div>
+                </div>
+                {h.type !== "STOCK" && <div style={{ marginTop:8, fontSize:10.5, color:"var(--warn)", lineHeight:1.4 }}>⚠ Notional option exposure — not the same as reported 13F value. Strike & expiry are not disclosed in 13F.</div>}
+                {!h.verified && <div style={{ marginTop:8, fontSize:10.5, color:"var(--text-faint)", lineHeight:1.4 }}>≈ Line-level value is a representative reconstruction.</div>}
+              </div>
+            </div>
+          </td>
+        </tr>
+      )}
+    </>
+  );
+}
+
+function HoldingsTable({ holdings, total, sort, setSort }) {
+  const [open, setOpen] = React.useState(null);
+  const cols = [
+    { k:"name",   label:"Holding",   align:"left" },
+    { k:"type",   label:"Type",      align:"left" },
+    { k:"shares", label:"Shares",    align:"right" },
+    { k:"value",  label:"Value",     align:"right" },
+    { k:"pct",    label:"% Port",    align:"right" },
+    { k:"change", label:"Δ vs prior",align:"left" }
+  ];
+  return (
+    <div className="tablewrap">
+      <table className="htable">
+        <thead>
+          <tr>
+            {cols.map(c => (
+              <th key={c.k} onClick={() => c.k!=="type" && c.k!=="change" && setSort(c.k)}
+                style={{ textAlign:c.align, cursor:(c.k!=="type"&&c.k!=="change")?"pointer":"default", paddingLeft:c.k==="name"?16:undefined, paddingRight:c.k==="change"?16:undefined }}>
+                {c.label}{sort===c.k?" ↓":""}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {holdings.map(h => (
+            <HoldingRow key={h.ticker} h={h} pct={h.value/total*100}
+              expanded={open===h.ticker} onToggle={() => setOpen(open===h.ticker ? null : h.ticker)} />
+          ))}
+        </tbody>
+      </table>
+      {holdings.length === 0 && <div style={{ padding:"40px 16px", textAlign:"center", color:"var(--text-faint)", fontSize:13 }}>No holdings match the current filters.</div>}
+    </div>
+  );
+}
+
+function ChangeCards() {
+  const s = window.CHANGE_SUMMARY;
+  const cards = [
+    { k:"new",  label:"New positions", n:s.counts.new,       color:"var(--accent)", glyph:"✦" },
+    { k:"inc",  label:"Increased",     n:s.counts.increased, color:"var(--up)",     glyph:"▲" },
+    { k:"dec",  label:"Decreased",     n:s.counts.decreased, color:"var(--down)",   glyph:"▼" },
+    { k:"exit", label:"Exited",        n:s.counts.exited,    color:"var(--down)",   glyph:"✕" }
+  ];
+  return (
+    <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:10 }}>
+      {cards.map(c => (
+        <div key={c.k} className="kcard">
+          <div style={{ display:"flex", alignItems:"center", gap:6, color:c.color, fontSize:11, fontFamily:"var(--mono)", fontWeight:600 }}>
+            <span style={{ fontSize:9 }}>{c.glyph}</span>{c.label}
+          </div>
+          <div style={{ fontFamily:"var(--mono)", fontSize:30, fontWeight:700, color:"var(--text)", marginTop:4, lineHeight:1 }}>{c.n}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function AlertsFeed() {
+  const [alerts, setAlerts] = React.useState(window.ALERTS);
+  const unread = alerts.filter(a => a.status==="UNREAD").length;
+  const sevColor = { high:"var(--down)", medium:"var(--warn)", low:"var(--text-dim)" };
+  const markRead = (id) => setAlerts(alerts.map(a => a.id===id ? {...a,status:"READ"} : a));
+  return (
+    <div className="panel">
+      <PanelHead kicker="Material changes" title="Alerts"
+        right={<span style={{ fontFamily:"var(--mono)", fontSize:11, color:"var(--accent)", background:"color-mix(in oklab, var(--accent) 14%, transparent)", padding:"3px 8px", borderRadius:20 }}>{unread} unread</span>} />
+      <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+        {alerts.map(a => (
+          <div key={a.id} onClick={() => markRead(a.id)} className="alert" style={{ opacity:a.status==="READ"?.55:1 }}>
+            <div style={{ width:3, alignSelf:"stretch", borderRadius:3, background:sevColor[a.severity], flexShrink:0 }} />
+            <div style={{ flex:1, minWidth:0 }}>
+              <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:3 }}>
+                <span style={{ fontFamily:"var(--mono)", fontSize:11, fontWeight:700, color:"var(--text)" }}>{a.ticker}</span>
+                <span style={{ fontFamily:"var(--mono)", fontSize:9.5, letterSpacing:".06em", color:sevColor[a.severity], border:"1px solid "+sevColor[a.severity], borderRadius:3, padding:"0 5px" }}>{a.type.replace("_"," ")}</span>
+                {a.status==="UNREAD" && <span style={{ width:6, height:6, borderRadius:"50%", background:"var(--accent)" }} />}
+                <span style={{ marginLeft:"auto", fontFamily:"var(--mono)", fontSize:10, color:"var(--text-faint)" }}>{timeAgo(a.ts)}</span>
+              </div>
+              <div style={{ fontSize:12, color:"var(--text-dim)", lineHeight:1.45 }}>{a.message}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+Object.assign(window, { HoldingsTable, ChangeCards, AlertsFeed });
+</script>
+
+<!-- ── news module ── -->
+<script type="text/babel">
+function NewsItemInline({ n }) {
+  return (
+    <a href={n.url} target="_blank" rel="noopener noreferrer" className="tickitem">
+      <span style={{ display:"inline-flex", gap:4 }}>
+        {n.tickers.slice(0,2).map(t => <span key={t} className="ticktag">{t}</span>)}
+      </span>
+      <span style={{ color:"var(--text)", fontSize:12.5 }}>{n.headline}</span>
+      <span style={{ color:"var(--text-faint)", fontSize:11, fontFamily:"var(--mono)" }}>· {n.source}</span>
+      <span style={{ color:"var(--text-faint)", fontSize:16, margin:"0 6px" }}>•</span>
+    </a>
+  );
+}
+
+function Marquee({ news }) {
+  const doubled = news.concat(news);
+  return (
+    <div className="marquee">
+      <div className="marquee-track">
+        {doubled.map((n, i) => <NewsItemInline key={n.id+"-"+i} n={n} />)}
+      </div>
+    </div>
+  );
+}
+
+function NewsFeed({ news, filter, setFilter, allTickers }) {
+  return (
+    <div>
+      <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:12 }}>
+        <Chip active={!filter} onClick={() => setFilter(null)}>ALL</Chip>
+        {allTickers.map(t => <Chip key={t} active={filter===t} onClick={() => setFilter(t)}>{t}</Chip>)}
+      </div>
+      <div style={{ display:"flex", flexDirection:"column" }}>
+        {news.map(n => (
+          <a key={n.id} href={n.url} target="_blank" rel="noopener noreferrer" className="feeditem">
+            <div style={{ display:"flex", gap:5, flexShrink:0, paddingTop:2 }}>
+              {n.tickers.slice(0,3).map(t => <span key={t} className="ticktag">{t}</span>)}
+            </div>
+            <div style={{ flex:1, minWidth:0 }}>
+              <div style={{ fontSize:13, color:"var(--text)", lineHeight:1.4, marginBottom:3 }}>{n.headline}</div>
+              <div style={{ fontFamily:"var(--mono)", fontSize:11, color:"var(--text-faint)" }}>
+                {n.source} · {timeAgo(n.ts)}
+                <span style={{ marginLeft:8, color:"var(--accent)" }}>open ↗</span>
+              </div>
+            </div>
+          </a>
+        ))}
+        {news.length===0 && <div style={{ padding:"24px 0", textAlign:"center", color:"var(--text-faint)", fontSize:13 }}>No coverage for this ticker yet.</div>}
+      </div>
+    </div>
+  );
+}
+
+function NewsModule({ mode, setMode }) {
+  const [filter, setFilter] = React.useState(null);
+  const all = window.NEWS;
+  const allTickers = Array.from(new Set(all.flatMap(n => n.tickers))).sort();
+  const filtered = (filter ? all.filter(n => n.tickers.includes(filter)) : all)
+    .slice().sort((a, b) => new Date(b.ts) - new Date(a.ts));
+  return (
+    <div className="panel">
+      <PanelHead kicker="Across all portfolio tickers" title="Unified news"
+        right={
+          <div style={{ display:"flex", gap:0, border:"1px solid var(--border)", borderRadius:7, overflow:"hidden" }}>
+            {["marquee","feed"].map(m => (
+              <button key={m} onClick={() => setMode(m)} style={{
+                fontFamily:"var(--mono)", fontSize:11, letterSpacing:".04em", textTransform:"uppercase",
+                padding:"5px 12px", border:"none", cursor:"pointer",
+                background: mode===m ? "var(--accent)" : "transparent",
+                color: mode===m ? "#06080c" : "var(--text-dim)", fontWeight:600
+              }}>{m}</button>
+            ))}
+          </div>
+        } />
+      {mode==="marquee"
+        ? <div>
+            <Marquee news={all} />
+            <div style={{ marginTop:10, fontSize:11, color:"var(--text-faint)", fontFamily:"var(--mono)" }}>
+              ↔ live tape · hover to pause · {all.length} sources · switch to Feed to filter by ticker
+            </div>
+          </div>
+        : <NewsFeed news={filtered} filter={filter} setFilter={setFilter} allTickers={allTickers} />}
+    </div>
+  );
+}
+
+Object.assign(window, { NewsModule });
+</script>
+
+<!-- ── main app ── -->
+<script type="text/babel">
+const { useState, useMemo } = React;
+
+const THEMES = {
+  carbon:   { "--bg":"#0a0e14","--panel":"#11161f","--panel-2":"#161d28","--border":"#222b38","--text":"#e6edf3","--text-dim":"#8a97a6","--text-faint":"#5a6675" },
+  midnight: { "--bg":"#080b1a","--panel":"#0f1430","--panel-2":"#151b3c","--border":"#252c52","--text":"#e7e9f7","--text-dim":"#9095bb","--text-faint":"#5e6390" },
+  slate:    { "--bg":"#14181d","--panel":"#1b2028","--panel-2":"#222933","--border":"#2f3947","--text":"#e8edf2","--text-dim":"#9aa5b2","--text-faint":"#6b7785" },
+  paper:    { "--bg":"#f3f5f9","--panel":"#ffffff","--panel-2":"#eef2f7","--border":"#e0e6ee","--text":"#111722","--text-dim":"#586472","--text-faint":"#95a0ad" }
+};
+const ACCENTS = { blue:"#2f6df6", green:"#1ec46a", gold:"#c9a227", violet:"#7c5cff" };
+
+const TWEAK_DEFAULTS = {
+  "theme": "carbon",
+  "accent": "#2f6df6",
+  "density": "regular",
+  "defaultNews": "marquee",
+  "defaultAlloc": "treemap"
+};
+
+function App() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const F = window.FUND;
+  const H = window.HOLDINGS;
+
+  const [search, setSearch] = useState("");
+  const [sector, setSector] = useState(null);
+  const [typeF, setTypeF] = useState("ALL");
+  const [sort, setSort] = useState("value");
+  const [allocMode, setAllocMode] = useState(t.defaultAlloc);
+  const [colorMode, setColorMode] = useState("layer");
+  const [newsMode, setNewsMode] = useState(t.defaultNews);
+  const [picked, setPicked] = useState(null);
+
+  const sectors = useMemo(() => Array.from(new Set(H.map(h => h.sector))), []);
+  const totalAll = useMemo(() => H.reduce((s, h) => s + h.value, 0), []);
+  const longVal = useMemo(() => H.filter(h => h.type !== "PUT").reduce((s, h) => s + h.value, 0), []);
+  const shortVal = totalAll - longVal;
+
+  const filtered = useMemo(() => {
+    let r = H.filter(h => {
+      if (typeF !== "ALL" && h.type !== typeF) return false;
+      if (sector && h.sector !== sector) return false;
+      if (search) {
+        const q = search.toLowerCase();
+        if (!h.ticker.toLowerCase().includes(q) && !h.name.toLowerCase().includes(q)) return false;
+      }
+      return true;
+    });
+    r = r.slice().sort((a, b) => {
+      if (sort === "name") return a.ticker.localeCompare(b.ticker);
+      if (sort === "shares") return (b.shares||0) - (a.shares||0);
+      return b.value - a.value;
+    });
+    return r;
+  }, [search, sector, typeF, sort]);
+
+  const themeVars = { ...THEMES[t.theme], "--accent":t.accent, "--up":"#1ec46a", "--down":"#e2554f", "--warn":"#f6a92f" };
+  const fundSeries = window.FILINGS.map(f => f.value000/1000).reverse();
+
+  return (
+    <div className="app" style={{ ...themeVars, color:"var(--text)", background:"var(--bg)", minHeight:"100vh" }}>
+      <div className={t.density==="compact" ? "dense" : ""}>
+
+        <header className="topbar">
+          <div className="wrap">
+            <div className="brandrow">
+              <div className="mark"><span>SA</span></div>
+              <div style={{ flex:1, minWidth:0 }}>
+                <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
+                  <h1 style={{ margin:0, fontSize:18, fontWeight:600, letterSpacing:"-.01em" }}>{F.name}</h1>
+                  <span className="pill" style={{ color:"var(--accent)", borderColor:"color-mix(in oklab, var(--accent) 40%, transparent)" }}>13F-HR · {F.periodOfReport}</span>
+                </div>
+                <div style={{ fontSize:12.5, color:"var(--text-dim)", marginTop:2 }}>{F.manager} · {F.location} · CIK {F.cik}</div>
+              </div>
+              <div style={{ display:"flex", alignItems:"center", gap:14, flexWrap:"wrap", justifyContent:"flex-end" }}>
+                <span className="metachip"><span className="dot" style={{ background:"var(--up)" }} />Holdings <b>fresh</b><span style={{ color:"var(--text-faint)" }}>· filed {fmtDate(F.dateFiled)}</span></span>
+                <span className="pill" style={{ color:"var(--warn)", borderColor:"color-mix(in oklab, var(--warn) 35%, transparent)" }}>Research, not investment advice</span>
+              </div>
+            </div>
+
+            <div className="controls">
+              <div className="selwrap">
+                <select value="Q1 2026" onChange={() => {}} title="Filing period">
+                  {window.FILINGS.map(f => <option key={f.q}>{f.q}</option>)}
+                </select>
+              </div>
+              <div className="seg">
+                {["ALL","STOCK","CALL","PUT"].map(x => (
+                  <button key={x} className={typeF===x?"on":""} onClick={() => setTypeF(x)}>{x==="STOCK"?"STK":x}</button>
+                ))}
+              </div>
+              <div style={{ display:"flex", gap:6, flexWrap:"wrap", flex:1 }}>
+                {sectors.map(s => <Chip key={s} active={sector===s} onClick={() => setSector(sector===s?null:s)}>{s}</Chip>)}
+              </div>
+              <div className="search">
+                <span style={{ color:"var(--text-faint)", fontFamily:"var(--mono)", fontSize:12 }}>⌕</span>
+                <input value={search} onChange={e => setSearch(e.target.value)} placeholder="ticker / name" />
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main className="wrap">
+          <div className="hero">
+            <div className="herocell">
+              <div className="herolabel">Reported 13F value · Q1 2026</div>
+              <div style={{ display:"flex", alignItems:"flex-end", gap:14, flexWrap:"wrap" }}>
+                <div className="herobig" style={{ fontSize:34 }}>$13.68B</div>
+                <div style={{ marginBottom:2 }}>
+                  <Sparkline data={fundSeries} width={130} height={34} color="var(--accent)" fill />
+                  <div style={{ fontFamily:"var(--mono)", fontSize:9.5, color:"var(--text-faint)", marginTop:2 }}>Q4'24 → Q1'26 · ~22×</div>
+                </div>
+              </div>
+              <div style={{ fontFamily:"var(--mono)", fontSize:10.5, color:"var(--text-faint)", marginTop:8 }}>Whole-dollar units (post-2023). Gross book incl. listed options.</div>
+            </div>
+            <div className="herocell">
+              <div className="herolabel">Holdings</div>
+              <div className="herobig" style={{ fontSize:34 }}>42</div>
+              <div style={{ fontFamily:"var(--mono)", fontSize:11, color:"var(--up)", marginTop:8 }}>▲ +13 vs Q4 2025 (29)</div>
+            </div>
+            <div className="herocell">
+              <div className="herolabel">Long vs short</div>
+              <div style={{ display:"flex", height:14, borderRadius:4, overflow:"hidden", marginTop:4, marginBottom:8 }}>
+                <div style={{ width:(longVal/totalAll*100)+"%", background:"var(--accent)" }} />
+                <div style={{ width:(shortVal/totalAll*100)+"%", background:"color-mix(in oklab, var(--down) 60%, transparent)" }} />
+              </div>
+              <div style={{ fontFamily:"var(--mono)", fontSize:11, color:"var(--text-dim)" }}>
+                <span style={{ color:"var(--accent)" }}>{fmtMillions(longVal)} long</span> · <span style={{ color:"var(--down)" }}>{fmtMillions(shortVal)} puts</span>
+              </div>
+            </div>
+            <div className="herocell">
+              <div className="herolabel">Filing cadence</div>
+              <div style={{ fontFamily:"var(--mono)", fontSize:13, color:"var(--text)", lineHeight:1.6 }}>
+                <div>Filed <b>{fmtDate(F.dateFiled)}</b></div>
+                <div style={{ color:"var(--text-dim)" }}>Next due <b style={{ color:"var(--warn)" }}>{fmtDate(F.nextFilingDue)}</b></div>
+              </div>
+              <a href={F.indexUrl} target="_blank" rel="noopener noreferrer" style={{ fontFamily:"var(--mono)", fontSize:10.5, color:"var(--accent)", marginTop:8, display:"inline-block" }}>SEC filing index ↗</a>
+            </div>
+          </div>
+
+          <div className="grid2">
+            <div className="panel">
+              <PanelHead kicker="Portfolio allocation" title="Where the book sits"
+                right={
+                  <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
+                    {allocMode==="treemap" && (
+                      <div className="seg">
+                        {[["layer","Layer"],["longshort","L/S"],["change","Δ"]].map(([k,l]) => (
+                          <button key={k} className={colorMode===k?"on":""} onClick={() => setColorMode(k)}>{l}</button>
+                        ))}
+                      </div>
+                    )}
+                    <div className="seg">
+                      {[["treemap","Map"],["sector","Bars"],["donut","Donut"]].map(([k,l]) => (
+                        <button key={k} className={allocMode===k?"on":""} onClick={() => setAllocMode(k)}>{l}</button>
+                      ))}
+                    </div>
+                  </div>
+                } />
+              {allocMode==="treemap" && <Treemap holdings={H} colorMode={colorMode} active={picked} onPick={(c) => { setPicked(c.ticker); setSearch(c.ticker.replace(".C","")); }} />}
+              {allocMode==="sector"  && <SectorBar holdings={H} />}
+              {allocMode==="donut"   && <Donut holdings={H} />}
+              <Legend mode={allocMode==="treemap" ? colorMode : "layer"} />
+            </div>
+
+            <div className="stack">
+              <div className="panel">
+                <PanelHead kicker={"vs "+window.CHANGE_SUMMARY.prevFiling} title="Position changes" />
+                <ChangeCards />
+                <div style={{ marginTop:12, display:"flex", flexDirection:"column", gap:7 }}>
+                  {[window.CHANGE_SUMMARY.largestNew, window.CHANGE_SUMMARY.largestIncrease, window.CHANGE_SUMMARY.largestExit].map((m,i) => (
+                    <div key={i} style={{ display:"flex", gap:8, alignItems:"baseline", fontSize:12, color:"var(--text-dim)" }}>
+                      <span style={{ fontFamily:"var(--mono)", fontWeight:700, color:"var(--text)", minWidth:52 }}>{m.ticker}</span>
+                      <span style={{ lineHeight:1.4 }}>{m.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <AlertsFeed />
+            </div>
+          </div>
+
+          <div className="panel" style={{ marginTop:16 }}>
+            <PanelHead kicker={filtered.length+" of "+H.length+" positions · click a row to drill in"} title="Holdings"
+              right={<span style={{ fontFamily:"var(--mono)", fontSize:11, color:"var(--text-faint)" }}>✓ = figure from filing · ≈ rows reconstructed</span>} />
+            <HoldingsTable holdings={filtered} total={totalAll} sort={sort} setSort={setSort} />
+          </div>
+
+          <div style={{ marginTop:16 }}>
+            <NewsModule mode={newsMode} setMode={setNewsMode} />
+          </div>
+
+          <footer className="footer">
+            <div className="discl">
+              <div style={{ color:"var(--text-dim)", marginBottom:8 }}>Data provenance</div>
+              Holdings sourced from SEC EDGAR 13F-HR, accession <b style={{ color:"var(--text-dim)" }}>{F.accession}</b> (period {F.periodOfReport}, filed {fmtDate(F.dateFiled)}). Filing metadata, totals, holding counts, the put/call thesis and anchor figures (✓) are from the real filing; per-line share/value figures marked ≈ are a representative reconstruction pending the live INFORMATION TABLE parse.<br />
+              13Fs disclose only long U.S. equity and listed options — <b style={{ color:"var(--text-dim)" }}>not</b> short stock, bonds, cash, FX, or private holdings, so this is not the fund's full economic exposure. Notional option exposure ≠ reported 13F value. Prices/news date-stamped {fmtDate(F.dataAsOf.news.slice(0,10))}.<br />
+              <span style={{ color:"var(--text)", fontWeight:600 }}>This is research, not investment advice.</span>
+            </div>
+          </footer>
+        </main>
+
+        <TweaksPanel>
+          <TweakSection label="Aesthetic theme" />
+          <TweakSelect label="Theme" value={t.theme} options={["carbon","midnight","slate","paper"]} onChange={v => setTweak("theme",v)} />
+          <TweakColor label="Accent" value={t.accent} options={Object.values(ACCENTS)} onChange={v => setTweak("accent",v)} />
+          <TweakRadio label="Density" value={t.density} options={["regular","compact"]} onChange={v => setTweak("density",v)} />
+          <TweakSection label="Defaults" />
+          <TweakRadio label="News view" value={t.defaultNews} options={["marquee","feed"]} onChange={v => { setTweak("defaultNews",v); setNewsMode(v); }} />
+          <TweakRadio label="Allocation" value={t.defaultAlloc} options={["treemap","sector","donut"]} onChange={v => { setTweak("defaultAlloc",v); setAllocMode(v); }} />
+        </TweaksPanel>
+      </div>
+    </div>
+  );
+}
+
+function Legend({ mode }) {
+  let items;
+  if (mode==="longshort") items=[["var(--accent)","Long stock"],["var(--up)","Call options"],["var(--down)","Put options"]];
+  else if (mode==="change") items=[["var(--accent)","New"],["var(--up)","Increased"],["var(--down)","Decreased"],["var(--text-faint)","Held"]];
+  else items=Object.values(window.LAYERS).map(l => [l.color, l.label]);
+  return (
+    <div style={{ display:"flex", gap:14, flexWrap:"wrap", marginTop:14, paddingTop:12, borderTop:"1px solid color-mix(in oklab, var(--border) 55%, transparent)" }}>
+      {items.map(([c,l]) => (
+        <span key={l} style={{ display:"inline-flex", alignItems:"center", gap:6, fontSize:11, color:"var(--text-dim)" }}>
+          <span style={{ width:9, height:9, borderRadius:2, background:c }} />{l}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

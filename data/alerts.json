@@ -1,0 +1,10 @@
+[
+  {"id":"a1","type":"NEW_SHORT",   "severity":"high",   "ticker":"SMH",    "message":"New $2.0B notional put book opened across semiconductors (SMH, NVDA, ORCL, AVGO, AMD, ASML, INTC, GLW).","ts":"2026-05-18T18:33:00-07:00","filing_accession":"0002045724-26-000008","status":"UNREAD"},
+  {"id":"a2","type":"OPTION_FLIP", "severity":"high",   "ticker":"INTC",   "message":"Position flipped bearish — Intel calls ($520M) fully exited, puts opened ($560M).","ts":"2026-05-18T18:33:00-07:00","filing_accession":"0002045724-26-000008","status":"UNREAD"},
+  {"id":"a3","type":"INCREASE",    "severity":"medium", "ticker":"CORZ",   "message":"Core Scientific increased +64% (20.7M→34M shares); activist 13D discloses 9.4% stake.","ts":"2026-05-18T18:33:00-07:00","filing_accession":"0002045724-26-000008","status":"UNREAD"},
+  {"id":"a4","type":"INCREASE",    "severity":"medium", "ticker":"CLSK",   "message":"CleanSpark increased +52% (19M→28.9M shares) — miner-compute proxy build continues.","ts":"2026-05-18T18:33:00-07:00","filing_accession":"0002045724-26-000008","status":"READ"},
+  {"id":"a5","type":"NEW_LONG",    "severity":"low",    "ticker":"SNDK.C", "message":"Opened call options on Sandisk (600K shares) to complement common stock position.","ts":"2026-05-18T18:33:00-07:00","filing_accession":"0002045724-26-000008","status":"READ"},
+  {"id":"a6","type":"EXIT",        "severity":"medium", "ticker":"MRVL",   "message":"Full exit of Marvell Technology (1.2M shares, $140M) vs Q4 2025.","ts":"2026-05-18T18:33:00-07:00","filing_accession":"0002045724-26-000008","status":"READ"},
+  {"id":"a7","type":"INCREASE",    "severity":"medium", "ticker":"APLD",   "message":"Applied Digital increased +41% (14.9M→21M shares).","ts":"2026-05-18T18:33:00-07:00","filing_accession":"0002045724-26-000008","status":"READ"},
+  {"id":"a8","type":"DECREASE",    "severity":"low",    "ticker":"VRT",    "message":"Vertiv trimmed -22% (1.25M→980K shares).","ts":"2026-05-18T18:33:00-07:00","filing_accession":"0002045724-26-000008","status":"READ"}
+]

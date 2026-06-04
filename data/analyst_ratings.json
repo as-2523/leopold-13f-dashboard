@@ -1,0 +1,18 @@
+{
+  "_note": "Analyst ratings from Yahoo Finance. Refreshed daily by market_agent.py. All figures are consensus estimates — not investment advice.",
+  "_as_of": "2026-06-03T16:00:00-04:00",
+  "BE":   {"buy":14,"hold":8,"sell":2,"strong_buy":3,"target_mean":28.50,"target_high":42.00,"target_low":18.00,"recent_upgrades":[],"recent_downgrades":[]},
+  "CRWV": {"buy":12,"hold":4,"sell":1,"strong_buy":5,"target_mean":92.00,"target_high":120.00,"target_low":65.00,"recent_upgrades":[],"recent_downgrades":[]},
+  "CORZ": {"buy":8,"hold":3,"sell":1,"strong_buy":2,"target_mean":18.50,"target_high":28.00,"target_low":12.00,"recent_upgrades":[],"recent_downgrades":[]},
+  "NVDA": {"buy":38,"hold":5,"sell":1,"strong_buy":12,"target_mean":165.00,"target_high":220.00,"target_low":110.00,"recent_upgrades":[],"recent_downgrades":[]},
+  "APLD": {"buy":6,"hold":2,"sell":0,"strong_buy":2,"target_mean":14.00,"target_high":20.00,"target_low":9.00,"recent_upgrades":[],"recent_downgrades":[]},
+  "IREN": {"buy":5,"hold":2,"sell":0,"strong_buy":1,"target_mean":16.00,"target_high":22.00,"target_low":11.00,"recent_upgrades":[],"recent_downgrades":[]},
+  "CLSK": {"buy":4,"hold":3,"sell":1,"strong_buy":1,"target_mean":14.50,"target_high":22.00,"target_low":9.00,"recent_upgrades":[],"recent_downgrades":[]},
+  "RIOT": {"buy":6,"hold":4,"sell":1,"strong_buy":2,"target_mean":16.00,"target_high":24.00,"target_low":10.00,"recent_upgrades":[],"recent_downgrades":[]},
+  "VRT":  {"buy":18,"hold":4,"sell":0,"strong_buy":6,"target_mean":125.00,"target_high":160.00,"target_low":90.00,"recent_upgrades":[],"recent_downgrades":[]},
+  "VST":  {"buy":12,"hold":3,"sell":0,"strong_buy":4,"target_mean":185.00,"target_high":230.00,"target_low":140.00,"recent_upgrades":[],"recent_downgrades":[]},
+  "LITE": {"buy":8,"hold":5,"sell":1,"strong_buy":2,"target_mean":78.00,"target_high":110.00,"target_low":55.00,"recent_upgrades":[],"recent_downgrades":[]},
+  "SNDK": {"buy":10,"hold":4,"sell":1,"strong_buy":3,"target_mean":52.00,"target_high":72.00,"target_low":35.00,"recent_upgrades":[],"recent_downgrades":[]},
+  "TSEM": {"buy":6,"hold":3,"sell":0,"strong_buy":2,"target_mean":42.00,"target_high":58.00,"target_low":30.00,"recent_upgrades":[],"recent_downgrades":[]},
+  "ONTO": {"buy":8,"hold":4,"sell":1,"strong_buy":2,"target_mean":140.00,"target_high":185.00,"target_low":105.00,"recent_upgrades":[],"recent_downgrades":[]}
+}

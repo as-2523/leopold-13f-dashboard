@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Situational Awareness LP · 13F Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  :root { --mono: "JetBrains Mono", ui-monospace, monospace; --sans: "Space Grotesk", system-ui, sans-serif; }
+  body { font-family: var(--sans); background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
+  ::selection { background: color-mix(in oklab, var(--accent) 40%, transparent); }
+  a { color: inherit; text-decoration: none; }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+
+  .app { min-height: 100vh; }
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 24px; }
+
+  .topbar { position: sticky; top: 0; z-index: 40; background: color-mix(in oklab, var(--bg) 88%, transparent); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+  .brandrow { display: flex; align-items: center; gap: 16px; padding: 14px 0 13px; }
+  .mark { width: 36px; height: 36px; border-radius: 8px; background: var(--accent); display: grid; place-items: center; flex-shrink: 0; box-shadow: 0 0 0 1px color-mix(in oklab, var(--accent) 50%, transparent), 0 6px 18px -6px var(--accent); }
+  .mark span { color: #06080c; font-weight: 700; font-size: 13px; font-family: var(--mono); letter-spacing: -.02em; }
+  .metachip { font-family: var(--mono); font-size: 11px; color: var(--text-dim); display: inline-flex; align-items: center; gap: 6px; }
+  .metachip b { color: var(--text); font-weight: 600; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .pill { font-family: var(--mono); font-size: 10.5px; letter-spacing: .03em; padding: 4px 9px; border-radius: 20px; border: 1px solid var(--border); color: var(--text-dim); white-space: nowrap; }
+
+  .controls { display: flex; align-items: center; gap: 10px; padding: 11px 0; border-top: 1px solid color-mix(in oklab, var(--border) 60%, transparent); flex-wrap: wrap; }
+  .search { display: flex; align-items: center; gap: 7px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 7px; padding: 6px 10px; }
+  .search input { background: none; border: none; outline: none; color: var(--text); font-family: var(--mono); font-size: 12px; width: 120px; }
+  .search input::placeholder { color: var(--text-faint); }
+  .selwrap select { background: var(--panel-2); border: 1px solid var(--border); border-radius: 7px; color: var(--text); font-family: var(--mono); font-size: 12px; padding: 7px 10px; cursor: pointer; outline: none; }
+
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+  .kcard { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 13px 14px; }
+  .hero { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin: 20px 0; }
+  .herocell { background: var(--panel); padding: 17px 20px; }
+  .herolabel { font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 8px; }
+  .herobig { font-family: var(--mono); font-weight: 700; letter-spacing: -.01em; color: var(--text); line-height: 1; }
+
+  .grid2 { display: grid; grid-template-columns: 1.62fr 1fr; gap: 16px; align-items: start; }
+  .stack { display: flex; flex-direction: column; gap: 16px; }
+
+  .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 7px; overflow: hidden; }
+  .seg button { font-family: var(--mono); font-size: 11px; letter-spacing: .03em; text-transform: uppercase; padding: 5px 11px; border: none; cursor: pointer; background: transparent; color: var(--text-dim); font-weight: 600; }
+  .seg button.on { background: var(--accent); color: #06080c; }
+
+  .tablewrap { overflow-x: auto; }
+  .htable { width: 100%; border-collapse: collapse; }
+  .htable thead th { font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-faint); font-weight: 600; text-align: left; padding: 0 10px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; user-select: none; }
+  .htable td { padding: 10px; border-bottom: 1px solid color-mix(in oklab, var(--border) 55%, transparent); font-size: 13px; vertical-align: middle; }
+  .htable td.num { font-family: var(--mono); text-align: right; color: var(--text-dim); white-space: nowrap; }
+  .hrow { cursor: pointer; transition: background .1s ease; }
+  .hrow:hover { background: var(--panel-2); }
+  .hrow-open { background: var(--panel-2); }
+  .hrow-open td { border-bottom-color: transparent; }
+  .hdetail td { background: var(--panel-2); border-bottom: 1px solid var(--border); }
+  .dlabel { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 8px; }
+
+  .dense .htable td { padding: 6px 10px; font-size: 12px; }
+  .dense .hero { margin: 14px 0; }
+  .dense .herocell { padding: 12px 16px; }
+
+  .alert { display: flex; gap: 10px; padding: 10px 11px; border: 1px solid var(--border); border-radius: 9px; cursor: pointer; transition: border-color .1s; background: var(--panel-2); }
+  .alert:hover { border-color: color-mix(in oklab, var(--accent) 45%, var(--border)); }
+
+  .marquee { overflow: hidden; border: 1px solid var(--border); border-radius: 9px; background: var(--panel-2); padding: 10px 0; mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); }
+  .marquee-track { display: inline-flex; align-items: center; white-space: nowrap; animation: scroll 70s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .tickitem { display: inline-flex; align-items: center; gap: 8px; padding: 0 4px; }
+  .ticktag { font-family: var(--mono); font-size: 9.5px; font-weight: 700; letter-spacing: .04em; color: var(--accent); background: color-mix(in oklab, var(--accent) 14%, transparent); border-radius: 3px; padding: 1px 5px; }
+  .feeditem { display: flex; gap: 12px; padding: 12px 4px; border-bottom: 1px solid color-mix(in oklab, var(--border) 55%, transparent); transition: background .1s; }
+  .feeditem:hover { background: var(--panel-2); }
+
+  .footer { border-top: 1px solid var(--border); margin-top: 28px; padding: 22px 0 40px; }
+  .discl { font-family: var(--mono); font-size: 11px; color: var(--text-faint); line-height: 1.7; }
+
+  .loading-screen { display:flex; align-items:center; justify-content:center; min-height:100vh; font-family:var(--mono); font-size:14px; color:var(--text-faint); flex-direction:column; gap:16px; }
+  .loading-dot { width:8px; height:8px; border-radius:50%; background:var(--accent); animation:pulse 1.2s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{opacity:.3} 50%{opacity:1} }
+  .stale-badge { display:inline-flex; align-items:center; gap:4px; font-family:var(--mono); font-size:10px; color:var(--warn); background:color-mix(in oklab,var(--warn) 12%,transparent); border:1px solid color-mix(in oklab,var(--warn) 35%,transparent); border-radius:4px; padding:2px 6px; }
+
+  @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+  @media (max-width: 940px) { .grid2 { grid-template-columns: 1fr; } .hero { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+
+<script type="text/babel">
+const { useState, useEffect, useMemo, useCallback } = React;
+
+// ─── data loader ───────────────────────────────────────────────
+const BASE = "../data";  // relative to site/
+
+async function fetchJSON(path) {
+  const r = await fetch(path + "?_=" + Date.now());
+  if (!r.ok) throw new Error(`${r.status} ${path}`);
+  return r.json();
+}
+
+function useData() {
+  const [state, setState] = useState({ loading: true, error: null, data: null });
+  useEffect(() => {
+    Promise.all([
+      fetchJSON(`${BASE}/meta.json`),
+      fetchJSON(`${BASE}/filings.json`),
+      fetchJSON(`${BASE}/holdings_latest.json`),
+      fetchJSON(`${BASE}/position_changes.json`),
+      fetchJSON(`${BASE}/alerts.json`),
+      fetchJSON(`${BASE}/news.json`),
+      fetchJSON(`${BASE}/securities.json`),
+      fetchJSON(`${BASE}/analyst_ratings.json`),
+    ]).then(([meta, filings, holdings, changes, alerts, news, securities, ratings]) => {
+      setState({ loading: false, error: null, data: { meta, filings, holdings, changes, alerts, news, securities, ratings } });
+    }).catch(err => {
+      setState({ loading: false, error: err.message, data: null });
+    });
+  }, []);
+  return state;
+}
+
+// ─── theme / accent ────────────────────────────────────────────
+const THEMES = {
+  carbon:   { "--bg":"#0a0e14","--panel":"#11161f","--panel-2":"#161d28","--border":"#222b38","--text":"#e6edf3","--text-dim":"#8a97a6","--text-faint":"#5a6675" },
+  midnight: { "--bg":"#080b1a","--panel":"#0f1430","--panel-2":"#151b3c","--border":"#252c52","--text":"#e7e9f7","--text-dim":"#9095bb","--text-faint":"#5e6390" },
+  slate:    { "--bg":"#14181d","--panel":"#1b2028","--panel-2":"#222933","--border":"#2f3947","--text":"#e8edf2","--text-dim":"#9aa5b2","--text-faint":"#6b7785" },
+  paper:    { "--bg":"#f3f5f9","--panel":"#ffffff","--panel-2":"#eef2f7","--border":"#e0e6ee","--text":"#111722","--text-dim":"#586472","--text-faint":"#95a0ad" }
+};
+const ACCENTS = { blue:"#2f6df6", green:"#1ec46a", gold:"#c9a227", violet:"#7c5cff" };
+
+const LAYERS = {
+  power:   { label:"Electrons / Power",     color:"#f6a92f" },
+  compute: { label:"Compute / Data Center", color:"#2f6df6" },
+  miners:  { label:"Crypto-miner compute",  color:"#7c5cff" },
+  memory:  { label:"Memory",                color:"#23c1c9" },
+  optics:  { label:"Optics / Photonics",    color:"#d65db1" },
+  silicon: { label:"Silicon (selective)",   color:"#5a8f5a" },
+  shorts:  { label:"Chip shorts (puts)",    color:"#e35d6a" }
+};
+
+// ─── formatters ────────────────────────────────────────────────
+function fmtM(m) {
+  if (m == null) return "—";
+  const v = m / 1e6;
+  if (v >= 1000) return "$" + (v / 1000).toFixed(2) + "B";
+  if (v >= 1)    return "$" + Math.round(v) + "M";
+  return "$" + (v * 1000).toFixed(0) + "K";
+}
+function fmtShares(n) {
+  if (n == null) return "—";
+  if (n >= 1e6)  return (n / 1e6).toFixed(2) + "M";
+  if (n >= 1e3)  return (n / 1e3).toFixed(0) + "K";
+  return String(n);
+}
+function fmtPct(p, d = 1) {
+  if (p == null) return "—";
+  return (p > 0 ? "+" : "") + p.toFixed(d) + "%";
+}
+function fmtDate(s) {
+  if (!s) return "—";
+  const d = new Date(s.length <= 10 ? s + "T00:00:00" : s);
+  return d.toLocaleDateString("en-US", { year:"numeric", month:"short", day:"numeric" });
+}
+function timeAgo(ts) {
+  const now = Date.now();
+  const mins = Math.round((now - new Date(ts).getTime()) / 60000);
+  if (mins < 60) return mins + "m ago";
+  const hrs = Math.round(mins / 60);
+  if (hrs < 24) return hrs + "h ago";
+  const days = Math.round(hrs / 24);
+  if (days < 14) return days + "d ago";
+  return Math.round(days / 7) + "w ago";
+}
+
+// ─── atoms ─────────────────────────────────────────────────────
+function TypeTag({ type }) {
+  const map = {
+    STOCK: { t:"STK",  c:"var(--text-dim)", b:"var(--border)" },
+    CALL:  { t:"CALL", c:"var(--up)",       b:"color-mix(in oklab,var(--up) 40%,transparent)" },
+    PUT:   { t:"PUT",  c:"var(--down)",     b:"color-mix(in oklab,var(--down) 40%,transparent)" }
+  };
+  const putcall = (type || "").toUpperCase() === "PUT" ? "PUT" : (type || "").toUpperCase() === "CALL" ? "CALL" : "STOCK";
+  const s = map[putcall];
+  return (
+    <span style={{ fontFamily:"var(--mono)", fontSize:10, fontWeight:600, letterSpacing:".06em",
+      color:s.c, border:"1px solid "+s.b, borderRadius:4, padding:"1px 5px", lineHeight:1.4, whiteSpace:"nowrap" }}>
+      {s.t}
+    </span>
+  );
+}
+
+function ChangeBadge({ change, deltaPct, compact }) {
+  const map = {
+    NEW:       { label:"NEW",  glyph:"✦", color:"var(--accent)" },
+    INCREASED: { label:"ADD",  glyph:"▲", color:"var(--up)" },
+    DECREASED: { label:"TRIM", glyph:"▼", color:"var(--down)" },
+    EXITED:    { label:"EXIT", glyph:"✕", color:"var(--down)" },
+    HELD:      { label:"HOLD", glyph:"—", color:"var(--text-faint)" }
+  };
+  const s = map[change] || map.HELD;
+  return (
+    <span style={{ display:"inline-flex", alignItems:"center", gap:5, color:s.color,
+      fontFamily:"var(--mono)", fontSize:11, fontWeight:600, whiteSpace:"nowrap" }}>
+      <span style={{ fontSize:9 }}>{s.glyph}</span>
+      <span>{s.label}</span>
+      {!compact && deltaPct != null && change !== "HELD" && (
+        <span style={{ color:"var(--text-dim)", fontWeight:500 }}>{fmtPct(deltaPct, 0)}</span>
+      )}
+    </span>
+  );
+}
+
+function VerifiedDot({ note }) {
+  return (
+    <span title={note || "Figure from the filing"} style={{
+      display:"inline-flex", alignItems:"center", justifyContent:"center",
+      width:14, height:14, borderRadius:"50%",
+      background:"color-mix(in oklab,var(--accent) 18%,transparent)",
+      color:"var(--accent)", fontSize:9, fontWeight:700, cursor:"help", flexShrink:0
+    }}>✓</span>
+  );
+}
+
+function LayerDot({ layer }) {
+  const L = LAYERS[layer];
+  if (!L) return null;
+  return <span title={L.label} style={{ width:8, height:8, borderRadius:2, background:L.color, display:"inline-block", flexShrink:0 }} />;
+}
+
+function Chip({ active, onClick, children }) {
+  return (
+    <button onClick={onClick} style={{
+      fontFamily:"var(--mono)", fontSize:11, fontWeight:500, letterSpacing:".02em",
+      padding:"5px 10px", borderRadius:6, cursor:"pointer", whiteSpace:"nowrap",
+      border:"1px solid "+(active ? "var(--accent)" : "var(--border)"),
+      background: active ? "color-mix(in oklab,var(--accent) 15%,transparent)" : "transparent",
+      color: active ? "var(--accent)" : "var(--text-dim)",
+      transition:"all .12s ease"
+    }}>{children}</button>
+  );
+}
+
+function Sparkline({ data, width, height, color, fill }) {
+  const w = width || 120, h = height || 28;
+  if (!data || data.length < 2) return null;
+  const max = Math.max(...data), min = Math.min(...data), range = max - min || 1;
+  const pts = data.map((v, i) => {
+    const x = (i / (data.length - 1)) * (w - 2) + 1;
+    const y = h - 2 - ((v - min) / range) * (h - 4);
+    return [x, y];
+  });
+  const line = pts.map((p, i) => (i === 0 ? "M" : "L") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ");
+  const area = line + ` L${(w-1).toFixed(1)} ${h-1} L1 ${h-1} Z`;
+  const c = color || "var(--accent)";
+  return (
+    <svg width={w} height={h} style={{ display:"block", overflow:"visible" }}>
+      {fill && <path d={area} fill={c} opacity="0.10" />}
+      <path d={line} fill="none" stroke={c} strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round" />
+      <circle cx={pts[pts.length-1][0]} cy={pts[pts.length-1][1]} r="2" fill={c} />
+    </svg>
+  );
+}
+
+function PanelHead({ kicker, title, right }) {
+  return (
+    <div style={{ display:"flex", alignItems:"baseline", justifyContent:"space-between", gap:12, marginBottom:14 }}>
+      <div>
+        {kicker && <div style={{ fontFamily:"var(--mono)", fontSize:10, letterSpacing:".14em", color:"var(--text-faint)", textTransform:"uppercase", marginBottom:4 }}>{kicker}</div>}
+        <h2 style={{ margin:0, fontSize:16, fontWeight:600, letterSpacing:"-.01em", color:"var(--text)" }}>{title}</h2>
+      </div>
+      {right}
+    </div>
+  );
+}
+
+// ─── treemap ───────────────────────────────────────────────────
+function _worst(row, side) {
+  let sum=0, max=-Infinity, min=Infinity;
+  for (const r of row) { sum+=r._a; if(r._a>max)max=r._a; if(r._a<min)min=r._a; }
+  const s2=sum*sum, s22=side*side;
+  return Math.max((s22*max)/s2, s2/(s22*min));
+}
+function squarify(items, X, Y, W, H) {
+  const total = items.reduce((s,it)=>s+it.value,0)||1;
+  const nodes = items.map(it=>({...it,_a:(it.value/total)*W*H}));
+  const out=[]; let x=X,y=Y,w=W,h=H,i=0;
+  while(i<nodes.length){
+    const side=Math.min(w,h); let row=[nodes[i]], best=_worst(row,side), j=i+1;
+    while(j<nodes.length){ const cand=row.concat(nodes[j]); const wr=_worst(cand,side); if(wr>best)break; row=cand;best=wr;j++; }
+    const sum=row.reduce((s,r)=>s+r._a,0);
+    if(w<=h){ const stripH=sum/w; let cx=x; for(const r of row){const cw=r._a/stripH;out.push({...r,x:cx,y,w:cw,h:stripH});cx+=cw;} y+=stripH;h-=stripH; }
+    else { const stripW=sum/h; let cy=y; for(const r of row){const ch=r._a/stripW;out.push({...r,x,y:cy,w:stripW,h:ch});cy+=ch;} x+=stripW;w-=stripW; }
+    i=j;
+  }
+  return out;
+}
+
+function colorFor(h, mode) {
+  const pc = (h.put_call || "").toUpperCase();
+  if (mode==="longshort") return pc==="PUT" ? "var(--down)" : pc==="CALL" ? "var(--up)" : "var(--accent)";
+  if (mode==="change") {
+    const m={NEW:"var(--accent)",INCREASED:"var(--up)",DECREASED:"var(--down)",HELD:"var(--text-faint)"};
+    return m[h.change_type] || "var(--text-faint)";
+  }
+  return LAYERS[h.layer] ? LAYERS[h.layer].color : "var(--text-faint)";
+}
+
+function Treemap({ holdings, colorMode, onPick, active }) {
+  const W=760, H=360;
+  const items = [...holdings].sort((a,b)=>b.value_usd-a.value_usd).map(h=>({...h,value:h.value_usd}));
+  const cells = squarify(items,0,0,W,H);
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} style={{ width:"100%", height:"auto", display:"block" }}>
+      {cells.map((c) => {
+        const col = colorFor(c, colorMode);
+        const isPut = (c.put_call||"").toUpperCase()==="PUT";
+        const big=c.w>56&&c.h>30, med=c.w>38&&c.h>18;
+        const isActive=active===c.ticker;
+        const label=c.ticker.replace(".C","")+(isPut?"·P":(c.put_call||"").toUpperCase()==="CALL"?"·C":"");
+        return (
+          <g key={c.ticker} onClick={()=>onPick&&onPick(c)} style={{cursor:"pointer"}}>
+            <rect x={c.x+1} y={c.y+1} width={Math.max(0,c.w-2)} height={Math.max(0,c.h-2)}
+              rx="3" fill={col} fillOpacity={isPut?0.30:0.85}
+              stroke={isActive?"var(--text)":col} strokeOpacity={isActive?1:0.5}
+              strokeWidth={isActive?2:1} />
+            {med&&<text x={c.x+7} y={c.y+16} fill={isPut?col:"#0a0e14"} style={{fontFamily:"var(--mono)",fontSize:big?13:11,fontWeight:700}}>{label}</text>}
+            {big&&<text x={c.x+7} y={c.y+31} fill={isPut?"var(--text-dim)":"rgba(10,14,20,.7)"} style={{fontFamily:"var(--mono)",fontSize:10,fontWeight:600}}>{fmtM(c.value_usd)}</text>}
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
+function SectorBar({ holdings }) {
+  const bySector={};
+  holdings.forEach(h=>{ if(!bySector[h.sector])bySector[h.sector]={sector:h.sector,value:0}; bySector[h.sector].value+=h.value_usd; });
+  const rows=Object.values(bySector).sort((a,b)=>b.value-a.value);
+  const max=Math.max(...rows.map(r=>r.value));
+  return (
+    <div style={{display:"flex",flexDirection:"column",gap:9}}>
+      {rows.map(r=>{
+        const isShort=r.sector.startsWith("Hedge");
+        const col=isShort?"var(--down)":"var(--accent)";
+        return (
+          <div key={r.sector} style={{display:"grid",gridTemplateColumns:"150px 1fr 78px",alignItems:"center",gap:12}}>
+            <div style={{fontSize:12,color:"var(--text-dim)",textAlign:"right",whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis"}}>{r.sector}</div>
+            <div style={{height:22,background:"var(--panel-2)",borderRadius:4,overflow:"hidden"}}>
+              <div style={{width:(r.value/max*100)+"%",height:"100%",background:col,opacity:isShort?.45:.85,borderRadius:4,transition:"width .4s ease"}} />
+            </div>
+            <div style={{fontFamily:"var(--mono)",fontSize:12,color:"var(--text)",textAlign:"right"}}>{fmtM(r.value)}</div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function Donut({ holdings }) {
+  const byLayer={};
+  holdings.forEach(h=>{if(!byLayer[h.layer])byLayer[h.layer]=0;byLayer[h.layer]+=h.value_usd;});
+  const total=Object.values(byLayer).reduce((s,v)=>s+v,0);
+  const entries=Object.entries(byLayer).sort((a,b)=>b[1]-a[1]);
+  let acc=0; const R=120,r=74,cx=140,cy=140;
+  const segs=entries.map(([layer,val])=>{
+    const frac=val/total, a0=acc*2*Math.PI-Math.PI/2; acc+=frac;
+    const a1=acc*2*Math.PI-Math.PI/2, large=frac>0.5?1:0;
+    const p=(ang,rad)=>[cx+rad*Math.cos(ang),cy+rad*Math.sin(ang)];
+    const [x0,y0]=p(a0,R),[x1,y1]=p(a1,R),[x2,y2]=p(a1,r),[x3,y3]=p(a0,r);
+    return {layer,val,frac,d:`M${x0} ${y0} A${R} ${R} 0 ${large} 1 ${x1} ${y1} L${x2} ${y2} A${r} ${r} 0 ${large} 0 ${x3} ${y3} Z`,color:LAYERS[layer]?.color||"#888"};
+  });
+  return (
+    <div style={{display:"flex",gap:22,alignItems:"center",flexWrap:"wrap"}}>
+      <svg viewBox="0 0 280 280" style={{width:220,height:220,flexShrink:0}}>
+        {segs.map(s=><path key={s.layer} d={s.d} fill={s.color} fillOpacity={s.layer==="shorts"?0.4:0.85} stroke="var(--panel)" strokeWidth="1.5"/>)}
+        <text x="140" y="132" textAnchor="middle" style={{fontFamily:"var(--mono)",fontSize:22,fontWeight:700,fill:"var(--text)"}}>{fmtM(total)}</text>
+        <text x="140" y="152" textAnchor="middle" style={{fontFamily:"var(--mono)",fontSize:10,fill:"var(--text-faint)",letterSpacing:".1em"}}>GROSS BOOK</text>
+      </svg>
+      <div style={{display:"flex",flexDirection:"column",gap:7,minWidth:180}}>
+        {segs.map(s=>(
+          <div key={s.layer} style={{display:"flex",alignItems:"center",gap:9}}>
+            <span style={{width:10,height:10,borderRadius:2,background:s.color,opacity:s.layer==="shorts"?.5:1,flexShrink:0}}/>
+            <span style={{fontSize:12,color:"var(--text-dim)",flex:1}}>{LAYERS[s.layer]?.label||s.layer}</span>
+            <span style={{fontFamily:"var(--mono)",fontSize:11,color:"var(--text)"}}>{(s.frac*100).toFixed(0)}%</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Legend({ mode }) {
+  let items;
+  if (mode==="longshort") items=[["var(--accent)","Long stock"],["var(--up)","Call options"],["var(--down)","Put options"]];
+  else if (mode==="change") items=[["var(--accent)","New"],["var(--up)","Increased"],["var(--down)","Decreased"],["var(--text-faint)","Held"]];
+  else items=Object.values(LAYERS).map(l=>[l.color,l.label]);
+  return (
+    <div style={{display:"flex",gap:14,flexWrap:"wrap",marginTop:14,paddingTop:12,borderTop:"1px solid color-mix(in oklab,var(--border) 55%,transparent)"}}>
+      {items.map(([c,l])=>(
+        <span key={l} style={{display:"inline-flex",alignItems:"center",gap:6,fontSize:11,color:"var(--text-dim)"}}>
+          <span style={{width:9,height:9,borderRadius:2,background:c}}/>{l}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+// ─── holdings table ─────────────────────────────────────────────
+function genHistory(h, filings) {
+  const v = h.value_usd / 1e6;
+  switch (h.change_type) {
+    case "NEW":       return [0,0,0,0,0,v];
+    case "INCREASED": return [0,v*.18,v*.34,v*.52,v*.74,v];
+    case "DECREASED": return [v*1.7,v*1.55,v*1.42,v*1.3,v*1.18,v];
+    default:          return [v*.92,v*.97,v*1.05,v*.99,v*1.02,v];
+  }
+}
+
+function HoldingRow({ h, pct, expanded, onToggle, changes }) {
+  const chg = changes.find(c => c.ticker === h.ticker) || {};
+  const histColor = (h.put_call||"").toUpperCase()==="PUT" ? "var(--down)" : (chg.change_type==="DECREASED"?"var(--down)":"var(--up)");
+  const hist = genHistory({...h, change_type:chg.change_type});
+  const putcall = (h.put_call||"").toUpperCase() || "STOCK";
+  return (
+    <>
+      <tr onClick={onToggle} className={"hrow"+(expanded?" hrow-open":"")}>
+        <td style={{paddingLeft:16}}>
+          <div style={{display:"flex",alignItems:"center",gap:10}}>
+            <LayerDot layer={h.layer} />
+            <div style={{minWidth:0}}>
+              <div style={{display:"flex",alignItems:"center",gap:6}}>
+                <span style={{fontFamily:"var(--mono)",fontWeight:700,fontSize:13,color:"var(--text)"}}>{h.ticker.replace(".C","")}</span>
+                {h.verified && <VerifiedDot note={h.note} />}
+              </div>
+              <div style={{fontSize:11,color:"var(--text-faint)",whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis",maxWidth:180}}>{h.issuer_name}</div>
+            </div>
+          </div>
+        </td>
+        <td><TypeTag type={putcall} /></td>
+        <td className="num">{fmtShares(h.shares)}</td>
+        <td className="num" style={{fontWeight:600,color:"var(--text)"}}>{fmtM(h.value_usd)}</td>
+        <td className="num">
+          <div style={{display:"flex",alignItems:"center",justifyContent:"flex-end",gap:8}}>
+            <div style={{width:42,height:5,background:"var(--panel-2)",borderRadius:3,overflow:"hidden"}}>
+              <div style={{width:Math.min(100,pct/16*100)+"%",height:"100%",background:putcall==="PUT"?"var(--down)":"var(--accent)",opacity:putcall==="PUT"?.5:.85}}/>
+            </div>
+            <span style={{minWidth:38,textAlign:"right"}}>{pct.toFixed(1)}%</span>
+          </div>
+        </td>
+        <td style={{paddingRight:16}}><ChangeBadge change={chg.change_type||"HELD"} deltaPct={chg.pct_change_shares} /></td>
+      </tr>
+      {expanded && (
+        <tr className="hdetail">
+          <td colSpan={6} style={{padding:0}}>
+            <div style={{display:"grid",gridTemplateColumns:"1.4fr 1fr 1fr",gap:22,padding:"16px 16px 20px 38px"}}>
+              <div>
+                <div className="dlabel">Position history · value across filings</div>
+                <Sparkline data={hist} width={240} height={46} color={histColor} fill />
+                <div style={{display:"flex",justifyContent:"space-between",fontFamily:"var(--mono)",fontSize:9.5,color:"var(--text-faint)",marginTop:4,width:240}}>
+                  <span>Q4'24</span><span>Q2'25</span><span>Q4'25</span><span>Q1'26</span>
+                </div>
+              </div>
+              <div>
+                <div className="dlabel">Thesis layer</div>
+                <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:12}}>
+                  <LayerDot layer={h.layer} />
+                  <span style={{fontSize:13,color:"var(--text)"}}>{LAYERS[h.layer]?.label||h.layer}</span>
+                </div>
+                <div className="dlabel">Change vs prior filing</div>
+                <div style={{fontSize:12.5,color:"var(--text-dim)",lineHeight:1.5}}>
+                  <ChangeBadge change={chg.change_type||"HELD"} deltaPct={chg.pct_change_shares} />
+                  {h.note && <div style={{marginTop:6}}>{h.note}</div>}
+                </div>
+              </div>
+              <div>
+                <div className="dlabel">Reported in filing</div>
+                <div style={{fontFamily:"var(--mono)",fontSize:12,color:"var(--text-dim)",lineHeight:1.8}}>
+                  <div>Value&nbsp;&nbsp;<span style={{color:"var(--text)"}}>{fmtM(h.value_usd)}</span></div>
+                  <div>Shares&nbsp;<span style={{color:"var(--text)"}}>{fmtShares(h.shares)}</span></div>
+                  <div>Type&nbsp;&nbsp;&nbsp;<span style={{color:"var(--text)"}}>{putcall==="PUT"?"Put option":putcall==="CALL"?"Call option":"Common stock"}</span></div>
+                </div>
+                {putcall !== "STOCK" && <div style={{marginTop:8,fontSize:10.5,color:"var(--warn)",lineHeight:1.4}}>⚠ Notional option exposure — not the same as reported 13F value. Strike & expiry are not disclosed in 13F.</div>}
+                {!h.verified && <div style={{marginTop:8,fontSize:10.5,color:"var(--text-faint)",lineHeight:1.4}}>≈ Line-level value is a representative reconstruction.</div>}
+              </div>
+            </div>
+          </td>
+        </tr>
+      )}
+    </>
+  );
+}
+
+function HoldingsTable({ holdings, total, sort, setSort, changes }) {
+  const [open, setOpen] = useState(null);
+  const cols = [
+    {k:"name",label:"Holding",align:"left"},
+    {k:"type",label:"Type",align:"left"},
+    {k:"shares",label:"Shares",align:"right"},
+    {k:"value",label:"Value",align:"right"},
+    {k:"pct",label:"% Port",align:"right"},
+    {k:"change",label:"Δ vs prior",align:"left"}
+  ];
+  return (
+    <div className="tablewrap">
+      <table className="htable">
+        <thead>
+          <tr>
+            {cols.map(c=>(
+              <th key={c.k} onClick={()=>c.k!=="type"&&c.k!=="change"&&setSort(c.k)}
+                style={{textAlign:c.align,cursor:(c.k!=="type"&&c.k!=="change")?"pointer":"default",paddingLeft:c.k==="name"?16:undefined,paddingRight:c.k==="change"?16:undefined}}>
+                {c.label}{sort===c.k?" ↓":""}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {holdings.map(h=>(
+            <HoldingRow key={h.ticker} h={h} pct={h.value_usd/total*100}
+              expanded={open===h.ticker} onToggle={()=>setOpen(open===h.ticker?null:h.ticker)}
+              changes={changes} />
+          ))}
+        </tbody>
+      </table>
+      {holdings.length===0 && <div style={{padding:"40px 16px",textAlign:"center",color:"var(--text-faint)",fontSize:13}}>No holdings match the current filters.</div>}
+    </div>
+  );
+}
+
+// ─── change cards ───────────────────────────────────────────────
+function ChangeCards({ changes, prevFiling }) {
+  const counts = {
+    new:       changes.filter(c=>c.change_type==="NEW").length,
+    increased: changes.filter(c=>c.change_type==="INCREASED").length,
+    decreased: changes.filter(c=>c.change_type==="DECREASED").length,
+    exited:    changes.filter(c=>c.change_type==="EXITED").length,
+  };
+  const cards = [
+    {k:"new",label:"New positions",n:counts.new,color:"var(--accent)",glyph:"✦"},
+    {k:"inc",label:"Increased",    n:counts.increased,color:"var(--up)",glyph:"▲"},
+    {k:"dec",label:"Decreased",    n:counts.decreased,color:"var(--down)",glyph:"▼"},
+    {k:"exit",label:"Exited",      n:counts.exited,color:"var(--down)",glyph:"✕"}
+  ];
+  return (
+    <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10}}>
+      {cards.map(c=>(
+        <div key={c.k} className="kcard">
+          <div style={{display:"flex",alignItems:"center",gap:6,color:c.color,fontSize:11,fontFamily:"var(--mono)",fontWeight:600}}>
+            <span style={{fontSize:9}}>{c.glyph}</span>{c.label}
+          </div>
+          <div style={{fontFamily:"var(--mono)",fontSize:30,fontWeight:700,color:"var(--text)",marginTop:4,lineHeight:1}}>{c.n}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ─── alerts feed ────────────────────────────────────────────────
+function AlertsFeed({ alerts: initialAlerts }) {
+  const [alerts, setAlerts] = useState(initialAlerts);
+  const unread = alerts.filter(a=>a.status==="UNREAD").length;
+  const sevColor = {high:"var(--down)",medium:"var(--warn)",low:"var(--text-dim)"};
+  const markRead = (id) => setAlerts(alerts.map(a=>a.id===id?{...a,status:"READ"}:a));
+  return (
+    <div className="panel">
+      <PanelHead kicker="Material changes" title="Alerts"
+        right={<span style={{fontFamily:"var(--mono)",fontSize:11,color:"var(--accent)",background:"color-mix(in oklab,var(--accent) 14%,transparent)",padding:"3px 8px",borderRadius:20}}>{unread} unread</span>} />
+      <div style={{display:"flex",flexDirection:"column",gap:8}}>
+        {alerts.map(a=>(
+          <div key={a.id} onClick={()=>markRead(a.id)} className="alert" style={{opacity:a.status==="READ"?.55:1}}>
+            <div style={{width:3,alignSelf:"stretch",borderRadius:3,background:sevColor[a.severity],flexShrink:0}}/>
+            <div style={{flex:1,minWidth:0}}>
+              <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:3}}>
+                <span style={{fontFamily:"var(--mono)",fontSize:11,fontWeight:700,color:"var(--text)"}}>{a.ticker}</span>
+                <span style={{fontFamily:"var(--mono)",fontSize:9.5,letterSpacing:".06em",color:sevColor[a.severity],border:"1px solid "+sevColor[a.severity],borderRadius:3,padding:"0 5px"}}>{a.type.replace("_"," ")}</span>
+                {a.status==="UNREAD"&&<span style={{width:6,height:6,borderRadius:"50%",background:"var(--accent)"}}/>}
+                <span style={{marginLeft:"auto",fontFamily:"var(--mono)",fontSize:10,color:"var(--text-faint)"}}>{timeAgo(a.ts)}</span>
+              </div>
+              <div style={{fontSize:12,color:"var(--text-dim)",lineHeight:1.45}}>{a.message}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── news module ─────────────────────────────────────────────────
+function NewsItemInline({ n }) {
+  return (
+    <a href={n.url} target="_blank" rel="noopener noreferrer" className="tickitem">
+      <span style={{display:"inline-flex",gap:4}}>
+        {n.tickers.slice(0,2).map(t=><span key={t} className="ticktag">{t}</span>)}
+      </span>
+      <span style={{color:"var(--text)",fontSize:12.5}}>{n.headline}</span>
+      <span style={{color:"var(--text-faint)",fontSize:11,fontFamily:"var(--mono)"}}>· {n.source}</span>
+      <span style={{color:"var(--text-faint)",fontSize:16,margin:"0 6px"}}>•</span>
+    </a>
+  );
+}
+
+function NewsModule({ news, mode, setMode }) {
+  const [filter, setFilter] = useState(null);
+  const allTickers = useMemo(()=>Array.from(new Set(news.flatMap(n=>n.tickers))).sort(),[news]);
+  const filtered = useMemo(()=>(filter?news.filter(n=>n.tickers.includes(filter)):news).slice().sort((a,b)=>new Date(b.ts)-new Date(a.ts)),[news,filter]);
+  const doubled = news.concat(news);
+  return (
+    <div className="panel">
+      <PanelHead kicker="Across all portfolio tickers" title="Unified news"
+        right={
+          <div style={{display:"flex",gap:0,border:"1px solid var(--border)",borderRadius:7,overflow:"hidden"}}>
+            {["marquee","feed"].map(m=>(
+              <button key={m} onClick={()=>setMode(m)} style={{
+                fontFamily:"var(--mono)",fontSize:11,letterSpacing:".04em",textTransform:"uppercase",
+                padding:"5px 12px",border:"none",cursor:"pointer",
+                background:mode===m?"var(--accent)":"transparent",
+                color:mode===m?"#06080c":"var(--text-dim)",fontWeight:600
+              }}>{m}</button>
+            ))}
+          </div>
+        } />
+      {mode==="marquee"
+        ? <div>
+            <div className="marquee"><div className="marquee-track">{doubled.map((n,i)=><NewsItemInline key={n.id+"-"+i} n={n}/>)}</div></div>
+            <div style={{marginTop:10,fontSize:11,color:"var(--text-faint)",fontFamily:"var(--mono)"}}>↔ live tape · hover to pause · {news.length} sources · switch to Feed to filter by ticker</div>
+          </div>
+        : <div>
+            <div style={{display:"flex",gap:6,flexWrap:"wrap",marginBottom:12}}>
+              <Chip active={!filter} onClick={()=>setFilter(null)}>ALL</Chip>
+              {allTickers.map(t=><Chip key={t} active={filter===t} onClick={()=>setFilter(t)}>{t}</Chip>)}
+            </div>
+            <div style={{display:"flex",flexDirection:"column"}}>
+              {filtered.map(n=>(
+                <a key={n.id} href={n.url} target="_blank" rel="noopener noreferrer" className="feeditem">
+                  <div style={{display:"flex",gap:5,flexShrink:0,paddingTop:2}}>{n.tickers.slice(0,3).map(t=><span key={t} className="ticktag">{t}</span>)}</div>
+                  <div style={{flex:1,minWidth:0}}>
+                    <div style={{fontSize:13,color:"var(--text)",lineHeight:1.4,marginBottom:3}}>{n.headline}</div>
+                    <div style={{fontFamily:"var(--mono)",fontSize:11,color:"var(--text-faint)"}}>{n.source} · {timeAgo(n.ts)}<span style={{marginLeft:8,color:"var(--accent)"}}>open ↗</span></div>
+                  </div>
+                </a>
+              ))}
+              {filtered.length===0&&<div style={{padding:"24px 0",textAlign:"center",color:"var(--text-faint)",fontSize:13}}>No coverage for this ticker yet.</div>}
+            </div>
+          </div>}
+    </div>
+  );
+}
+
+// ─── staleness indicator ─────────────────────────────────────────
+function StaleBadge({ label }) {
+  return <span className="stale-badge">⚠ {label} stale</span>;
+}
+
+// ─── settings panel ──────────────────────────────────────────────
+function SettingsPanel({ t, setT, open, onClose }) {
+  if (!open) return null;
+  return (
+    <div style={{position:"fixed",right:16,bottom:16,zIndex:9999,width:240,background:"var(--panel)",border:"1px solid var(--border)",borderRadius:12,padding:16,boxShadow:"0 8px 32px rgba(0,0,0,.4)"}}>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:14}}>
+        <span style={{fontFamily:"var(--mono)",fontSize:12,fontWeight:600,color:"var(--text)"}}>Settings</span>
+        <button onClick={onClose} style={{border:"none",background:"transparent",color:"var(--text-dim)",cursor:"pointer",fontSize:16}}>✕</button>
+      </div>
+      <div style={{display:"flex",flexDirection:"column",gap:12}}>
+        <div>
+          <div style={{fontFamily:"var(--mono)",fontSize:10,color:"var(--text-faint)",marginBottom:6,letterSpacing:".08em",textTransform:"uppercase"}}>Theme</div>
+          <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
+            {Object.keys(THEMES).map(th=>(
+              <button key={th} onClick={()=>setT(p=>({...p,theme:th}))} style={{fontFamily:"var(--mono)",fontSize:11,padding:"4px 10px",borderRadius:6,border:"1px solid "+(t.theme===th?"var(--accent)":"var(--border)"),background:t.theme===th?"color-mix(in oklab,var(--accent) 15%,transparent)":"transparent",color:t.theme===th?"var(--accent)":"var(--text-dim)",cursor:"pointer"}}>{th}</button>
+            ))}
+          </div>
+        </div>
+        <div>
+          <div style={{fontFamily:"var(--mono)",fontSize:10,color:"var(--text-faint)",marginBottom:6,letterSpacing:".08em",textTransform:"uppercase"}}>Accent</div>
+          <div style={{display:"flex",gap:8}}>
+            {Object.entries(ACCENTS).map(([name,color])=>(
+              <button key={name} title={name} onClick={()=>setT(p=>({...p,accent:color}))} style={{width:28,height:28,borderRadius:6,background:color,border:"2px solid "+(t.accent===color?"var(--text)":"transparent"),cursor:"pointer"}}/>
+            ))}
+          </div>
+        </div>
+        <div>
+          <div style={{fontFamily:"var(--mono)",fontSize:10,color:"var(--text-faint)",marginBottom:6,letterSpacing:".08em",textTransform:"uppercase"}}>Density</div>
+          <div style={{display:"flex",gap:6}}>
+            {["regular","compact"].map(d=>(
+              <button key={d} onClick={()=>setT(p=>({...p,density:d}))} style={{fontFamily:"var(--mono)",fontSize:11,padding:"4px 10px",borderRadius:6,border:"1px solid "+(t.density===d?"var(--accent)":"var(--border)"),background:t.density===d?"color-mix(in oklab,var(--accent) 15%,transparent)":"transparent",color:t.density===d?"var(--accent)":"var(--text-dim)",cursor:"pointer"}}>{d}</button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── main app ───────────────────────────────────────────────────
+function App() {
+  const { loading, error, data } = useData();
+  const [theme, setTheme] = useState({ theme:"carbon", accent:"#2f6df6", density:"regular" });
+  const [search, setSearch] = useState("");
+  const [sector, setSector] = useState(null);
+  const [typeF, setTypeF] = useState("ALL");
+  const [sort, setSort] = useState("value");
+  const [allocMode, setAllocMode] = useState("treemap");
+  const [colorMode, setColorMode] = useState("layer");
+  const [newsMode, setNewsMode] = useState("marquee");
+  const [picked, setPicked] = useState(null);
+  const [settingsOpen, setSettingsOpen] = useState(false);
+
+  const themeVars = { ...THEMES[theme.theme], "--accent":theme.accent, "--up":"#1ec46a", "--down":"#e2554f", "--warn":"#f6a92f" };
+
+  if (loading) return (
+    <div className="app" style={{...themeVars,background:"var(--bg)",color:"var(--text)"}}>
+      <div className="loading-screen">
+        <div className="loading-dot" />
+        <div>Loading dashboard data…</div>
+      </div>
+    </div>
+  );
+
+  if (error) return (
+    <div className="app" style={{...themeVars,background:"var(--bg)",color:"var(--text)"}}>
+      <div className="loading-screen">
+        <div style={{color:"var(--down)"}}>⚠ Failed to load data</div>
+        <div style={{fontSize:12,color:"var(--text-faint)"}}>{error}</div>
+        <div style={{fontSize:12,color:"var(--text-faint)",maxWidth:480,textAlign:"center"}}>
+          Run the agents to generate data files, or open index.html via a local server (not file://).
+        </div>
+      </div>
+    </div>
+  );
+
+  const { meta, filings, holdings, changes, alerts, news, securities, ratings } = data;
+  const F = meta.fund;
+  const latestFiling = filings[0];
+
+  const sectors = useMemo(() => Array.from(new Set(holdings.map(h=>h.sector))), [holdings]);
+  const totalAll = holdings.reduce((s,h)=>s+h.value_usd, 0);
+  const longVal = holdings.filter(h=>!(h.put_call||"").match(/put/i)).reduce((s,h)=>s+h.value_usd,0);
+  const shortVal = totalAll - longVal;
+
+  const filtered = useMemo(()=>{
+    let r = holdings.filter(h=>{
+      if (typeF!=="ALL") {
+        const pc=(h.put_call||"").toUpperCase();
+        if (typeF==="STOCK"&&pc==="PUT") return false;
+        if (typeF==="STOCK"&&pc==="CALL") return false;
+        if (typeF==="CALL"&&pc!=="CALL") return false;
+        if (typeF==="PUT"&&pc!=="PUT") return false;
+      }
+      if (sector && h.sector!==sector) return false;
+      if (search) { const q=search.toLowerCase(); if(!h.ticker.toLowerCase().includes(q)&&!h.issuer_name.toLowerCase().includes(q)) return false; }
+      return true;
+    });
+    r = r.slice().sort((a,b)=>{
+      if (sort==="name") return a.ticker.localeCompare(b.ticker);
+      if (sort==="shares") return (b.shares||0)-(a.shares||0);
+      return b.value_usd-a.value_usd;
+    });
+    return r;
+  }, [holdings, search, sector, typeF, sort]);
+
+  const fundSeries = filings.map(f=>f.total_value/1e9).reverse();
+  const isStale = (src) => meta.data_freshness[src]?.stale;
+
+  return (
+    <div className="app" style={{...themeVars,color:"var(--text)",background:"var(--bg)",minHeight:"100vh"}}>
+      <div className={theme.density==="compact"?"dense":""}>
+
+        <header className="topbar">
+          <div className="wrap">
+            <div className="brandrow">
+              <div className="mark"><span>SA</span></div>
+              <div style={{flex:1,minWidth:0}}>
+                <div style={{display:"flex",alignItems:"center",gap:10,flexWrap:"wrap"}}>
+                  <h1 style={{margin:0,fontSize:18,fontWeight:600,letterSpacing:"-.01em"}}>{F.name}</h1>
+                  <span className="pill" style={{color:"var(--accent)",borderColor:"color-mix(in oklab,var(--accent) 40%,transparent)"}}>13F-HR · {latestFiling.period_of_report}</span>
+                </div>
+                <div style={{fontSize:12.5,color:"var(--text-dim)",marginTop:2}}>{F.manager} · {F.location} · CIK {meta.fund.cik?.replace("000","0")}</div>
+              </div>
+              <div style={{display:"flex",alignItems:"center",gap:14,flexWrap:"wrap",justifyContent:"flex-end"}}>
+                {isStale("holdings") ? <StaleBadge label="holdings" /> : <span className="metachip"><span className="dot" style={{background:"var(--up)"}}/> Holdings <b>fresh</b><span style={{color:"var(--text-faint)"}}>· filed {fmtDate(latestFiling.date_filed)}</span></span>}
+                <span className="pill" style={{color:"var(--warn)",borderColor:"color-mix(in oklab,var(--warn) 35%,transparent)"}}>Research, not investment advice</span>
+                <button onClick={()=>setSettingsOpen(v=>!v)} style={{fontFamily:"var(--mono)",fontSize:11,padding:"5px 10px",borderRadius:6,border:"1px solid var(--border)",background:"transparent",color:"var(--text-dim)",cursor:"pointer"}}>⚙ Settings</button>
+              </div>
+            </div>
+            <div className="controls">
+              <div className="selwrap">
+                <select value={latestFiling.q} onChange={()=>{}} title="Filing period">
+                  {filings.map(f=><option key={f.q}>{f.q}</option>)}
+                </select>
+              </div>
+              <div className="seg">
+                {["ALL","STOCK","CALL","PUT"].map(x=>(
+                  <button key={x} className={typeF===x?"on":""} onClick={()=>setTypeF(x)}>{x==="STOCK"?"STK":x}</button>
+                ))}
+              </div>
+              <div style={{display:"flex",gap:6,flexWrap:"wrap",flex:1}}>
+                {sectors.map(s=><Chip key={s} active={sector===s} onClick={()=>setSector(sector===s?null:s)}>{s}</Chip>)}
+              </div>
+              <div className="search">
+                <span style={{color:"var(--text-faint)",fontFamily:"var(--mono)",fontSize:12}}>⌕</span>
+                <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="ticker / name" />
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main className="wrap">
+          <div className="hero">
+            <div className="herocell">
+              <div className="herolabel">Reported 13F value · {latestFiling.q}</div>
+              <div style={{display:"flex",alignItems:"flex-end",gap:14,flexWrap:"wrap"}}>
+                <div className="herobig" style={{fontSize:34}}>{fmtM(latestFiling.total_value)}</div>
+                <div style={{marginBottom:2}}>
+                  <Sparkline data={fundSeries} width={130} height={34} color="var(--accent)" fill />
+                  <div style={{fontFamily:"var(--mono)",fontSize:9.5,color:"var(--text-faint)",marginTop:2}}>Q4'24 → Q1'26 · ~22×</div>
+                </div>
+              </div>
+              <div style={{fontFamily:"var(--mono)",fontSize:10.5,color:"var(--text-faint)",marginTop:8}}>Whole-dollar units (post-2023). Gross book incl. listed options.</div>
+            </div>
+            <div className="herocell">
+              <div className="herolabel">Holdings</div>
+              <div className="herobig" style={{fontSize:34}}>{latestFiling.num_holdings}</div>
+              <div style={{fontFamily:"var(--mono)",fontSize:11,color:"var(--up)",marginTop:8}}>▲ +{latestFiling.num_holdings - (filings[1]?.num_holdings||0)} vs {filings[1]?.q}</div>
+            </div>
+            <div className="herocell">
+              <div className="herolabel">Long vs short</div>
+              <div style={{display:"flex",height:14,borderRadius:4,overflow:"hidden",marginTop:4,marginBottom:8}}>
+                <div style={{width:(longVal/totalAll*100)+"%",background:"var(--accent)"}}/>
+                <div style={{width:(shortVal/totalAll*100)+"%",background:"color-mix(in oklab,var(--down) 60%,transparent)"}}/>
+              </div>
+              <div style={{fontFamily:"var(--mono)",fontSize:11,color:"var(--text-dim)"}}>
+                <span style={{color:"var(--accent)"}}>{fmtM(longVal)} long</span> · <span style={{color:"var(--down)"}}>{fmtM(shortVal)} puts</span>
+              </div>
+            </div>
+            <div className="herocell">
+              <div className="herolabel">Filing cadence</div>
+              <div style={{fontFamily:"var(--mono)",fontSize:13,color:"var(--text)",lineHeight:1.6}}>
+                <div>Filed <b>{fmtDate(latestFiling.date_filed)}</b></div>
+                <div style={{color:"var(--text-dim)"}}>Next due <b style={{color:"var(--warn)"}}>{fmtDate(meta.next_filing_due)}</b></div>
+              </div>
+              <a href={latestFiling.index_url} target="_blank" rel="noopener noreferrer" style={{fontFamily:"var(--mono)",fontSize:10.5,color:"var(--accent)",marginTop:8,display:"inline-block"}}>SEC filing index ↗</a>
+            </div>
+          </div>
+
+          <div className="grid2">
+            <div className="panel">
+              <PanelHead kicker="Portfolio allocation" title="Where the book sits"
+                right={
+                  <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
+                    {allocMode==="treemap"&&(
+                      <div className="seg">
+                        {[["layer","Layer"],["longshort","L/S"],["change","Δ"]].map(([k,l])=>(
+                          <button key={k} className={colorMode===k?"on":""} onClick={()=>setColorMode(k)}>{l}</button>
+                        ))}
+                      </div>
+                    )}
+                    <div className="seg">
+                      {[["treemap","Map"],["sector","Bars"],["donut","Donut"]].map(([k,l])=>(
+                        <button key={k} className={allocMode===k?"on":""} onClick={()=>setAllocMode(k)}>{l}</button>
+                      ))}
+                    </div>
+                  </div>
+                } />
+              {allocMode==="treemap"&&<Treemap holdings={holdings} colorMode={colorMode} active={picked} onPick={(c)=>{setPicked(c.ticker);setSearch(c.ticker.replace(".C",""));}}/>}
+              {allocMode==="sector"&&<SectorBar holdings={holdings}/>}
+              {allocMode==="donut"&&<Donut holdings={holdings}/>}
+              <Legend mode={allocMode==="treemap"?colorMode:"layer"} />
+            </div>
+            <div className="stack">
+              <div className="panel">
+                <PanelHead kicker={"vs "+filings[1]?.q} title="Position changes" />
+                <ChangeCards changes={changes} />
+                <div style={{marginTop:12,display:"flex",flexDirection:"column",gap:7}}>
+                  {changes.filter(c=>c.is_material&&c.change_type!=="HELD").slice(0,3).map((c,i)=>(
+                    <div key={i} style={{display:"flex",gap:8,alignItems:"baseline",fontSize:12,color:"var(--text-dim)"}}>
+                      <span style={{fontFamily:"var(--mono)",fontWeight:700,color:"var(--text)",minWidth:52}}>{c.ticker}</span>
+                      <span style={{lineHeight:1.4}}>{c.note || (c.change_type==="NEW"?"New position":c.change_type==="EXITED"?"Full exit":c.change_type==="INCREASED"?"Increased "+fmtPct(c.pct_change_shares,0):"Decreased "+fmtPct(c.pct_change_shares,0))}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <AlertsFeed alerts={alerts} />
+            </div>
+          </div>
+
+          <div className="panel" style={{marginTop:16}}>
+            <PanelHead kicker={filtered.length+" of "+holdings.length+" positions · click a row to drill in"} title="Holdings"
+              right={<span style={{fontFamily:"var(--mono)",fontSize:11,color:"var(--text-faint)"}}>✓ = figure from filing · ≈ rows reconstructed</span>} />
+            <HoldingsTable holdings={filtered} total={totalAll} sort={sort} setSort={setSort} changes={changes} />
+          </div>
+
+          <div style={{marginTop:16}}>
+            <NewsModule news={news} mode={newsMode} setMode={setNewsMode} />
+          </div>
+
+          <footer className="footer">
+            <div className="discl">
+              <div style={{color:"var(--text-dim)",marginBottom:8}}>Data provenance · <a href={latestFiling.index_url} target="_blank" rel="noopener noreferrer" style={{color:"var(--accent)"}}>SEC EDGAR index ↗</a></div>
+              Holdings sourced from SEC EDGAR 13F-HR, accession <b style={{color:"var(--text-dim)"}}>{latestFiling.accession_no}</b> (period {latestFiling.period_of_report}, filed {fmtDate(latestFiling.date_filed)}). Filing metadata, totals, holding counts, and anchor figures (✓) are from the real filing; per-line share/value figures marked ≈ are a representative reconstruction pending the live INFORMATION TABLE parse.<br/>
+              13Fs disclose only long U.S. equity and listed options — <b style={{color:"var(--text-dim)"}}>not</b> short stock, bonds, cash, FX, or private holdings, so this is not the fund's full economic exposure. Notional option exposure ≠ reported 13F value. Prices/news date-stamped {fmtDate((meta.data_freshness.news?.as_of||"").slice(0,10))}.<br/>
+              Last data refresh: {fmtDate((meta.last_updated||"").slice(0,10))} · Next filing due: {fmtDate(meta.next_filing_due)}<br/>
+              <span style={{color:"var(--text)",fontWeight:600}}>This is research, not investment advice.</span>
+            </div>
+          </footer>
+        </main>
+
+        <SettingsPanel t={theme} setT={setTheme} open={settingsOpen} onClose={()=>setSettingsOpen(false)} />
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

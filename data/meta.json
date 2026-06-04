@@ -1,0 +1,35 @@
+{
+  "last_updated": "2026-05-18T18:33:00-07:00",
+  "next_filing_due": "2026-08-14",
+  "data_freshness": {
+    "holdings": {
+      "source": "SEC EDGAR",
+      "accession": "0002045724-26-000008",
+      "period_of_report": "2026-03-31",
+      "date_filed": "2026-05-18",
+      "as_of": "2026-05-18T18:33:00-07:00",
+      "stale": false
+    },
+    "prices": {
+      "source": "Yahoo Finance",
+      "as_of": "2026-06-03T16:00:00-04:00",
+      "stale": false
+    },
+    "news": {
+      "source": "Yahoo Finance / NewsAPI",
+      "as_of": "2026-06-03T09:12:00-04:00",
+      "stale": false
+    },
+    "analyst_ratings": {
+      "source": "Yahoo Finance",
+      "as_of": "2026-06-03T16:00:00-04:00",
+      "stale": false
+    }
+  },
+  "fund": {
+    "name": "Situational Awareness LP",
+    "manager": "Leopold Aschenbrenner",
+    "cik": "0002045724",
+    "location": "San Francisco, CA"
+  }
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "q": "Q1 2026",
+    "accession_no": "0002045724-26-000008",
+    "period_of_report": "2026-03-31",
+    "date_filed": "2026-05-18",
+    "total_value": 13676657000,
+    "num_holdings": 42,
+    "index_url": "https://www.sec.gov/Archives/edgar/data/2045724/000204572426000008/0002045724-26-000008-index.htm",
+    "info_table_url": "https://www.sec.gov/Archives/edgar/data/2045724/000204572426000008/salp13fq1xml.xml",
+    "top_positions": "SMH puts, NVDA puts, ORCL puts, AVGO puts"
+  },
+  {
+    "q": "Q4 2025",
+    "accession_no": "0002045724-26-000002",
+    "period_of_report": "2025-12-31",
+    "date_filed": "2026-02-11",
+    "total_value": 5516758000,
+    "num_holdings": 29,
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002045724&type=13F-HR&dateb=&owner=include&count=40",
+    "info_table_url": null,
+    "top_positions": "BE, CRWV calls, INTC calls, LITE"
+  },
+  {
+    "q": "Q3 2025",
+    "accession_no": "0002045724-25-000008",
+    "period_of_report": "2025-09-30",
+    "date_filed": "2025-11-14",
+    "total_value": 4138368000,
+    "num_holdings": 28,
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002045724&type=13F-HR&dateb=&owner=include&count=40",
+    "info_table_url": null,
+    "top_positions": "INTC calls, CRWV, CORZ, IREN"
+  },
+  {
+    "q": "Q2 2025",
+    "accession_no": "0002045724-25-000006",
+    "period_of_report": "2025-06-30",
+    "date_filed": "2025-08-14",
+    "total_value": 2123023000,
+    "num_holdings": 9,
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002045724&type=13F-HR&dateb=&owner=include&count=40",
+    "info_table_url": null,
+    "top_positions": "SMH puts, INTC calls, AVGO, VST"
+  },
+  {
+    "q": "Q1 2025",
+    "accession_no": "0002045724-25-000002",
+    "period_of_report": "2025-03-31",
+    "date_filed": "2025-05-14",
+    "total_value": 1005567000,
+    "num_holdings": 12,
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002045724&type=13F-HR&dateb=&owner=include&count=40",
+    "info_table_url": null,
+    "top_positions": "INTC calls, AVGO, ONTO, VST"
+  },
+  {
+    "q": "Q4 2024",
+    "accession_no": "0002093583625000120",
+    "period_of_report": "2024-12-31",
+    "date_filed": "2025-02-11",
+    "total_value": 254813000,
+    "num_holdings": 6,
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002045724&type=13F-HR&dateb=&owner=include&count=40",
+    "info_table_url": null,
+    "top_positions": "MRVL, VST, VRT, TLNE"
+  }
+]
