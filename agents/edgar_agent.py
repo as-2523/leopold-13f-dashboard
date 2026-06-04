@@ -334,9 +334,10 @@ def run(force: bool = False):
     latest = filings_raw[0]
     prev_filings = _read_json(DATA_DIR / "filings.json") or []
 
-    # 2. Check if latest filing is new
+    # 2. Check if latest filing is new. We store the dashed accession (matches
+    #    EDGAR display and the dashboard's holdings/<accession>.json fetch).
     existing_accessions = {f.get("accession_no") for f in prev_filings}
-    is_new_filing = latest["accession_no"] not in existing_accessions
+    is_new_filing = latest["accession_dashed"] not in existing_accessions
 
     if not is_new_filing and not force:
         print(f"[edgar] Latest filing {latest['accession_no']} already processed. Skipping XML parse.")
@@ -370,6 +371,9 @@ def run(force: bool = False):
                     h["verified"] = True   # direct from INFORMATION TABLE XML
 
                 _write_json(DATA_DIR / "holdings_latest.json", curr_holdings)
+                # Archive this filing's holdings so the dashboard's filing-period
+                # dropdown can load it later (data/holdings/<accession>.json).
+                _write_json(DATA_DIR / "holdings" / f"{latest['accession_dashed']}.json", curr_holdings)
 
                 # 4. Compute changes
                 changes, new_alerts = compute_changes(prev_holdings, curr_holdings)
@@ -384,18 +388,27 @@ def run(force: bool = False):
     # 5. Build filings.json (always refresh the full list)
     prev_filings_map = {f["accession_no"]: f for f in prev_filings}
     out_filings = []
+    cik_num = int(CIK.lstrip("0") or "0")
     for raw in filings_raw:
-        acc = raw["accession_no"]
-        cik_num = int(CIK.lstrip("0") or "0")
-        idx_url = build_index_url(str(cik_num), acc)
+        acc      = raw["accession_dashed"]   # dashed: display, storage, archive filename, frontend fetch
+        acc_raw  = raw["accession_no"]        # undashed: EDGAR URL path segment
+        idx_url  = build_index_url(str(cik_num), acc_raw)
         existing = prev_filings_map.get(acc, {})
+        # If this filing's holdings have been archived, fill in totals/count from it.
+        archive = _read_json(DATA_DIR / "holdings" / f"{acc}.json")
+        total_value  = existing.get("total_value")
+        num_holdings = existing.get("num_holdings")
+        if archive:
+            total_value  = sum(h["value_usd"] for h in archive)
+            num_holdings = len(archive)
         out_filings.append({
             "q":               existing.get("q", f"({raw['period_of_report']})"),
             "accession_no":    acc,
+            "accession_raw":   acc_raw,
             "period_of_report": raw["period_of_report"],
             "date_filed":      raw["date_filed"],
-            "total_value":     existing.get("total_value"),
-            "num_holdings":    existing.get("num_holdings"),
+            "total_value":     total_value,
+            "num_holdings":    num_holdings,
             "index_url":       idx_url,
             "info_table_url":  existing.get("info_table_url"),
             "top_positions":   existing.get("top_positions"),
@@ -405,9 +418,54 @@ def run(force: bool = False):
     print("[edgar] Done.")
 
 
+def backfill_history():
+    """Fetch & archive the INFORMATION TABLE for every historical filing into
+    data/holdings/<accession>.json, so the dashboard's filing-period dropdown
+    can show real line-item holdings for past quarters. Idempotent: skips
+    filings already archived. Best-effort: a fetch/parse failure for one filing
+    is logged and skipped, never fatal."""
+    print("[edgar] Backfilling historical holdings …")
+    filings_raw = fetch_filing_list()
+    cik_num = int(CIK.lstrip("0") or "0")
+    # ticker/layer/sector enrichment map from the latest holdings
+    latest_holdings = _read_json(DATA_DIR / "holdings_latest.json") or []
+    by_cusip = {h["cusip"]: h for h in latest_holdings}
+
+    archived = 0
+    for raw in filings_raw:
+        acc     = raw["accession_dashed"]   # storage / archive filename
+        acc_raw = raw["accession_no"]        # EDGAR URL path segment
+        out_path = DATA_DIR / "holdings" / f"{acc}.json"
+        if out_path.exists():
+            continue
+        xml_text = fetch_info_table_xml(str(cik_num), acc_raw)
+        if not xml_text:
+            print(f"  [edgar] backfill: no XML for {acc} ({raw['period_of_report']}) — skipped", file=sys.stderr)
+            continue
+        rows = parse_info_table(xml_text)
+        if not rows:
+            print(f"  [edgar] backfill: empty parse for {acc} — skipped", file=sys.stderr)
+            continue
+        total = sum(r["value_usd"] for r in rows)
+        for r in rows:
+            ref = by_cusip.get(r["cusip"], {})
+            r["ticker"] = ref.get("ticker", r["cusip"])
+            r["layer"]  = ref.get("layer", "unknown")
+            r["sector"] = ref.get("sector", "Unknown")
+            r["pct_of_portfolio"] = round(r["value_usd"] / total * 100, 2) if total else 0
+            r["verified"] = True
+        _write_json(out_path, rows)
+        archived += 1
+    print(f"[edgar] Backfill complete — archived {archived} new filing(s).")
+
+
 if __name__ == "__main__":
     import argparse
     p = argparse.ArgumentParser()
     p.add_argument("--force", action="store_true", help="Re-parse even if filing already processed")
+    p.add_argument("--backfill", action="store_true", help="Archive INFORMATION TABLE for all historical filings")
     args = p.parse_args()
-    run(force=args.force)
+    if args.backfill:
+        backfill_history()
+    else:
+        run(force=args.force)
