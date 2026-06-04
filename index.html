@@ -741,12 +741,14 @@ function App() {
   const F = meta.fund;
   const latestFiling = filings[0];
 
-  const sectors = useMemo(() => Array.from(new Set(holdings.map(h=>h.sector))), [holdings]);
+  // Plain computations (NOT hooks) — these run after the early returns above,
+  // so they must not be useMemo/useState or they'd violate the Rules of Hooks.
+  const sectors = Array.from(new Set(holdings.map(h=>h.sector)));
   const totalAll = holdings.reduce((s,h)=>s+h.value_usd, 0);
   const longVal = holdings.filter(h=>!(h.put_call||"").match(/put/i)).reduce((s,h)=>s+h.value_usd,0);
   const shortVal = totalAll - longVal;
 
-  const filtered = useMemo(()=>{
+  const filtered = (() => {
     let r = holdings.filter(h=>{
       if (typeF!=="ALL") {
         const pc=(h.put_call||"").toUpperCase();
@@ -765,7 +767,7 @@ function App() {
       return b.value_usd-a.value_usd;
     });
     return r;
-  }, [holdings, search, sector, typeF, sort]);
+  })();
 
   const fundSeries = filings.map(f=>f.total_value/1e9).reverse();
   const isStale = (src) => meta.data_freshness[src]?.stale;
