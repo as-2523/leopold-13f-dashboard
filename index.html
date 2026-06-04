@@ -701,6 +701,30 @@ function SettingsPanel({ t, setT, open, onClose }) {
 }
 
 // ─── main app ───────────────────────────────────────────────────
+// Shown when a historical filing is selected but its line-item holdings
+// (data/holdings/<accession>.json) haven't been archived yet.
+function FilingNotice({ filing, state }) {
+  return (
+    <div style={{padding:"32px 16px",textAlign:"center"}}>
+      <div style={{fontFamily:"var(--mono)",fontSize:12,color:"var(--text-dim)",marginBottom:10}}>
+        {state==="loading" ? `Loading ${filing.q} holdings…` : `${filing.q} · ${filing.num_holdings ?? "?"} holdings · ${fmtM(filing.total_value)}`}
+      </div>
+      {state!=="loading" && <>
+        <div style={{fontSize:13,color:"var(--text-faint)",maxWidth:520,margin:"0 auto",lineHeight:1.6}}>
+          Line-item holdings for this filing aren't archived in the dashboard yet — only the
+          summary above (reported value, holding count, filing dates) is shown. The daily agent
+          archives full INFORMATION TABLE detail for new filings going forward.
+        </div>
+        <a href={filing.index_url} target="_blank" rel="noopener noreferrer"
+          style={{display:"inline-block",marginTop:14,fontFamily:"var(--mono)",fontSize:11.5,color:"var(--accent)",
+            border:"1px solid color-mix(in oklab,var(--accent) 40%,transparent)",borderRadius:7,padding:"7px 14px"}}>
+          View full {filing.q} 13F on SEC EDGAR ↗
+        </a>
+      </>}
+    </div>
+  );
+}
+
 function App() {
   const { loading, error, data } = useData();
   const [theme, setTheme] = useState({ theme:"carbon", accent:"#2f6df6", density:"regular" });
@@ -713,6 +737,26 @@ function App() {
   const [newsMode, setNewsMode] = useState("marquee");
   const [picked, setPicked] = useState(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  // Filing-period selection. null = latest filing.
+  const [selectedQ, setSelectedQ] = useState(null);
+  const [histHoldings, setHistHoldings] = useState(null);
+  const [histState, setHistState] = useState("idle"); // idle | loading | loaded | missing
+
+  // When a non-latest filing is picked, lazily fetch its archived holdings
+  // (data/holdings/<accession>.json). Falls back to a notice if not archived.
+  useEffect(() => {
+    if (!data) return;
+    const fl = data.filings;
+    const sel = selectedQ ? fl.find(f => f.q === selectedQ) : fl[0];
+    if (!sel || sel.accession_no === fl[0].accession_no) {
+      setHistHoldings(null); setHistState("idle"); return;
+    }
+    setHistHoldings(null); setHistState("loading");
+    fetch(`${BASE}/holdings/${sel.accession_no}.json?_=` + Date.now())
+      .then(r => r.ok ? r.json() : Promise.reject(new Error("not found")))
+      .then(j => { setHistHoldings(j); setHistState("loaded"); })
+      .catch(() => setHistState("missing"));
+  }, [selectedQ, data]);
 
   const themeVars = { ...THEMES[theme.theme], "--accent":theme.accent, "--up":"#1ec46a", "--down":"#e2554f", "--warn":"#f6a92f" };
 
@@ -739,17 +783,43 @@ function App() {
 
   const { meta, filings, holdings, changes, alerts, news, securities, ratings } = data;
   const F = meta.fund;
-  const latestFiling = filings[0];
+
+  // ── Filing selection ──────────────────────────────────────────────
+  // selectedFiling drives the header/hero/footer figures. prevFiling is the
+  // next-older filing (for the "vs prior" delta). isLatest decides whether we
+  // have full line-item holdings (only the latest filing is parsed in detail).
+  const selIdx = selectedQ ? Math.max(0, filings.findIndex(f => f.q === selectedQ)) : 0;
+  const selectedFiling = filings[selIdx] || filings[0];
+  const prevFiling = filings[selIdx + 1] || null;
+  const latestFiling = selectedFiling; // header/hero/footer all read this
+  const isLatest = selectedFiling.accession_no === filings[0].accession_no;
+
+  // Which holdings to render in the detail sections:
+  //   latest  -> holdings_latest.json (full detail)
+  //   older   -> archived data/holdings/<accession>.json if present, else none
+  const haveDetail = isLatest || histState === "loaded";
+  const displayHoldings = isLatest ? holdings : (histHoldings || []);
+  const displayChanges  = isLatest ? changes  : []; // diffs are computed for the latest filing only
+
+  // next filing due = 45 days after the selected filing's quarter-end
+  const nextDue = (() => {
+    if (isLatest && meta.next_filing_due) return meta.next_filing_due;
+    try {
+      const d = new Date(selectedFiling.period_of_report + "T00:00:00");
+      d.setDate(d.getDate() + 45);
+      return d.toISOString().slice(0, 10);
+    } catch { return meta.next_filing_due; }
+  })();
 
   // Plain computations (NOT hooks) — these run after the early returns above,
   // so they must not be useMemo/useState or they'd violate the Rules of Hooks.
-  const sectors = Array.from(new Set(holdings.map(h=>h.sector)));
-  const totalAll = holdings.reduce((s,h)=>s+h.value_usd, 0);
-  const longVal = holdings.filter(h=>!(h.put_call||"").match(/put/i)).reduce((s,h)=>s+h.value_usd,0);
+  const sectors = Array.from(new Set(displayHoldings.map(h=>h.sector)));
+  const totalAll = displayHoldings.reduce((s,h)=>s+h.value_usd, 0) || selectedFiling.total_value || 0;
+  const longVal = displayHoldings.filter(h=>!(h.put_call||"").match(/put/i)).reduce((s,h)=>s+h.value_usd,0);
   const shortVal = totalAll - longVal;
 
   const filtered = (() => {
-    let r = holdings.filter(h=>{
+    let r = displayHoldings.filter(h=>{
       if (typeF!=="ALL") {
         const pc=(h.put_call||"").toUpperCase();
         if (typeF==="STOCK"&&pc==="PUT") return false;
@@ -795,8 +865,9 @@ function App() {
             </div>
             <div className="controls">
               <div className="selwrap">
-                <select value={latestFiling.q} onChange={()=>{}} title="Filing period">
-                  {filings.map(f=><option key={f.q}>{f.q}</option>)}
+                <select value={selectedFiling.q} title="Filing period"
+                  onChange={e => setSelectedQ(e.target.value === filings[0].q ? null : e.target.value)}>
+                  {filings.map(f=><option key={f.q} value={f.q}>{f.q}{f.accession_no===filings[0].accession_no?" (latest)":""}</option>)}
                 </select>
               </div>
               <div className="seg">
@@ -830,8 +901,12 @@ function App() {
             </div>
             <div className="herocell">
               <div className="herolabel">Holdings</div>
-              <div className="herobig" style={{fontSize:34}}>{latestFiling.num_holdings}</div>
-              <div style={{fontFamily:"var(--mono)",fontSize:11,color:"var(--up)",marginTop:8}}>▲ +{latestFiling.num_holdings - (filings[1]?.num_holdings||0)} vs {filings[1]?.q}</div>
+              <div className="herobig" style={{fontSize:34}}>{selectedFiling.num_holdings ?? "—"}</div>
+              {prevFiling ? (() => {
+                const d = (selectedFiling.num_holdings||0) - (prevFiling.num_holdings||0);
+                const col = d>0?"var(--up)":d<0?"var(--down)":"var(--text-faint)";
+                return <div style={{fontFamily:"var(--mono)",fontSize:11,color:col,marginTop:8}}>{d>0?"▲ +":d<0?"▼ ":"— "}{d} vs {prevFiling.q}</div>;
+              })() : <div style={{fontFamily:"var(--mono)",fontSize:11,color:"var(--text-faint)",marginTop:8}}>earliest filing</div>}
             </div>
             <div className="herocell">
               <div className="herolabel">Long vs short</div>
@@ -847,7 +922,7 @@ function App() {
               <div className="herolabel">Filing cadence</div>
               <div style={{fontFamily:"var(--mono)",fontSize:13,color:"var(--text)",lineHeight:1.6}}>
                 <div>Filed <b>{fmtDate(latestFiling.date_filed)}</b></div>
-                <div style={{color:"var(--text-dim)"}}>Next due <b style={{color:"var(--warn)"}}>{fmtDate(meta.next_filing_due)}</b></div>
+                <div style={{color:"var(--text-dim)"}}>Next due <b style={{color:"var(--warn)"}}>{fmtDate(nextDue)}</b></div>
               </div>
               <a href={latestFiling.index_url} target="_blank" rel="noopener noreferrer" style={{fontFamily:"var(--mono)",fontSize:10.5,color:"var(--accent)",marginTop:8,display:"inline-block"}}>SEC filing index ↗</a>
             </div>
@@ -872,32 +947,43 @@ function App() {
                     </div>
                   </div>
                 } />
-              {allocMode==="treemap"&&<Treemap holdings={holdings} colorMode={colorMode} active={picked} onPick={(c)=>{setPicked(c.ticker);setSearch(c.ticker.replace(".C",""));}}/>}
-              {allocMode==="sector"&&<SectorBar holdings={holdings}/>}
-              {allocMode==="donut"&&<Donut holdings={holdings}/>}
-              <Legend mode={allocMode==="treemap"?colorMode:"layer"} />
+              {haveDetail ? <>
+                {allocMode==="treemap"&&<Treemap holdings={displayHoldings} colorMode={colorMode} active={picked} onPick={(c)=>{setPicked(c.ticker);setSearch(c.ticker.replace(".C",""));}}/>}
+                {allocMode==="sector"&&<SectorBar holdings={displayHoldings}/>}
+                {allocMode==="donut"&&<Donut holdings={displayHoldings}/>}
+                <Legend mode={allocMode==="treemap"?colorMode:"layer"} />
+              </> : <FilingNotice filing={selectedFiling} state={histState} />}
             </div>
             <div className="stack">
               <div className="panel">
-                <PanelHead kicker={"vs "+filings[1]?.q} title="Position changes" />
-                <ChangeCards changes={changes} />
-                <div style={{marginTop:12,display:"flex",flexDirection:"column",gap:7}}>
-                  {changes.filter(c=>c.is_material&&c.change_type!=="HELD").slice(0,3).map((c,i)=>(
-                    <div key={i} style={{display:"flex",gap:8,alignItems:"baseline",fontSize:12,color:"var(--text-dim)"}}>
-                      <span style={{fontFamily:"var(--mono)",fontWeight:700,color:"var(--text)",minWidth:52}}>{c.ticker}</span>
-                      <span style={{lineHeight:1.4}}>{c.note || (c.change_type==="NEW"?"New position":c.change_type==="EXITED"?"Full exit":c.change_type==="INCREASED"?"Increased "+fmtPct(c.pct_change_shares,0):"Decreased "+fmtPct(c.pct_change_shares,0))}</span>
-                    </div>
-                  ))}
-                </div>
+                <PanelHead kicker={isLatest ? ("vs "+(prevFiling?.q||"prior")) : selectedFiling.q} title="Position changes" />
+                {isLatest ? <>
+                  <ChangeCards changes={displayChanges} />
+                  <div style={{marginTop:12,display:"flex",flexDirection:"column",gap:7}}>
+                    {displayChanges.filter(c=>c.is_material&&c.change_type!=="HELD").slice(0,3).map((c,i)=>(
+                      <div key={i} style={{display:"flex",gap:8,alignItems:"baseline",fontSize:12,color:"var(--text-dim)"}}>
+                        <span style={{fontFamily:"var(--mono)",fontWeight:700,color:"var(--text)",minWidth:52}}>{c.ticker}</span>
+                        <span style={{lineHeight:1.4}}>{c.note || (c.change_type==="NEW"?"New position":c.change_type==="EXITED"?"Full exit":c.change_type==="INCREASED"?"Increased "+fmtPct(c.pct_change_shares,0):"Decreased "+fmtPct(c.pct_change_shares,0))}</span>
+                      </div>
+                    ))}
+                  </div>
+                </> : <div style={{fontSize:12.5,color:"var(--text-dim)",lineHeight:1.6}}>
+                  Quarter-over-quarter change detection is computed for the <b style={{color:"var(--text)"}}>latest</b> filing only.
+                  Select <b style={{color:"var(--text)"}}>{filings[0].q}</b> to see NEW / ADD / TRIM / EXIT moves and material-change alerts.
+                </div>}
               </div>
               <AlertsFeed alerts={alerts} />
             </div>
           </div>
 
           <div className="panel" style={{marginTop:16}}>
-            <PanelHead kicker={filtered.length+" of "+holdings.length+" positions · click a row to drill in"} title="Holdings"
+            <PanelHead
+              kicker={haveDetail ? (filtered.length+" of "+displayHoldings.length+" positions · "+selectedFiling.q+" · click a row to drill in") : selectedFiling.q+" · "+(selectedFiling.num_holdings??"?")+" holdings"}
+              title="Holdings"
               right={<span style={{fontFamily:"var(--mono)",fontSize:11,color:"var(--text-faint)"}}>✓ = figure from filing · ≈ rows reconstructed</span>} />
-            <HoldingsTable holdings={filtered} total={totalAll} sort={sort} setSort={setSort} changes={changes} />
+            {haveDetail
+              ? <HoldingsTable holdings={filtered} total={totalAll} sort={sort} setSort={setSort} changes={displayChanges} />
+              : <FilingNotice filing={selectedFiling} state={histState} />}
           </div>
 
           <div style={{marginTop:16}}>
@@ -909,7 +995,7 @@ function App() {
               <div style={{color:"var(--text-dim)",marginBottom:8}}>Data provenance · <a href={latestFiling.index_url} target="_blank" rel="noopener noreferrer" style={{color:"var(--accent)"}}>SEC EDGAR index ↗</a></div>
               Holdings sourced from SEC EDGAR 13F-HR, accession <b style={{color:"var(--text-dim)"}}>{latestFiling.accession_no}</b> (period {latestFiling.period_of_report}, filed {fmtDate(latestFiling.date_filed)}). Filing metadata, totals, holding counts, and anchor figures (✓) are from the real filing; per-line share/value figures marked ≈ are a representative reconstruction pending the live INFORMATION TABLE parse.<br/>
               13Fs disclose only long U.S. equity and listed options — <b style={{color:"var(--text-dim)"}}>not</b> short stock, bonds, cash, FX, or private holdings, so this is not the fund's full economic exposure. Notional option exposure ≠ reported 13F value. Prices/news date-stamped {fmtDate((meta.data_freshness.news?.as_of||"").slice(0,10))}.<br/>
-              Last data refresh: {fmtDate((meta.last_updated||"").slice(0,10))} · Next filing due: {fmtDate(meta.next_filing_due)}<br/>
+              Last data refresh: {fmtDate((meta.last_updated||"").slice(0,10))} · Next filing due: {fmtDate(nextDue)}<br/>
               <span style={{color:"var(--text)",fontWeight:600}}>This is research, not investment advice.</span>
             </div>
           </footer>
