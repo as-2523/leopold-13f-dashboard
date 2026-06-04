@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-04T03:08:36.507445+00:00",
+  "last_updated": "2026-06-04T17:35:40.791281+00:00",
   "next_filing_due": "2026-05-15",
   "data_freshness": {
     "holdings": {
@@ -7,22 +7,22 @@
       "accession": "0002045724-26-000008",
       "period_of_report": "2026-03-31",
       "date_filed": "2026-05-18",
-      "as_of": "2026-06-04T03:08:36.507445+00:00",
+      "as_of": "2026-06-04T17:35:40.791281+00:00",
       "stale": false
     },
     "prices": {
       "source": "Yahoo Finance",
-      "as_of": "2026-06-04T03:08:36.507445+00:00",
+      "as_of": "2026-06-04T17:35:40.791281+00:00",
       "stale": false
     },
     "news": {
       "source": "NewsAPI / Yahoo Finance RSS",
-      "as_of": "2026-06-04T03:08:36.507445+00:00",
+      "as_of": "2026-06-04T17:35:40.791281+00:00",
       "stale": false
     },
     "analyst_ratings": {
       "source": "Yahoo Finance",
-      "as_of": "2026-06-04T03:08:36.507445+00:00",
+      "as_of": "2026-06-04T17:35:40.791281+00:00",
       "stale": false
     }
   },
