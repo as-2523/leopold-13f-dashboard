@@ -20,7 +20,7 @@
     "exchange": "NYQ",
     "sector": "Technology",
     "market_cap": 530026528768,
-    "pe_ratio": 31.556505,
+    "pe_ratio": 31.664946,
     "description": "Oracle Corporation offers products and services that address enterprise information technology environments worldwide. Its Oracle cloud software as a service offering include various cloud software applications, including Oracle Fusion cloud enterprise resource planning ERP, Oracle Fusion cloud enterprise performance management EPM, Oracle Fusion cloud supply chain and manufacturing management SCM, Oracle Fusion cloud human capital management HCM, and NetSuite applications suite, Oracle Health a"
   },
   "AVGO": {
@@ -28,7 +28,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 1957030658048,
-    "pe_ratio": 68.21725,
+    "pe_ratio": 68.44426,
     "description": "Broadcom Inc. designs, develops, and supplies various semiconductor devices and infrastructure software solutions internationally. The company operates in two segments: Semiconductor Solutions and Infrastructure Software. The company offers networking connectivity, such as custom silicon solutions, ethernet switching & routing, ethernet NIC controllers, physical layer devices, and fiber optic components; wireless device connectivity, including RF semiconductor devices, connectivity solutions, cu"
   },
   "AMD": {
@@ -36,7 +36,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 876235849728,
-    "pe_ratio": 179.72241,
+    "pe_ratio": 178.52824,
     "description": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers artificial intelligence (AI) accelerators, microprocessors, and graphics processing units (GPUs) as standalone devices or as incorporated into accelerated processing units, chipsets, and data center and professional GPUs; and embedded processors and semi-custom system-on-chip (SoC) products, microprocessor and SoC develo"
   },
   "ASML": {
@@ -44,7 +44,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 743732805632,
-    "pe_ratio": 64.45157,
+    "pe_ratio": 64.10897,
     "description": "ASML Holding N.V. provides lithography solutions for the development, production, marketing, sales, upgrading, and servicing of advanced semiconductor equipment systems. The company offers lithography, metrology, and inspection systems. It also provides extreme ultraviolet lithography systems; and deep ultraviolet lithography systems comprising immersion and dry lithography systems solutions to manufacture various range of semiconductor nodes and technologies. In addition, the company offers met"
   },
   "INTC": {
@@ -60,7 +60,7 @@
     "exchange": "NYQ",
     "sector": "Technology",
     "market_cap": 167755530240,
-    "pe_ratio": 98.94416,
+    "pe_ratio": 93.26316,
     "description": "Corning Incorporated operates in optical communications, display, specialty materials, automotive, and life sciences businesses in the United States, Canada, Mexico, Japan, Taiwan, China, South Korea, Germany, and internationally. The company provides optical fibers and cables; and hardware and equipment products, such as cable assemblies, fiber optic hardware and connectors, optical components and couplers, closures, network interface devices, and other accessories for the telecommunications in"
   },
   "BE": {
@@ -116,7 +116,7 @@
     "exchange": "NYQ",
     "sector": "Industrials",
     "market_cap": 127927427072,
-    "pe_ratio": 83.6809,
+    "pe_ratio": 83.2625,
     "description": "Vertiv Holdings Co designs, manufactures, and services critical digital infrastructure technologies and life cycle services for data centers, communication networks, and commercial and industrial environments in the Americas, the Asia Pacific, Europe, the Middle East, and Africa. The company offers AC and DC power management products, low/medium voltage switchgear, busbar, thermal management products, air cooled and liquid cooled thermal management products, integrated modular solutions, racks, "
   },
   "CORZ": {
@@ -156,7 +156,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 66130001920,
-    "pe_ratio": 149.38489,
+    "pe_ratio": 149.12282,
     "description": "Lumentum Holdings Inc. manufactures and sells optical and photonic products in the Americas, the Asia-Pacific, Europe, the Middle East, and Africa. It operates through two segments, Cloud & Networking and Industrial Tech. The Cloud & Networking segment offers optical and photonic chips, components, modules, and subsystems supplied to cloud data center operators, AI/ML infrastructure providers, and network equipment manufacturer customers that are building cloud data centers and network infrastru"
   },
   "SNDK": {
@@ -172,7 +172,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 1278839095296,
-    "pe_ratio": 53.41451,
+    "pe_ratio": 53.464878,
     "description": "Micron Technology, Inc. designs, develops, manufactures, and sells memory and storage products in the United States, Taiwan, Japan, Mainland China, Hong Kong, Europe, and internationally. It operates through the Cloud Memory Business Unit; Core Data Center Business Unit; Mobile and Client Business Unit; and Automotive and Embedded Business Unit segments. The company provides memory products, including dynamic random access memory components and modules, CXL-based memory, LPDDR components and mod"
   },
   "TSM": {
@@ -180,7 +180,7 @@
     "exchange": "NYQ",
     "sector": "Technology",
     "market_cap": 2396773416960,
-    "pe_ratio": 39.73517,
+    "pe_ratio": 39.666954,
     "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europe, the Middle East, Africa, Japan, the United States, and internationally. It provides various wafer fabrication processes, such as processes to manufacture complementary metal- oxide-semiconductor (CMOS) logic, mixed-signal, radio frequency, embedded memory, bipolar CMOS mixed-signal, and others. T"
   },
   "TSEM": {
@@ -212,7 +212,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 271695364096,
-    "pe_ratio": 107.09654,
+    "pe_ratio": 106.36301,
     "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China, India, Israel, Japan, Singapore, South Korea, Taiwan, Vietnam, and internationally. The company develops and scales system-on-a-chip architectures, integrating analog, mixed-signal, and digital signal processing functionality. It offers a portfolio of ethernet solutions, including spanning controll"
   },
   "WYFI": {

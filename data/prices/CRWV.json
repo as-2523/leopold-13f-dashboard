@@ -3,7 +3,7 @@
   "current_price": 117.95,
   "prev_close": 115.21,
   "day_change_pct": 2.38,
-  "week_52_high": 187.0,
+  "week_52_high": 183.98,
   "week_52_low": 63.8,
   "history": [
     {
@@ -724,9 +724,9 @@
       "high": 119.89,
       "low": 114.125,
       "close": 117.95,
-      "volume": 65480400
+      "volume": 65546300
     }
   ],
-  "as_of": "2026-06-19T16:24:30.594877+00:00",
+  "as_of": "2026-06-20T12:18:42.727529+00:00",
   "stale": false
 }
