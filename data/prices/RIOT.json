@@ -1,19 +1,11 @@
 {
   "ticker": "RIOT",
-  "current_price": 28.86,
-  "prev_close": 28.1,
-  "day_change_pct": 2.7,
+  "current_price": 28.96,
+  "prev_close": 28.63,
+  "day_change_pct": 1.15,
   "week_52_high": 30.32,
-  "week_52_low": 8.87,
+  "week_52_low": 9.36,
   "history": [
-    {
-      "date": "2026-02-11",
-      "open": 14.95,
-      "high": 15.115,
-      "low": 14.28,
-      "close": 14.8,
-      "volume": 17062500
-    },
     {
       "date": "2026-02-12",
       "open": 14.78,
@@ -720,13 +712,21 @@
     },
     {
       "date": "2026-06-22",
-      "open": 28.5,
+      "open": 28.44,
       "high": 30.32,
       "low": 28.18,
-      "close": 28.86,
-      "volume": 12306160
+      "close": 28.63,
+      "volume": 15844900
+    },
+    {
+      "date": "2026-06-23",
+      "open": 27.004,
+      "high": 29.55,
+      "low": 26.75,
+      "close": 28.96,
+      "volume": 5669636
     }
   ],
-  "as_of": "2026-06-22T19:00:39.977811+00:00",
+  "as_of": "2026-06-23T16:13:52.660616+00:00",
   "stale": false
 }
