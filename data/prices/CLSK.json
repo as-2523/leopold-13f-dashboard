@@ -1,19 +1,11 @@
 {
   "ticker": "CLSK",
-  "current_price": 16.555,
-  "prev_close": 17.19,
-  "day_change_pct": -3.69,
+  "current_price": 15.73,
+  "prev_close": 16.235,
+  "day_change_pct": -3.11,
   "week_52_high": 23.61,
   "week_52_low": 8.0,
   "history": [
-    {
-      "date": "2026-02-13",
-      "open": 9.725,
-      "high": 10.3,
-      "low": 9.3,
-      "close": 9.85,
-      "volume": 28219400
-    },
     {
       "date": "2026-02-17",
       "open": 9.59,
@@ -716,17 +708,25 @@
       "high": 18.53,
       "low": 16.44,
       "close": 17.19,
-      "volume": 20847600
+      "volume": 20899700
     },
     {
       "date": "2026-06-24",
-      "open": 17.605,
+      "open": 17.6,
       "high": 17.86,
-      "low": 16.15,
-      "close": 16.555,
-      "volume": 8473314
+      "low": 15.66,
+      "close": 16.23,
+      "volume": 19488100
+    },
+    {
+      "date": "2026-06-25",
+      "open": 16.68,
+      "high": 17.065,
+      "low": 15.19,
+      "close": 15.73,
+      "volume": 12843765
     }
   ],
-  "as_of": "2026-06-24T15:39:18.496760+00:00",
+  "as_of": "2026-06-25T16:06:09.364378+00:00",
   "stale": false
 }
