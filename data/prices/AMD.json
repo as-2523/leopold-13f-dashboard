@@ -1,8 +1,8 @@
 {
   "ticker": "AMD",
-  "current_price": 511.2,
+  "current_price": 521.58,
   "prev_close": 532.57,
-  "day_change_pct": -4.01,
+  "day_change_pct": -2.06,
   "week_52_high": 562.99,
   "week_52_low": 133.5,
   "history": [
@@ -716,17 +716,17 @@
       "high": 550.88,
       "low": 507.0,
       "close": 532.57,
-      "volume": 27031300
+      "volume": 27115300
     },
     {
       "date": "2026-06-26",
-      "open": 519.795,
-      "high": 520.665,
+      "open": 519.8,
+      "high": 525.11,
       "low": 502.61,
-      "close": 511.585,
-      "volume": 2402920
+      "close": 521.58,
+      "volume": 52661800
     }
   ],
-  "as_of": "2026-06-26T13:36:10.387868+00:00",
+  "as_of": "2026-06-27T11:50:16.036745+00:00",
   "stale": false
 }
