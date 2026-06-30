@@ -1,8 +1,8 @@
 {
   "ticker": "VST",
-  "current_price": 163.315,
+  "current_price": 162.38,
   "prev_close": 163.49,
-  "day_change_pct": -0.11,
+  "day_change_pct": -0.68,
   "week_52_high": 219.82,
   "week_52_low": 132.66,
   "history": [
@@ -716,17 +716,17 @@
       "high": 167.93,
       "low": 163.19,
       "close": 163.49,
-      "volume": 5483700
+      "volume": 5487400
     },
     {
       "date": "2026-06-29",
       "open": 163.7,
-      "high": 165.59,
+      "high": 165.6,
       "low": 161.02,
-      "close": 163.315,
-      "volume": 1339805
+      "close": 162.38,
+      "volume": 2809200
     }
   ],
-  "as_of": "2026-06-29T17:16:39.043424+00:00",
+  "as_of": "2026-06-30T13:26:54.377698+00:00",
   "stale": false
 }
