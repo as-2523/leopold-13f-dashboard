@@ -68,7 +68,7 @@
     "exchange": "NYQ",
     "sector": "Industrials",
     "market_cap": 77053001728,
-    "pe_ratio": 62.12946,
+    "pe_ratio": 61.552902,
     "description": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, an energy server platform to convert fuel, such as natural gas, biogas, hydrogen, or a blend of these fuels, into electricity through a non-combustion electrochemical process. The company also provides Bloom Electrolyzer for producing hydrogen. It sells its products through direct and indirect sales"
   },
   "SEI": {
@@ -211,7 +211,7 @@
     "name": "Marvell Technology, Inc.",
     "exchange": "NMS",
     "sector": "Technology",
-    "market_cap": 214579691520,
+    "market_cap": 214764421120,
     "pe_ratio": 84.00342,
     "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China, India, Israel, Japan, Singapore, South Korea, Taiwan, Vietnam, and internationally. The company develops and scales system-on-a-chip architectures, integrating analog, mixed-signal, and digital signal processing functionality. It offers a portfolio of ethernet solutions, including spanning controll"
   },
