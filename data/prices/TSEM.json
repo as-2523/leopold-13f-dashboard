@@ -1,19 +1,11 @@
 {
   "ticker": "TSEM",
-  "current_price": 211.93,
-  "prev_close": 218.95,
-  "day_change_pct": -3.21,
+  "current_price": 216.7,
+  "prev_close": 211.93,
+  "day_change_pct": 2.25,
   "week_52_high": 319.94,
   "week_52_low": 43.12,
   "history": [
-    {
-      "date": "2026-02-26",
-      "open": 127.16,
-      "high": 129.57,
-      "low": 119.1,
-      "close": 123.84,
-      "volume": 1982100
-    },
     {
       "date": "2026-02-27",
       "open": 123.84,
@@ -724,9 +716,17 @@
       "high": 213.82,
       "low": 199.63,
       "close": 211.93,
-      "volume": 1940200
+      "volume": 1943100
+    },
+    {
+      "date": "2026-07-08",
+      "open": 210.18,
+      "high": 217.12,
+      "low": 205.71,
+      "close": 216.7,
+      "volume": 1442000
     }
   ],
-  "as_of": "2026-07-08T09:04:16.010753+00:00",
+  "as_of": "2026-07-09T10:05:06.189874+00:00",
   "stale": false
 }
