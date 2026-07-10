@@ -4,87 +4,87 @@
     "exchange": "NGM",
     "sector": "ETF",
     "market_cap": null,
-    "pe_ratio": 38.38881,
+    "pe_ratio": 39.342377,
     "description": "The fund normally invests at least 80% of its total assets in securities that comprise the fund's benchmark index. The index includes common stocks and depositary receipts of U.S. exchange-listed companies in the semiconductor industry. Such companies may include medium-capitalization companies and foreign companies that are listed on a U.S. exchange. The fund is non-diversified."
   },
   "NVDA": {
     "name": "NVIDIA Corporation",
     "exchange": "NMS",
     "sector": "Technology",
-    "market_cap": 4943990226944,
-    "pe_ratio": 30.106194,
+    "market_cap": 4911534178304,
+    "pe_ratio": 31.244993,
     "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and Graphics segments. The Compute & Networking segment provides data center accelerated computing and networking platforms and artificial intelligence solutions and software, and automotive platforms and autonomous and electric vehicle solutions, including software. The Graphics segment offers GeForce "
   },
   "ORCL": {
     "name": "Oracle Corporation",
     "exchange": "NYQ",
     "sector": "Technology",
-    "market_cap": 404677394432,
-    "pe_ratio": 24.09777,
+    "market_cap": 415421530112,
+    "pe_ratio": 24.076796,
     "description": "Oracle Corporation offers products and services that build, run and support enterprise information technology frameworks worldwide. Its Oracle cloud software as a service offering includes various cloud software applications, including Oracle Fusion cloud enterprise resource planning ERP, Oracle Fusion cloud enterprise performance management EPM, Oracle Fusion cloud supply chain and manufacturing management SCM, Oracle Fusion cloud human capital management HCM, and NetSuite applications suite, O"
   },
   "AVGO": {
     "name": "Broadcom Inc.",
     "exchange": "NMS",
     "sector": "Technology",
-    "market_cap": 1849223938048,
-    "pe_ratio": 61.696823,
+    "market_cap": 1908312899584,
+    "pe_ratio": 64.48714,
     "description": "Broadcom Inc. designs, develops, and supplies various semiconductor devices and infrastructure software solutions internationally. The company operates in two segments: Semiconductor Solutions and Infrastructure Software. The company offers networking connectivity, such as custom silicon solutions, ethernet switching & routing, ethernet NIC controllers, physical layer devices, and fiber optic components; wireless device connectivity, including RF semiconductor devices, connectivity solutions, cu"
   },
   "AMD": {
     "name": "Advanced Micro Devices, Inc.",
     "exchange": "NMS",
     "sector": "Technology",
-    "market_cap": 843680907264,
-    "pe_ratio": 172.46834,
+    "market_cap": 891481882624,
+    "pe_ratio": 172.46686,
     "description": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers artificial intelligence (AI) accelerators, microprocessors, and graphics processing units (GPUs) as standalone devices or as incorporated into accelerated processing units, chipsets, and data center and professional GPUs; and embedded processors and semi-custom system-on-chip (SoC) products, microprocessor and SoC develo"
   },
   "ASML": {
     "name": "ASML Holding N.V.",
     "exchange": "NMS",
     "sector": "Technology",
-    "market_cap": 681668968448,
-    "pe_ratio": 59.171967,
+    "market_cap": 695389847552,
+    "pe_ratio": 59.88218,
     "description": "ASML Holding N.V. provides lithography solutions for the development, production, marketing, sales, upgrading, and servicing of advanced semiconductor equipment systems. The company offers lithography, metrology, and inspection systems. It also provides extreme ultraviolet lithography systems; and deep ultraviolet lithography systems comprising immersion and dry lithography systems solutions to manufacture various range of semiconductor nodes and technologies. In addition, the company offers met"
   },
   "INTC": {
     "name": "Intel Corporation",
     "exchange": "NMS",
     "sector": "Technology",
-    "market_cap": 554066247680,
-    "pe_ratio": 70.58296,
+    "market_cap": 565626011648,
+    "pe_ratio": 72.05558,
     "description": "Intel Corporation designs, develops, manufactures, markets, sells, and services computing and related end products and services in the United States, Ireland, Israel, and internationally. It operates through three segments: CCG, DCAI, and Intel Foundry. The company offers client computing group products, including client and commercial CPUs, discrete client GPUs, edge computing, and connectivity products; data center and AI products, such as server CPUs, discrete GPUs, and networking products; a"
   },
   "GLW": {
     "name": "Corning Incorporated",
     "exchange": "NYQ",
     "sector": "Technology",
-    "market_cap": 158383177728,
-    "pe_ratio": 89.33495,
+    "market_cap": 165569511424,
+    "pe_ratio": 88.65438,
     "description": "Corning Incorporated operates in optical communications, display, specialty materials, automotive, and life sciences businesses in the United States, Canada, Mexico, Japan, Taiwan, China, South Korea, Germany, and internationally. The company provides optical fibers and cables; and hardware and equipment products, such as cable assemblies, fiber optic hardware and connectors, optical components and couplers, closures, network interface devices, and other accessories for the telecommunications in"
   },
   "BE": {
     "name": "Bloom Energy Corporation",
     "exchange": "NYQ",
     "sector": "Industrials",
-    "market_cap": 72331231232,
-    "pe_ratio": 57.362827,
+    "market_cap": 73107759104,
+    "pe_ratio": 58.373703,
     "description": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, an energy server platform to convert fuel, such as natural gas, biogas, hydrogen, or a blend of these fuels, into electricity through a non-combustion electrochemical process. The company also provides Bloom Electrolyzer for producing hydrogen. It sells its products through direct and indirect sales"
   },
   "SEI": {
     "name": "Solaris Energy Infrastructure, Inc.",
     "exchange": "NYQ",
     "sector": "Energy",
-    "market_cap": 6367077888,
-    "pe_ratio": 77.9647,
+    "market_cap": 6558273536,
+    "pe_ratio": 78.45977,
     "description": "Solaris Energy Infrastructure, Inc. provides modular and scalable equipment-based solutions for power generation, control and distribution, and management of raw materials used in the completion of oil and natural gas wells in the United States. It operates in Solaris Power Solutions and Solaris Logistics Solutions segments. The Solaris Power Solutions segment delivers power generation, control, and distribution solutions; and offers support to data center, energy, and other commercial and indus"
   },
   "VST": {
     "name": "Vistra Corp.",
     "exchange": "NYQ",
     "sector": "Utilities",
-    "market_cap": 52202590208,
-    "pe_ratio": 26.02017,
+    "market_cap": 53268082688,
+    "pe_ratio": 25.898361,
     "description": "Vistra Corp., together with its subsidiaries, operates as an integrated retail electricity and power generation company in the United States. The company operates through five segments: Retail, Texas, East, West, and Asset Closure. The company retails electricity and natural gas to residential, commercial, and industrial customers across states in the United States and the District of Columbia. It is also involved in electricity generation, wholesale energy purchases and sales, commodity risk ma"
   },
   "TLNE": {
@@ -99,128 +99,128 @@
     "name": "CoreWeave, Inc.",
     "exchange": "NMS",
     "sector": "Technology",
-    "market_cap": 49101332480,
-    "pe_ratio": -77.07261,
+    "market_cap": 48937660416,
+    "pe_ratio": -76.815704,
     "description": "CoreWeave, Inc. operates as a cloud infrastructure technology company in the United States. The company offers CoreWeave Cloud platform that comprises proprietary software and cloud services that deliver the automation and efficiency needed to manage complex artificial intelligence (AI) infrastructure at scale. It also offers data and storage solutions, such as Local Object Transport Accelerator; infrastructure control solutions, including CoreWeave Kubernetes service; mission control services, "
   },
   "APLD": {
     "name": "Applied Digital Corporation",
     "exchange": "NMS",
     "sector": "Technology",
-    "market_cap": 8984594432,
-    "pe_ratio": -25.560976,
+    "market_cap": 9227498496,
+    "pe_ratio": -26.252033,
     "description": "Applied Digital Corporation designs, develops, and operates digital infrastructure solutions to high-performance computing (HPC) and artificial intelligence industries in North America. It operates through: Data Center Hosting Business, and HPC Hosting Business. The company offers infrastructure services to crypto mining customers; and GPU computing solutions for critical workloads related to AI, machine learning, and other HPC tasks. It also engages in the designing, constructing, and managing "
   },
   "VRT": {
     "name": "Vertiv Holdings Co",
     "exchange": "NYQ",
     "sector": "Industrials",
-    "market_cap": 122073620480,
-    "pe_ratio": 76.95157,
+    "market_cap": 124420530176,
+    "pe_ratio": 79.98025,
     "description": "Vertiv Holdings Co designs, manufactures, and services critical digital infrastructure technologies and life cycle services for data centers, communication networks, and commercial and industrial environments in the Americas, the Asia Pacific, Europe, the Middle East, and Africa. The company offers AC and DC power management products, low/medium voltage switchgear, busbar, thermal management products, air cooled and liquid cooled thermal management products, integrated modular solutions, racks, "
   },
   "CORZ": {
     "name": "Core Scientific, Inc.",
     "exchange": "NMS",
     "sector": "Technology",
-    "market_cap": 7470304256,
-    "pe_ratio": 79.21259,
+    "market_cap": 7546596352,
+    "pe_ratio": 80.021576,
     "description": "Core Scientific, Inc. provides infrastructure for high-density colocation services and digital asset mining in the United States. It operates through three segments: Colocation, Digital Asset Self-Mining, and Digital Asset Hosted Mining. The company offers space, power, cooling, facilities operations, security, and other services to third-party customers to support workloads for machine learning and artificial intelligence; deployment, monitoring, troubleshooting, optimization, and maintenance o"
   },
   "IREN": {
     "name": "IREN Limited",
     "exchange": "NMS",
     "sector": "Financial Services",
-    "market_cap": 15369070592,
-    "pe_ratio": 51.813255,
+    "market_cap": 14909839360,
+    "pe_ratio": 55.626667,
     "description": "IREN Limited operates in the vertically integrated data center business in Australia and Canada. The company owns and operates computing hardware, as well as electrical infrastructure and data centers. It also mines Bitcoin, a scarce digital asset that is created and transmitted through the operation of a peer-to-peer network of computers running the Bitcoin software. The company was formerly known as Iris Energy Limited and changed its name to IREN Limited in November 2024. The company was inco"
   },
   "CLSK": {
     "name": "CleanSpark, Inc.",
     "exchange": "NCM",
     "sector": "Financial Services",
-    "market_cap": 3181946624,
-    "pe_ratio": -17.103447,
+    "market_cap": 3307685120,
+    "pe_ratio": -17.77931,
     "description": "CleanSpark, Inc. operates as a bitcoin mining company in the Americas. The company owns, leases, and operates data centers and power assets. Its infrastructure supports Bitcoin, a digital commodity. The company was formerly known as Stratean Inc. and changed its name to CleanSpark, Inc. in November 2016. CleanSpark, Inc. was incorporated in 1987 and is headquartered in Henderson, Nevada."
   },
   "RIOT": {
     "name": "Riot Platforms, Inc.",
     "exchange": "NCM",
     "sector": "Financial Services",
-    "market_cap": 7975209472,
-    "pe_ratio": -30.195433,
+    "market_cap": 8134032896,
+    "pe_ratio": -30.796762,
     "description": "Riot Platforms, Inc., together with its subsidiaries, operates as a Bitcoin mining company in the United States. It operates in two segments, Bitcoin Mining and Engineering. The company offers comprehensive and critical infrastructure for bitcoin mining and data center services at its facilities. The company also designs and manufactures power distribution equipment and engineered-to-order electrical products; and electricity distribution product design, manufacturing, and installation services "
   },
   "LITE": {
     "name": "Lumentum Holdings Inc.",
     "exchange": "NMS",
     "sector": "Technology",
-    "market_cap": 55012376576,
-    "pe_ratio": 123.40314,
+    "market_cap": 61132906496,
+    "pe_ratio": 124.92369,
     "description": "Lumentum Holdings Inc. manufactures and sells optical and photonic products in the Americas, the Asia-Pacific, Europe, the Middle East, and Africa. It operates through two segments, Cloud & Networking and Industrial Tech. The Cloud & Networking segment offers optical and photonic chips, components, modules, and subsystems supplied to cloud data center operators, AI/ML infrastructure providers, and network equipment manufacturer customers that are building cloud data centers and network infrastru"
   },
   "SNDK": {
     "name": "Sandisk Corporation",
     "exchange": "NMS",
     "sector": "Technology",
-    "market_cap": 255777685504,
-    "pe_ratio": 55.25208,
+    "market_cap": 275190775808,
+    "pe_ratio": 59.180576,
     "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the United States, Europe, the Middle East, Africa, Asia, and internationally. The company offers solid state drives for desktop and notebook PCs, gaming consoles, and set top boxes; and flash-based embedded storage products for mobile phones, tablets, notebook PCs and other portable and wearable devices, automotive applications, Internet of Things, industrial, and connected ho"
   },
   "MU": {
     "name": "Micron Technology, Inc.",
     "exchange": "NMS",
     "sector": "Technology",
-    "market_cap": 1071568191488,
-    "pe_ratio": 21.230701,
+    "market_cap": 1119951388672,
+    "pe_ratio": 21.459425,
     "description": "Micron Technology, Inc. designs, develops, manufactures, and sells memory and storage products in the United States, Taiwan, Japan, Mainland China, Hong Kong, Europe, and internationally. It operates through the Cloud Memory Business Unit; Core Data Center Business Unit; Mobile and Client Business Unit; and Automotive and Embedded Business Unit segments. The company provides memory products, including dynamic random access memory components and modules, CXL-based memory, LPDDR components and mod"
   },
   "TSM": {
     "name": "Taiwan Semiconductor Manufacturing Company Limited",
     "exchange": "NYQ",
     "sector": "Technology",
-    "market_cap": 2266385350656,
-    "pe_ratio": 38.031334,
+    "market_cap": 2266281541632,
+    "pe_ratio": 38.02959,
     "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europe, the Middle East, Africa, Japan, the United States, and internationally. It provides various wafer fabrication processes, such as processes to manufacture complementary metal- oxide-semiconductor (CMOS) logic, mixed-signal, radio frequency, embedded memory, bipolar CMOS mixed-signal, and others. T"
   },
   "TSEM": {
     "name": "Tower Semiconductor Ltd.",
     "exchange": "NMS",
     "sector": "Technology",
-    "market_cap": 25784922112,
-    "pe_ratio": 98.0543,
+    "market_cap": 25610618880,
+    "pe_ratio": 99.81498,
     "description": "Tower Semiconductor Ltd., an independent semiconductor foundry, provides technology, development, and process platforms for integrated circuits in the United States, Japan, rest of Asia, and Europe. The company provides customizable process technologies, including SiGe, SiPho, mixed signal CMOS, RF CMOS, CMOS image sensor, non-imaging sensors, wafers, and integrated power management. It also offers a design enablement platform for a design cycle, as well as transfer optimization and development "
   },
   "ONTO": {
     "name": "Onto Innovation Inc.",
     "exchange": "NYQ",
     "sector": "Technology",
-    "market_cap": 14497763328,
-    "pe_ratio": 130.11162,
+    "market_cap": 15769705472,
+    "pe_ratio": 134.90213,
     "description": "Onto Innovation Inc. engages in the design, development, manufacture, and support of process control tools that perform macro-defect inspection and metrology in the United States, Taiwan, South Korea, Japan, China, Southeast Asia, Asia, and Europe. The company offers lithography systems and process control analytical software; and automated and integrated metrology systems, silicon wafer all-surface inspection, macro defect inspection, automated defect classification and pattern analysis, yield "
   },
   "EQT": {
     "name": "EQT Corporation",
     "exchange": "NYQ",
     "sector": "Energy",
-    "market_cap": 31999455232,
-    "pe_ratio": 9.819577,
+    "market_cap": 31367723008,
+    "pe_ratio": 9.700193,
     "description": "EQT Corporation engages in the exploration, production, gathering, and transmission of hydrocarbons and natural gas. The company sells natural gas, natural gas liquids, and oil to marketers, utilities, and industrial customers located in the Appalachian Basin. It also provides marketing services and contractual pipeline capacity management services, as well as engages in risk management and hedging activities. The company was formerly known as Equitable Resources Inc. and changed its name to EQT"
   },
   "MRVL": {
     "name": "Marvell Technology, Inc.",
     "exchange": "NMS",
     "sector": "Technology",
-    "market_cap": 202699915264,
-    "pe_ratio": 79.62543,
+    "market_cap": 212812595200,
+    "pe_ratio": 79.24104,
     "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China, India, Israel, Japan, Singapore, South Korea, Taiwan, Vietnam, and internationally. The company develops and scales system-on-a-chip architectures, integrating analog, mixed-signal, and digital signal processing functionality. It offers a portfolio of ethernet solutions, including spanning controll"
   },
   "WYFI": {
     "name": "WhiteFiber, Inc.",
     "exchange": "NCM",
     "sector": "Technology",
-    "market_cap": 1418686336,
-    "pe_ratio": 62.983223,
+    "market_cap": 1499776128,
+    "pe_ratio": 66.583244,
     "description": "WhiteFiber, Inc. provides artificial intelligence (AI) infrastructure solutions. It operates through two segments, cloud services and colocation services. The company designs, develops, and operates data centers. It also offers hosting, colocation, and cloud-based high-performance computing (HPC) graphics processing unit (GPU) services. In addition, the company provides data center infrastructure and cloud services for enterprises, research institutions, and AI and machine learning (ML) driven b"
   }
 }
