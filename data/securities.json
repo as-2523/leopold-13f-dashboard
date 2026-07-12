@@ -12,7 +12,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 5109662089216,
-    "pe_ratio": 31.069221,
+    "pe_ratio": 32.25688,
     "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and Graphics segments. The Compute & Networking segment provides data center accelerated computing and networking platforms and artificial intelligence solutions and software, and automotive platforms and autonomous and electric vehicle solutions, including software. The Graphics segment offers GeForce "
   },
   "ORCL": {
@@ -20,7 +20,7 @@
     "exchange": "NYQ",
     "sector": "Technology",
     "market_cap": 405109440512,
-    "pe_ratio": 24.760565,
+    "pe_ratio": 24.082191,
     "description": "Oracle Corporation offers products and services that build, run and support enterprise information technology frameworks worldwide. Its Oracle cloud software as a service offering includes various cloud software applications, including Oracle Fusion cloud enterprise resource planning ERP, Oracle Fusion cloud enterprise performance management EPM, Oracle Fusion cloud supply chain and manufacturing management SCM, Oracle Fusion cloud human capital management HCM, and NetSuite applications suite, O"
   },
   "AVGO": {
@@ -36,7 +36,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 909695778816,
-    "pe_ratio": 181.72313,
+    "pe_ratio": 185.34552,
     "description": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers artificial intelligence (AI) accelerators, microprocessors, and graphics processing units (GPUs) as standalone devices or as incorporated into accelerated processing units, chipsets, and data center and professional GPUs; and embedded processors and semi-custom system-on-chip (SoC) products, microprocessor and SoC develo"
   },
   "ASML": {
@@ -44,7 +44,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 692718862336,
-    "pe_ratio": 61.34198,
+    "pe_ratio": 60.967434,
     "description": "ASML Holding N.V. provides lithography solutions for the development, production, marketing, sales, upgrading, and servicing of advanced semiconductor equipment systems. The company offers lithography, metrology, and inspection systems. It also provides extreme ultraviolet lithography systems; and deep ultraviolet lithography systems comprising immersion and dry lithography systems solutions to manufacture various range of semiconductor nodes and technologies. In addition, the company offers met"
   },
   "INTC": {
@@ -60,7 +60,7 @@
     "exchange": "NYQ",
     "sector": "Technology",
     "market_cap": 164287152128,
-    "pe_ratio": 92.665054,
+    "pe_ratio": 91.77404,
     "description": "Corning Incorporated operates in optical communications, display, specialty materials, automotive, and life sciences businesses in the United States, Canada, Mexico, Japan, Taiwan, China, South Korea, Germany, and internationally. The company provides optical fibers and cables; and hardware and equipment products, such as cable assemblies, fiber optic hardware and connectors, optical components and couplers, closures, network interface devices, and other accessories for the telecommunications in"
   },
   "BE": {
@@ -76,7 +76,7 @@
     "exchange": "NYQ",
     "sector": "Energy",
     "market_cap": 6876291072,
-    "pe_ratio": 81.329544,
+    "pe_ratio": 85.202385,
     "description": "Solaris Energy Infrastructure, Inc. provides modular and scalable equipment-based solutions for power generation, control and distribution, and management of raw materials used in the completion of oil and natural gas wells in the United States. It operates in Solaris Power Solutions and Solaris Logistics Solutions segments. The Solaris Power Solutions segment delivers power generation, control, and distribution solutions; and offers support to data center, energy, and other commercial and indus"
   },
   "VST": {
@@ -84,7 +84,7 @@
     "exchange": "NYQ",
     "sector": "Utilities",
     "market_cap": 53564805120,
-    "pe_ratio": 26.388704,
+    "pe_ratio": 26.609716,
     "description": "Vistra Corp., together with its subsidiaries, operates as an integrated retail electricity and power generation company in the United States. The company operates through five segments: Retail, Texas, East, West, and Asset Closure. The company retails electricity and natural gas to residential, commercial, and industrial customers across states in the United States and the District of Columbia. It is also involved in electricity generation, wholesale energy purchases and sales, commodity risk ma"
   },
   "TLNE": {
@@ -116,7 +116,7 @@
     "exchange": "NYQ",
     "sector": "Industrials",
     "market_cap": 122476929024,
-    "pe_ratio": 81.341835,
+    "pe_ratio": 79.91478,
     "description": "Vertiv Holdings Co designs, manufactures, and services critical digital infrastructure technologies and life cycle services for data centers, communication networks, and commercial and industrial environments in the Americas, the Asia Pacific, Europe, the Middle East, and Africa. The company offers AC and DC power management products, low/medium voltage switchgear, busbar, thermal management products, air cooled and liquid cooled thermal management products, integrated modular solutions, racks, "
   },
   "CORZ": {
@@ -132,7 +132,7 @@
     "exchange": "NMS",
     "sector": "Financial Services",
     "market_cap": 14702559232,
-    "pe_ratio": 54.13158,
+    "pe_ratio": 53.428574,
     "description": "IREN Limited operates in the vertically integrated data center business in Australia and Canada. The company owns and operates computing hardware, as well as electrical infrastructure and data centers. It also mines Bitcoin, a scarce digital asset that is created and transmitted through the operation of a peer-to-peer network of computers running the Bitcoin software. The company was formerly known as Iris Energy Limited and changed its name to IREN Limited in November 2024. The company was inco"
   },
   "CLSK": {
@@ -156,7 +156,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 62396379136,
-    "pe_ratio": 138.99654,
+    "pe_ratio": 140.95079,
     "description": "Lumentum Holdings Inc. manufactures and sells optical and photonic products in the Americas, the Asia-Pacific, Europe, the Middle East, and Africa. It operates through two segments, Cloud & Networking and Industrial Tech. The Cloud & Networking segment offers optical and photonic chips, components, modules, and subsystems supplied to cloud data center operators, AI/ML infrastructure providers, and network equipment manufacturer customers that are building cloud data centers and network infrastru"
   },
   "SNDK": {
@@ -164,7 +164,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 283728150528,
-    "pe_ratio": 63.69415,
+    "pe_ratio": 65.367455,
     "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the United States, Europe, the Middle East, Africa, Asia, and internationally. The company offers solid state drives for desktop and notebook PCs, gaming consoles, and set top boxes; and flash-based embedded storage products for mobile phones, tablets, notebook PCs and other portable and wearable devices, automotive applications, Internet of Things, industrial, and connected ho"
   },
   "MU": {
@@ -172,7 +172,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 1106014765056,
-    "pe_ratio": 22.419872,
+    "pe_ratio": 22.126074,
     "description": "Micron Technology, Inc. designs, develops, manufactures, and sells memory and storage products in the United States, Taiwan, Japan, Mainland China, Hong Kong, Europe, and internationally. It operates through the Cloud Memory Business Unit; Core Data Center Business Unit; Mobile and Client Business Unit; and Automotive and Embedded Business Unit segments. The company provides memory products, including dynamic random access memory components and modules, CXL-based memory, LPDDR components and mod"
   },
   "TSM": {
@@ -180,7 +180,7 @@
     "exchange": "NYQ",
     "sector": "Technology",
     "market_cap": 2251500027904,
-    "pe_ratio": 38.013134,
+    "pe_ratio": 37.748695,
     "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europe, the Middle East, Africa, Japan, the United States, and internationally. It provides various wafer fabrication processes, such as processes to manufacture complementary metal- oxide-semiconductor (CMOS) logic, mixed-signal, radio frequency, embedded memory, bipolar CMOS mixed-signal, and others. T"
   },
   "TSEM": {
@@ -188,7 +188,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 25177708544,
-    "pe_ratio": 105.07076,
+    "pe_ratio": 103.12499,
     "description": "Tower Semiconductor Ltd., an independent semiconductor foundry, provides technology, development, and process platforms for integrated circuits in the United States, Japan, rest of Asia, and Europe. The company provides customizable process technologies, including SiGe, SiPho, mixed signal CMOS, RF CMOS, CMOS image sensor, non-imaging sensors, wafers, and integrated power management. It also offers a design enablement platform for a design cycle, as well as transfer optimization and development "
   },
   "ONTO": {
@@ -196,7 +196,7 @@
     "exchange": "NYQ",
     "sector": "Technology",
     "market_cap": 15989572608,
-    "pe_ratio": 146.77626,
+    "pe_ratio": 149.50697,
     "description": "Onto Innovation Inc. engages in the design, development, manufacture, and support of process control tools that perform macro-defect inspection and metrology in the United States, Taiwan, South Korea, Japan, China, Southeast Asia, Asia, and Europe. The company offers lithography systems and process control analytical software; and automated and integrated metrology systems, silicon wafer all-surface inspection, macro defect inspection, automated defect classification and pattern analysis, yield "
   },
   "EQT": {
@@ -204,7 +204,7 @@
     "exchange": "NYQ",
     "sector": "Energy",
     "market_cap": 30554599424,
-    "pe_ratio": 9.522417,
+    "pe_ratio": 9.269449,
     "description": "EQT Corporation engages in the exploration, production, gathering, and transmission of hydrocarbons and natural gas. The company sells natural gas, natural gas liquids, and oil to marketers, utilities, and industrial customers located in the Appalachian Basin. It also provides marketing services and contractual pipeline capacity management services, as well as engages in risk management and hedging activities. The company was formerly known as Equitable Resources Inc. and changed its name to EQT"
   },
   "MRVL": {
@@ -212,7 +212,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 211649953792,
-    "pe_ratio": 83.32509,
+    "pe_ratio": 81.31379,
     "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China, India, Israel, Japan, Singapore, South Korea, Taiwan, Vietnam, and internationally. The company develops and scales system-on-a-chip architectures, integrating analog, mixed-signal, and digital signal processing functionality. It offers a portfolio of ethernet solutions, including spanning controll"
   },
   "WYFI": {
