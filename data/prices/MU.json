@@ -1,19 +1,11 @@
 {
   "ticker": "MU",
-  "current_price": 983.12,
-  "prev_close": 937.0,
-  "day_change_pct": 4.92,
+  "current_price": 904.28,
+  "prev_close": 983.12,
+  "day_change_pct": -8.02,
   "week_52_high": 1255.0,
   "week_52_low": 103.38,
   "history": [
-    {
-      "date": "2026-03-05",
-      "open": 398.3714,
-      "high": 404.298,
-      "low": 380.0818,
-      "close": 396.8222,
-      "volume": 29960100
-    },
     {
       "date": "2026-03-06",
       "open": 379.922,
@@ -720,13 +712,21 @@
     },
     {
       "date": "2026-07-14",
-      "open": NaN,
-      "high": NaN,
-      "low": NaN,
-      "close": NaN,
-      "volume": 30820913
+      "open": 988.38,
+      "high": 994.8,
+      "low": 950.07,
+      "close": 983.12,
+      "volume": 30835200
+    },
+    {
+      "date": "2026-07-15",
+      "open": 975.81,
+      "high": 978.4,
+      "low": 873.63,
+      "close": 904.28,
+      "volume": 54398100
     }
   ],
-  "as_of": "2026-07-15T08:39:33.218288+00:00",
+  "as_of": "2026-07-16T08:37:46.411579+00:00",
   "stale": false
 }
