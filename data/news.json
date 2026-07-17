@@ -1,5 +1,415 @@
 [
   {
+    "id": "n26637c66a3",
+    "headline": "Should You Buy Alphabet Before July 22?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-07-17T08:23:00+00:00",
+    "url": "https://www.fool.com/investing/2026/07/17/should-you-buy-alphabet-before-july-22/?.tsrc=rss"
+  },
+  {
+    "id": "n255b0523a5",
+    "headline": "Should You Buy SpaceX Stock Below $135 Per Share? Here's What History Says.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-07-17T08:15:00+00:00",
+    "url": "https://www.fool.com/investing/2026/07/17/should-buy-spacex-stock-below-135-share-history/?.tsrc=rss"
+  },
+  {
+    "id": "n6f3950b05f",
+    "headline": "History Might Be Telling Us Why Nvidia Stock Is So Cheap. Should Investors Listen?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-07-17T07:45:00+00:00",
+    "url": "https://www.fool.com/investing/2026/07/17/history-might-be-telling-us-why-nvidia-stock-is-so/?.tsrc=rss"
+  },
+  {
+    "id": "nef7eadac8e",
+    "headline": "The Oracle Paradox: Record AI Demand, Mounting Debt, And A Stock Wall Street Still Loves",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ORCL"
+    ],
+    "ts": "2026-07-17T07:38:14+00:00",
+    "url": "https://stocktwits.com/news-articles/markets/equity/the-oracle-paradox-record-ai-demand-mounting-debt-and-a-stock-wall-street-still-loves/cZZ7BvsR7ti?.tsrc=rss"
+  },
+  {
+    "id": "n66ccacdb7e",
+    "headline": "Elon Musk Has Never Sold His Tesla Vision. Should You Buy the Dip Before July 22?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-07-17T07:25:00+00:00",
+    "url": "https://www.fool.com/investing/2026/07/17/elon-musk-has-never-sold-his-tesla-vision-should-y/?.tsrc=rss"
+  },
+  {
+    "id": "n101c0eb88c",
+    "headline": "3 Reasons SpaceX Stock Could Drop 30% by 2028",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-07-17T06:50:00+00:00",
+    "url": "https://www.fool.com/investing/2026/07/17/3-reasons-spacex-stock-could-drop-30-by-2028/?.tsrc=rss"
+  },
+  {
+    "id": "nc14ce5f57a",
+    "headline": "MSFT Stock Dips Overnight: Satya Nadella Calls Anthropic\u2019s Fable 5 \u2018Editorially Controlled\u2019 Amid Backlash Over Safeguards",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "INTC"
+    ],
+    "ts": "2026-07-17T05:31:19+00:00",
+    "url": "https://stocktwits.com/news-articles/markets/equity/msft-stock-dips-overnight-satya-nadella-calls-anthropic-s-fable-5-editorially-controlled-amid-backlash-over-safeguards/cZZ74K6R7t9?.tsrc=rss"
+  },
+  {
+    "id": "nb3fbd557fa",
+    "headline": "Driving the Agentic AI Era: MiTAC Computing Showcases Comprehensive AI Infrastructure at WAIC",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AMD"
+    ],
+    "ts": "2026-07-17T05:30:00+00:00",
+    "url": "https://finance.yahoo.com/technology/ai/articles/driving-agentic-ai-era-mitac-053000650.html?.tsrc=rss"
+  },
+  {
+    "id": "n7b3dc30e3a",
+    "headline": "Why Did IBM, ORCL, SMR Stocks Drop To 52-Week Lows Today?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ORCL"
+    ],
+    "ts": "2026-07-17T01:43:42+00:00",
+    "url": "https://stocktwits.com/news-articles/markets/equity/why-did-ibm-orcl-smr-stocks-drop-to-52-week-lows-today/cZZ7bWlR7t5?.tsrc=rss"
+  },
+  {
+    "id": "nc173467ce4",
+    "headline": "Review & Preview: No More Easy Money in AI",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ASML"
+    ],
+    "ts": "2026-07-16T23:55:00+00:00",
+    "url": "https://finance.yahoo.com/m/204cd7c2-b80f-3280-935a-3241f6f5ba50/review-%26-preview%3A-no-more.html?.tsrc=rss"
+  },
+  {
+    "id": "nb0716a74e4",
+    "headline": "Nova and Microchip Technology Shares Are Falling, What You Need To Know",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ASML"
+    ],
+    "ts": "2026-07-16T23:05:22+00:00",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/nova-microchip-technology-shares-falling-230522245.html?.tsrc=rss"
+  },
+  {
+    "id": "nfadb556d89",
+    "headline": "NXP Semiconductors and Broadcom Shares Plummet, What You Need To Know",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AVGO"
+    ],
+    "ts": "2026-07-16T22:57:22+00:00",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/nxp-semiconductors-broadcom-shares-plummet-225722986.html?.tsrc=rss"
+  },
+  {
+    "id": "n27123d198a",
+    "headline": "Lattice Semiconductor, AMD, and Qualcomm Shares Are Falling, What You Need To Know",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AMD"
+    ],
+    "ts": "2026-07-16T22:49:22+00:00",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/lattice-semiconductor-amd-qualcomm-shares-224922431.html?.tsrc=rss"
+  },
+  {
+    "id": "n0b5ad51dbe",
+    "headline": "Semtech and Lam Research Shares Plummet, What You Need To Know",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ASML"
+    ],
+    "ts": "2026-07-16T22:41:22+00:00",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/semtech-lam-research-shares-plummet-224122280.html?.tsrc=rss"
+  },
+  {
+    "id": "n4db00cd7c4",
+    "headline": "AI Has Upended Chip Stocks. This Chart Shows How Much.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AVGO"
+    ],
+    "ts": "2026-07-16T22:17:00+00:00",
+    "url": "https://finance.yahoo.com/m/f52ae25b-cf16-37ee-9425-018a96ec9461/ai-has-upended-chip-stocks..html?.tsrc=rss"
+  },
+  {
+    "id": "na048f99478",
+    "headline": "1 Critical Reason to Buy Broadcom Stock on the Dip",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AVGO"
+    ],
+    "ts": "2026-07-16T21:53:00+00:00",
+    "url": "https://www.fool.com/investing/2026/07/16/1-critical-reason-to-buy-broadcom-stock-on-the-dip/?.tsrc=rss"
+  },
+  {
+    "id": "n85b58807c2",
+    "headline": "Oracle (ORCL) Suffers a Larger Drop Than the General Market: Key Insights",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ORCL"
+    ],
+    "ts": "2026-07-16T21:45:03+00:00",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/oracle-orcl-suffers-larger-drop-214503049.html?.tsrc=rss"
+  },
+  {
+    "id": "n0916f4625d",
+    "headline": "Teradyne and Intel Shares Are Falling, What You Need To Know",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "INTC"
+    ],
+    "ts": "2026-07-16T20:49:22+00:00",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/teradyne-intel-shares-falling-know-204922993.html?.tsrc=rss"
+  },
+  {
+    "id": "n062337afe6",
+    "headline": "Sandisk, Micron, TSMC, Abbott, AST SpaceMobile, and More Stocks That Explain Today\u2019s Market",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AMD"
+    ],
+    "ts": "2026-07-16T20:26:00+00:00",
+    "url": "https://finance.yahoo.com/m/c58be190-b3c8-3fe8-b657-5c3009645cc5/sandisk%2C-micron%2C-tsmc%2C.html?.tsrc=rss"
+  },
+  {
+    "id": "nb38d7a94f7",
+    "headline": "Most Stocks Gained, but Chip Selloff Drags Market",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AVGO"
+    ],
+    "ts": "2026-07-16T20:01:34+00:00",
+    "url": "https://finance.yahoo.com/m/b2df7f76-1cea-3fe3-a952-d6fa0b724a41/most-stocks-gained%2C-but-chip.html?.tsrc=rss"
+  },
+  {
+    "id": "n419a127eb3",
+    "headline": "Oklo Just Dropped 28% in a Month. Is It Time to Abandon Nuclear Stocks Like OKLO, NuScale, and Uranium Energy Corp.?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "VST"
+    ],
+    "ts": "2026-07-16T19:38:23+00:00",
+    "url": "https://247wallst.com/investing/2026/07/16/oklo-just-dropped-28-in-a-month-is-it-time-to-abandon-nuclear-stocks-like-oklo-nuscale-and-uranium-energy-corp/?.tsrc=rss"
+  },
+  {
+    "id": "nb62528fee3",
+    "headline": "MU Stock Alert: What to Know as Micron Teams Up With Qualcomm",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "CRWV"
+    ],
+    "ts": "2026-07-16T19:29:18+00:00",
+    "url": "https://www.barchart.com/story/news/3324296/mu-stock-alert-what-to-know-as-micron-teams-up-with-qualcomm?.tsrc=rss"
+  },
+  {
+    "id": "ne1e6c1dc7f",
+    "headline": "Q1 Rundown: AMD (NASDAQ:AMD) Vs Other Processors and Graphics Chips Stocks",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AMD"
+    ],
+    "ts": "2026-07-16T19:21:22+00:00",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/q1-rundown-amd-nasdaq-amd-192122824.html?.tsrc=rss"
+  },
+  {
+    "id": "ne82c60259a",
+    "headline": "Intel Target Raised Ahead of Q2",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "INTC"
+    ],
+    "ts": "2026-07-16T19:09:08+00:00",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/intel-target-raised-ahead-q2-190908009.html?.tsrc=rss"
+  },
+  {
+    "id": "n65550bb6ac",
+    "headline": "Nebius Sinks 13% as the Neocloud Trade Unravels; How CoreWeave, IREN, and the AI Data Center Stocks Stack Up",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "CRWV"
+    ],
+    "ts": "2026-07-16T18:50:13+00:00",
+    "url": "https://247wallst.com/investing/2026/07/16/nebius-sinks-13-as-the-neocloud-trade-unravels-how-coreweave-iren-and-the-ai-data-center-stocks-stack-up/?.tsrc=rss"
+  },
+  {
+    "id": "nd2e6fa980c",
+    "headline": "Micron\u2019s AI Boom: Wall Street Breaks Down How High Earnings Can Go",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "CRWV"
+    ],
+    "ts": "2026-07-16T18:50:00+00:00",
+    "url": "https://finance.yahoo.com/m/e10fce80-249d-3dae-bcb8-032693e5b5f1/micron%E2%80%99s-ai-boom%3A-wall-street.html?.tsrc=rss"
+  },
+  {
+    "id": "na05b191122",
+    "headline": "3 Reasons Why Micron Stock Keeps Falling",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "CRWV"
+    ],
+    "ts": "2026-07-16T18:48:00+00:00",
+    "url": "https://finance.yahoo.com/m/91fafb9f-7db4-3156-b34e-59150d255d13/3-reasons-why-micron-stock.html?.tsrc=rss"
+  },
+  {
+    "id": "n99c6a0b675",
+    "headline": "Applied Digital (APLD) Expands North Dakota AI Campus on Schedule",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "APLD"
+    ],
+    "ts": "2026-07-16T18:36:40+00:00",
+    "url": "https://finance.yahoo.com/technology/ai/articles/applied-digital-apld-expands-north-183640640.html?.tsrc=rss"
+  },
+  {
+    "id": "n2f5464fd9c",
+    "headline": "Think the AI Bull Market Is Just Getting Started? These 3 ETFs Are Positioned for the Next Leg",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "SMH"
+    ],
+    "ts": "2026-07-16T18:33:19+00:00",
+    "url": "https://247wallst.com/investing/etf/2026/07/16/think-the-ai-bull-market-is-just-getting-started-these-3-etfs-are-positioned-for-the-next-leg/?.tsrc=rss"
+  },
+  {
+    "id": "na233f38326",
+    "headline": "Marvell Stock's AI Bet Is Even Bigger Than You Think",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AVGO"
+    ],
+    "ts": "2026-07-16T18:06:31+00:00",
+    "url": "https://www.trefis.com/articles/607498/marvell-stocks-ai-bet-is-even-bigger-than-you-think/2026-07-16?.tsrc=rss"
+  },
+  {
+    "id": "n2ecc45bc5a",
+    "headline": "Down 50% From Its High, Is CoreWeave a Bargain or a Value Trap?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "CRWV"
+    ],
+    "ts": "2026-07-16T17:47:00+00:00",
+    "url": "https://www.fool.com/investing/2026/07/16/down-50-from-its-high-is-coreweave-a-bargain-or-a/?.tsrc=rss"
+  },
+  {
+    "id": "nf57336ec8e",
+    "headline": "Arm (ARM) CEO Flags China Export Hurdles As AGI CPU Demand Builds",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ORCL"
+    ],
+    "ts": "2026-07-16T17:13:21+00:00",
+    "url": "https://finance.yahoo.com/technology/ai/articles/arm-arm-ceo-flags-china-171321710.html?.tsrc=rss"
+  },
+  {
+    "id": "n6f3e6f5e4a",
+    "headline": "Oracle Just Cratered 33% in a Month. Is It Time to Switch to Cloudflare or CoreWeave?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ORCL"
+    ],
+    "ts": "2026-07-16T17:04:06+00:00",
+    "url": "https://247wallst.com/investing/2026/07/16/oracle-just-cratered-33-in-a-month-is-it-time-to-switch-to-cloudflare-or-coreweave/?.tsrc=rss"
+  },
+  {
+    "id": "nb726d4dbd8",
+    "headline": "LITE vs. APLD: Which AI Infrastructure Stock Offers Better Growth?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "APLD"
+    ],
+    "ts": "2026-07-16T15:35:00+00:00",
+    "url": "https://finance.yahoo.com/technology/ai/articles/lite-vs-apld-ai-infrastructure-153500607.html?.tsrc=rss"
+  },
+  {
+    "id": "n37731b57b0",
+    "headline": "Can Increased Capital Investments Boost VST Stock's Performance?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "VST"
+    ],
+    "ts": "2026-07-16T14:39:00+00:00",
+    "url": "https://finance.yahoo.com/energy/articles/increased-capital-investments-boost-vst-143900572.html?.tsrc=rss"
+  },
+  {
+    "id": "n7d71c4e3c0",
+    "headline": "Bloom Energy (BE) Lands $1.7 Billion Backing For Fuel Cells In AI Cloud Infrastructure",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "BE"
+    ],
+    "ts": "2026-07-16T14:12:39+00:00",
+    "url": "https://finance.yahoo.com/technology/ai/articles/bloom-energy-lands-1-7-141239902.html?.tsrc=rss"
+  },
+  {
+    "id": "n7aa6b7a122",
+    "headline": "Who Is Positioned to Buy Universal Display?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "GLW"
+    ],
+    "ts": "2026-07-16T13:13:29+00:00",
+    "url": "https://www.trefis.com/articles/607532/who-is-positioned-to-buy-universal-display/2026-07-16?.tsrc=rss"
+  },
+  {
+    "id": "nd9ec3f68e0",
+    "headline": "IDF, Oaktree to invest $1.7 billion in Bloom Energy fuel cells for AI infrastructure",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "BE"
+    ],
+    "ts": "2026-07-16T13:01:35+00:00",
+    "url": "https://finance.yahoo.com/technology/ai/articles/idf-oaktree-invest-1-7-130135797.html?.tsrc=rss"
+  },
+  {
+    "id": "nd903efe47a",
+    "headline": "Industrial Development Funding and Oaktree Announce $1.7 Billion Project Investment in Bloom Energy Fuel Cells for Nebius AI Infrastructure Build-Out",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "BE"
+    ],
+    "ts": "2026-07-16T12:25:00+00:00",
+    "url": "https://finance.yahoo.com/energy/articles/industrial-development-funding-oaktree-announce-122500775.html?.tsrc=rss"
+  },
+  {
+    "id": "n56b731ccf0",
+    "headline": "Chips stocks fall. UnitedHealth rises. Netflix earnings are up next",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "SMH"
+    ],
+    "ts": "2026-07-16T11:27:30+00:00",
+    "url": "https://qz.com/chip-stocks-slide-unitedhealth-netflix-earnings-071626?.tsrc=rss"
+  },
+  {
+    "id": "n11a68481a8",
+    "headline": "Tech Caution Undercuts Wall Street Pre-Bell; Asia Mixed, Europe Off",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "SMH"
+    ],
+    "ts": "2026-07-16T11:11:26+00:00",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/tech-caution-undercuts-wall-street-111126523.html?.tsrc=rss"
+  },
+  {
     "id": "n3137678c1b",
     "headline": "Global Full-Stack Observability Services Market Size/Share Worth USD 35 Billion by 2034 at a 22.5% CAGR: Custom Market Insights (Analysis, Outlook, Leaders, Report, Trends, Forecast, Segmentation, Gro",
     "source": "Yahoo Finance",
@@ -88,415 +498,5 @@
     ],
     "ts": "2026-07-16T07:27:00+00:00",
     "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-nvidia-072700486.html?.tsrc=rss"
-  },
-  {
-    "id": "n10ebdf385b",
-    "headline": "Apple CEO Tim Cook Just Announced Great News for Broadcom Stock Investors",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AVGO"
-    ],
-    "ts": "2026-07-16T06:50:00+00:00",
-    "url": "https://www.fool.com/investing/2026/07/16/apple-ceo-tim-cook-just-announced-great-news-for-b/?.tsrc=rss"
-  },
-  {
-    "id": "ne51c020204",
-    "headline": "Standard Chartered Selects Broadcom to Deliver Secure, Always-On Banking Services at Global Scale",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AVGO"
-    ],
-    "ts": "2026-07-16T06:00:00+00:00",
-    "url": "https://finance.yahoo.com/technology/articles/standard-chartered-selects-broadcom-deliver-060000711.html?.tsrc=rss"
-  },
-  {
-    "id": "n34b43af0bc",
-    "headline": "ORCL Stock Snaps 3-Day Losing Streak: What\u2019s Making Retail Traders \u2018Extremely Bullish\u2019?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ORCL"
-    ],
-    "ts": "2026-07-16T05:32:36+00:00",
-    "url": "https://stocktwits.com/news-articles/markets/equity/orcl-stock-snaps-3-day-losing-streak-what-s-making-retail-traders-extremely-bullish/cZZ36XHR7rs?.tsrc=rss"
-  },
-  {
-    "id": "n27e4211f2b",
-    "headline": "Michael Burry Mocks Data Center 'Fantasy\u2019 In ORCL, NVDA, AMZN \u2014 But Trump Sees \u2018Big, Strong, Bold\u2019 Money Machines",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ORCL"
-    ],
-    "ts": "2026-07-16T05:21:37+00:00",
-    "url": "https://stocktwits.com/news-articles/markets/equity/michael-burry-data-center-fantasy-trump-money-machines/cZZ3625R7rq?.tsrc=rss"
-  },
-  {
-    "id": "n09593a40be",
-    "headline": "30% of Cathie Wood's Portfolio Is Invested in These 5 Artificial Intelligence (AI) Stocks",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AMD"
-    ],
-    "ts": "2026-07-16T05:20:00+00:00",
-    "url": "https://www.fool.com/investing/2026/07/16/30-of-cathie-woods-portfolio-is-invested-in-these/?.tsrc=rss"
-  },
-  {
-    "id": "n435afc6cdc",
-    "headline": "ASML Stock Eyes Second Weekly Gains: Retail Bulls Call Chipmaker The 'Ultimate Gatekeeper Of Tech'",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ASML"
-    ],
-    "ts": "2026-07-16T05:11:57+00:00",
-    "url": "https://stocktwits.com/news-articles/markets/equity/asml-stock-eyes-second-weekly-gains-retail-bulls-call-chipmaker-the-ultimate-gatekeeper-of-tech/cZZ3CuOR7rp?.tsrc=rss"
-  },
-  {
-    "id": "ndf0f8fa226",
-    "headline": "AAPL Stock Tops Nasdaq\u2019s Modest Gains: Analyst Says Siri Finally Shows \u2018AI Chops\u2019 In iOS 27 Beta",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AVGO"
-    ],
-    "ts": "2026-07-16T03:32:16+00:00",
-    "url": "https://stocktwits.com/news-articles/markets/equity/aapl-stock-tops-nasdaq-s-modest-gains-analyst-says-siri-finally-shows-ai-chops-in-i-os-27-beta/cZZ3x3yR7r8?.tsrc=rss"
-  },
-  {
-    "id": "nd1cf294753",
-    "headline": "Dow Jones Futures: Apple, Google Mask Dell, Sandisk, Micron Sell-Off; J.B. Hunt Jumps Late",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ASML"
-    ],
-    "ts": "2026-07-16T03:12:22+00:00",
-    "url": "https://finance.yahoo.com/m/9b2a3551-5bcd-34f5-9f61-00ac74d553c1/dow-jones-futures%3A-apple%2C.html?.tsrc=rss"
-  },
-  {
-    "id": "nc7912661f3",
-    "headline": "Can CoreWeave Become a $1 Trillion Company?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "CRWV"
-    ],
-    "ts": "2026-07-16T01:20:00+00:00",
-    "url": "https://www.fool.com/investing/2026/07/15/can-coreweave-become-a-1-trillion-company/?.tsrc=rss"
-  },
-  {
-    "id": "n74d4b25aad",
-    "headline": "Oracle\u2019s stock buybacks & how they boost Larry Ellison\u2019s net worth",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ORCL"
-    ],
-    "ts": "2026-07-16T00:40:23+00:00",
-    "url": "https://www.thestreet.com/investing/stocks/oracle-stock-buybacks?.tsrc=rss"
-  },
-  {
-    "id": "nccc342e62a",
-    "headline": "ASML (ASML) Q2 2026 Earnings Call Transcript",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ASML"
-    ],
-    "ts": "2026-07-16T00:32:19+00:00",
-    "url": "https://www.fool.com/earnings/call-transcripts/2026/07/15/asml-asml-q2-2026-earnings-call-transcript/?.tsrc=rss"
-  },
-  {
-    "id": "n8743982bd9",
-    "headline": "Can You Stomach The Plunge In Applied Optoelectronics Stock?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AVGO"
-    ],
-    "ts": "2026-07-16T00:26:25+00:00",
-    "url": "https://www.trefis.com/articles/607305/can-you-stomach-the-plunge-in-applied-optoelectronics-stock/2026-07-15?.tsrc=rss"
-  },
-  {
-    "id": "n0123bdfd1e",
-    "headline": "The Real Risk Inside Marvell Stock",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AMD"
-    ],
-    "ts": "2026-07-16T00:12:43+00:00",
-    "url": "https://www.trefis.com/articles/607294/the-real-risk-inside-marvell-stock/2026-07-15?.tsrc=rss"
-  },
-  {
-    "id": "na5671e7009",
-    "headline": "Why Micron (MU) Stock Is Trading Lower Today",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "CRWV"
-    ],
-    "ts": "2026-07-15T23:04:21+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/why-micron-mu-stock-trading-230421565.html?.tsrc=rss"
-  },
-  {
-    "id": "nc752e54bf9",
-    "headline": "DocuSign and Oracle Shares Skyrocket, What You Need To Know",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ORCL"
-    ],
-    "ts": "2026-07-15T22:40:21+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/docusign-oracle-shares-skyrocket-know-224021754.html?.tsrc=rss"
-  },
-  {
-    "id": "n408f19b1c6",
-    "headline": "My 3 Favorite AI Stocks to Buy on the Continued Chip Sell-Off",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AMD"
-    ],
-    "ts": "2026-07-15T22:39:00+00:00",
-    "url": "https://www.fool.com/investing/2026/07/15/my-3-favorite-ai-stocks-to-buy-on-the-continued-ch/?.tsrc=rss"
-  },
-  {
-    "id": "n912870d70e",
-    "headline": "Bloom Energy (BE) Stock Drops Despite Market Gains: Important Facts to Note",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "BE"
-    ],
-    "ts": "2026-07-15T22:00:01+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/bloom-energy-stock-drops-despite-220001133.html?.tsrc=rss"
-  },
-  {
-    "id": "n7ed5d8bc65",
-    "headline": "Vistra Corp. (VST) Rises Higher Than Market: Key Facts",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "VST"
-    ],
-    "ts": "2026-07-15T21:45:03+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/vistra-corp-vst-rises-higher-214503897.html?.tsrc=rss"
-  },
-  {
-    "id": "nda0ff3147e",
-    "headline": "S&P 500, Dow Edge Higher As Bank Earnings Offset Middle East Oil Concerns \u2014 AAPL, SKHY, ASML, PYPL In Focus",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ASML"
-    ],
-    "ts": "2026-07-15T21:41:06+00:00",
-    "url": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-dow-edge-higher-as-bank-earnings-offset-middle-east-oil-concerns-aapl-skhy-asml-pypl-in-focus/cZZPKc1R7rK?.tsrc=rss"
-  },
-  {
-    "id": "nc4c85cf83e",
-    "headline": "Stock Market Today: Nasdaq Rises Despite Tumble Among Chip Leaders; Apple Paces Mag 7 Rally",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "SMH"
-    ],
-    "ts": "2026-07-15T20:31:15+00:00",
-    "url": "https://finance.yahoo.com/m/8b0331a9-7640-359f-947b-04f63d65cc26/stock-market-today%3A-nasdaq.html?.tsrc=rss"
-  },
-  {
-    "id": "n82fd57d7f1",
-    "headline": "EQT Declares Quarterly Cash Dividend",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "EQT"
-    ],
-    "ts": "2026-07-15T20:15:00+00:00",
-    "url": "https://finance.yahoo.com/energy/articles/eqt-declares-quarterly-cash-dividend-201500288.html?.tsrc=rss"
-  },
-  {
-    "id": "nd8ce7ec04b",
-    "headline": "A Short Seller Report Says China Could Kill This Key Data Center Supplier\u2019s Growth",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "BE"
-    ],
-    "ts": "2026-07-15T20:13:19+00:00",
-    "url": "https://www.barchart.com/story/news/3304085/a-short-seller-report-says-china-could-kill-this-key-data-center-suppliers-growth?.tsrc=rss"
-  },
-  {
-    "id": "n830b263d1c",
-    "headline": "Intel Begins Using ASML's Most Advanced Chipmaking Machine",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "INTC"
-    ],
-    "ts": "2026-07-15T20:11:09+00:00",
-    "url": "https://finance.yahoo.com/technology/articles/intel-begins-using-asmls-most-201109178.html?.tsrc=rss"
-  },
-  {
-    "id": "nf3339e565a",
-    "headline": "Applied Digital Sets Fiscal Fourth Quarter and Full Year 2026 Conference Call for Monday, July 27, 2026, at 5:00 p.m. Eastern Time",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "APLD"
-    ],
-    "ts": "2026-07-15T20:05:00+00:00",
-    "url": "https://finance.yahoo.com/technology/ai/articles/applied-digital-sets-fiscal-fourth-200500943.html?.tsrc=rss"
-  },
-  {
-    "id": "nd452c97197",
-    "headline": "Bloom Energy vs. Plug Power: Which Fuel Cell Stock Is a Better Buy in 2026?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "BE"
-    ],
-    "ts": "2026-07-15T19:59:27+00:00",
-    "url": "https://www.fool.com/coverage/better-buy/2026/07/15/bloom-energy-vs-plug-power-which-fuel-cell-stock-is-a-better-buy-in-2026/?.tsrc=rss"
-  },
-  {
-    "id": "n8d481bc941",
-    "headline": "AMD\u2019s hidden AI weapon may finally be exposed",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AMD"
-    ],
-    "ts": "2026-07-15T19:13:00+00:00",
-    "url": "https://www.thestreet.com/investing/amds-hidden-ai-weapon-may-finally-be-exposed?.tsrc=rss"
-  },
-  {
-    "id": "n7821bba003",
-    "headline": "Is CoreWeave (CRWV) Cheap After A 43% Drop?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "CRWV"
-    ],
-    "ts": "2026-07-15T19:09:27+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/coreweave-crwv-cheap-43-drop-190927614.html?.tsrc=rss"
-  },
-  {
-    "id": "nca2048f9d9",
-    "headline": "Corning Stock Signal Hints at Upside Potential Amid Breather",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "GLW"
-    ],
-    "ts": "2026-07-15T19:00:31+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/corning-stock-signal-hints-upside-190031333.html?.tsrc=rss"
-  },
-  {
-    "id": "n9f0ce310a2",
-    "headline": "TeraWulf Stock Panics Over New York\u2019s Data-Center Moratorium, but Wall Street Sees a Steal",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "CRWV"
-    ],
-    "ts": "2026-07-15T18:54:00+00:00",
-    "url": "https://finance.yahoo.com/m/b4ed0508-254a-3c64-934f-2510318929d7/terawulf-stock-panics-over.html?.tsrc=rss"
-  },
-  {
-    "id": "n8d932af6dd",
-    "headline": "Bank of America Says Long Semiconductors is the \u201cMost Crowded Trade Ever\u201d",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "SMH"
-    ],
-    "ts": "2026-07-15T18:46:52+00:00",
-    "url": "https://247wallst.com/investing/2026/07/15/bank-of-america-says-long-semiconductors-is-the-most-crowded-trade-ever/?.tsrc=rss"
-  },
-  {
-    "id": "n3f4b9b7b5e",
-    "headline": "Applied Optoelectronics Falls 12%, Coherent and Lumentum Slide as AI Optics Trade Cools",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "INTC"
-    ],
-    "ts": "2026-07-15T18:18:31+00:00",
-    "url": "https://247wallst.com/investing/2026/07/15/applied-optoelectronics-falls-12-coherent-and-lumentum-slide-as-ai-optics-trade-cools/?.tsrc=rss"
-  },
-  {
-    "id": "n16aca5a139",
-    "headline": "Corning (GLW) Stock Could Be 7% Above Fair Value On AI Selloff",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "GLW"
-    ],
-    "ts": "2026-07-15T18:13:21+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/corning-glw-stock-could-7-181321764.html?.tsrc=rss"
-  },
-  {
-    "id": "n286717d626",
-    "headline": "Is NVIDIA\u2019s Next Big Bet A Massive Pivot?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "INTC"
-    ],
-    "ts": "2026-07-15T17:11:53+00:00",
-    "url": "https://www.trefis.com/articles/607335/is-nvidias-next-big-bet-a-massive-pivot/2026-07-15?.tsrc=rss"
-  },
-  {
-    "id": "n364bc0a896",
-    "headline": "Indexes Wobble Near Flatline. Wall Street Is in Wait-and-See Mode.",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "GLW"
-    ],
-    "ts": "2026-07-15T17:02:47+00:00",
-    "url": "https://finance.yahoo.com/m/940bc323-a292-386b-b16b-1a1aa0a1cd4e/indexes-wobble-near-flatline..html?.tsrc=rss"
-  },
-  {
-    "id": "n7346fff79f",
-    "headline": "UBS Keeps Buy Rating on EQT Corporation (EQT)",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "EQT"
-    ],
-    "ts": "2026-07-15T14:24:38+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/ubs-keeps-buy-rating-eqt-142438217.html?.tsrc=rss"
-  },
-  {
-    "id": "ne49db2b0b4",
-    "headline": "NNE Underperforms Industry in the Past 6 Months: Buy, Hold or Sell?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "BE"
-    ],
-    "ts": "2026-07-15T14:12:00+00:00",
-    "url": "https://finance.yahoo.com/energy/articles/nne-underperforms-industry-past-6-141200591.html?.tsrc=rss"
-  },
-  {
-    "id": "nc94b4db65c",
-    "headline": "Is Alvopetro Energy (ALVOF) Stock Outpacing Its Oils-Energy Peers This Year?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "BE"
-    ],
-    "ts": "2026-07-15T13:40:04+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/alvopetro-energy-alvof-stock-outpacing-134004765.html?.tsrc=rss"
-  },
-  {
-    "id": "n0038701af2",
-    "headline": "Is Applied Digital (APLD) Undervalued As New AI Capacity Comes Online?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "APLD"
-    ],
-    "ts": "2026-07-15T13:10:50+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/applied-digital-apld-undervalued-ai-131050388.html?.tsrc=rss"
-  },
-  {
-    "id": "ne94fc80d9f",
-    "headline": "Is Massive AI Spending Favoring Chip ETFs More Than Big Tech?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "SMH"
-    ],
-    "ts": "2026-07-15T12:00:00+00:00",
-    "url": "https://finance.yahoo.com/technology/ai/articles/massive-ai-spending-favoring-chip-120000152.html?.tsrc=rss"
-  },
-  {
-    "id": "n3962e2206f",
-    "headline": "Chip stocks rise on ASML earnings despite U.S. strikes on Iran",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "SMH"
-    ],
-    "ts": "2026-07-15T11:35:11+00:00",
-    "url": "https://qz.com/chip-stocks-asml-earnings-iran-us-strikes-071526?.tsrc=rss"
-  },
-  {
-    "id": "nc4e45cbfeb",
-    "headline": "Tech Shares Lift Wall Street Pre-Bell; Asia Up, Europe Lower",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "SMH"
-    ],
-    "ts": "2026-07-15T11:18:28+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/tech-shares-lift-wall-street-111828212.html?.tsrc=rss"
   }
 ]
