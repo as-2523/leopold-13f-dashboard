@@ -1,19 +1,11 @@
 {
   "ticker": "WYFI",
-  "current_price": 25.8,
-  "prev_close": 29.18,
-  "day_change_pct": -11.58,
+  "current_price": 25.15,
+  "prev_close": 25.8,
+  "day_change_pct": -2.52,
   "week_52_high": 46.87,
   "week_52_low": 10.51,
   "history": [
-    {
-      "date": "2026-03-09",
-      "open": 15.16,
-      "high": 15.906,
-      "low": 15.01,
-      "close": 15.81,
-      "volume": 664800
-    },
     {
       "date": "2026-03-10",
       "open": 15.84,
@@ -724,9 +716,17 @@
       "high": 28.734,
       "low": 25.56,
       "close": 25.8,
-      "volume": 2865400
+      "volume": 2883000
+    },
+    {
+      "date": "2026-07-17",
+      "open": 24.82,
+      "high": 26.712,
+      "low": 23.8,
+      "close": 25.15,
+      "volume": 2446900
     }
   ],
-  "as_of": "2026-07-17T08:32:02.934666+00:00",
+  "as_of": "2026-07-18T08:14:26.134310+00:00",
   "stale": false
 }
