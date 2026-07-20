@@ -4,7 +4,7 @@
     "exchange": "NGM",
     "sector": "ETF",
     "market_cap": null,
-    "pe_ratio": 36.82995,
+    "pe_ratio": 36.027866,
     "description": "The fund normally invests at least 80% of its total assets in securities that comprise the fund's benchmark index. The index includes common stocks and depositary receipts of U.S. exchange-listed companies in the semiconductor industry. Such companies may include medium-capitalization companies and foreign companies that are listed on a U.S. exchange. The fund is non-diversified."
   },
   "NVDA": {
@@ -35,8 +35,8 @@
     "name": "Advanced Micro Devices, Inc.",
     "exchange": "NMS",
     "sector": "Technology",
-    "market_cap": 816833036288,
-    "pe_ratio": 175.15385,
+    "market_cap": 808386560000,
+    "pe_ratio": 164.15895,
     "description": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers artificial intelligence (AI) accelerators, microprocessors, and graphics processing units (GPUs) as standalone devices or as incorporated into accelerated processing units, chipsets, and data center and professional GPUs; and embedded processors and semi-custom system-on-chip (SoC) products, microprocessor and SoC develo"
   },
   "ASML": {
@@ -59,8 +59,8 @@
     "name": "Corning Incorporated",
     "exchange": "NYQ",
     "sector": "Technology",
-    "market_cap": 136316428288,
-    "pe_ratio": 84.25,
+    "market_cap": 133063213056,
+    "pe_ratio": 73.97608,
     "description": "Corning Incorporated operates in optical communications, display, specialty materials, automotive, and life sciences businesses in the United States, Canada, Mexico, Japan, Taiwan, China, South Korea, Germany, and internationally. The company provides optical fibers and cables; and hardware and equipment products, such as cable assemblies, fiber optic hardware and connectors, optical components and couplers, closures, network interface devices, and other accessories for the telecommunications in"
   },
   "BE": {
@@ -171,8 +171,8 @@
     "name": "Micron Technology, Inc.",
     "exchange": "NMS",
     "sector": "Technology",
-    "market_cap": 963598221312,
-    "pe_ratio": 20.450623,
+    "market_cap": 958798299136,
+    "pe_ratio": 19.193987,
     "description": "Micron Technology, Inc. designs, develops, manufactures, and sells memory and storage products in the United States, Taiwan, Japan, Mainland China, Hong Kong, Europe, and internationally. It operates through the Cloud Memory Business Unit; Core Data Center Business Unit; Mobile and Client Business Unit; and Automotive and Embedded Business Unit segments. The company provides memory products, including dynamic random access memory components and modules, CXL-based memory, LPDDR components and mod"
   },
   "TSM": {
@@ -203,8 +203,8 @@
     "name": "EQT Corporation",
     "exchange": "NYQ",
     "sector": "Energy",
-    "market_cap": 30898614272,
-    "pe_ratio": 9.373815,
+    "market_cap": 30998691840,
+    "pe_ratio": 9.404175,
     "description": "EQT Corporation engages in the exploration, production, gathering, and transmission of hydrocarbons and natural gas. The company sells natural gas, natural gas liquids, and oil to marketers, utilities, and industrial customers located in the Appalachian Basin. It also provides marketing services and contractual pipeline capacity management services, as well as engages in risk management and hedging activities. The company was formerly known as Equitable Resources Inc. and changed its name to EQT"
   },
   "MRVL": {
