@@ -4,7 +4,7 @@
   "prev_close": 833.64,
   "day_change_pct": -8.47,
   "week_52_high": 1085.68,
-  "week_52_low": 101.22,
+  "week_52_low": 101.61,
   "history": [
     {
       "date": "2026-03-17",
@@ -720,13 +720,13 @@
     },
     {
       "date": "2026-07-24",
-      "open": 810.5,
-      "high": 831.21,
-      "low": 755.03,
-      "close": 762.99,
-      "volume": 3645300
+      "open": NaN,
+      "high": NaN,
+      "low": NaN,
+      "close": NaN,
+      "volume": 3636627
     }
   ],
-  "as_of": "2026-07-25T08:27:36.731493+00:00",
+  "as_of": "2026-07-26T08:42:34.961525+00:00",
   "stale": false
 }
