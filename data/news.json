@@ -1,5 +1,175 @@
 [
   {
+    "id": "nde7d24364b",
+    "headline": "Warren Buffett Thinks Investors Are \"Gambling\" Right Now. Here's What Happened the Last Time He Uttered Those Words.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-08-02T08:27:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/02/warren-buffett-thinks-investors-are-gambling-right/?.tsrc=rss"
+  },
+  {
+    "id": "n4e03a2743d",
+    "headline": "President Donald Trump Expects the Stock Market to \"Go Through the Roof,\" but His Own Policies Can Prevent That From Happening",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-08-02T08:26:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/02/trump-expects-stock-market-to-go-through-the-roof/?.tsrc=rss"
+  },
+  {
+    "id": "na8c0501c6d",
+    "headline": "1 Incredible Reason to Buy Qualcomm Stock Right Now",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-08-02T08:25:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/02/1-incredible-reason-buy-qualcomm-stock-right-now/?.tsrc=rss"
+  },
+  {
+    "id": "n55151a77a3",
+    "headline": "Here Are My 3 Top Artificial Intelligence (AI) Stocks to Buy in August",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-08-02T08:20:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/02/here-are-my-3-top-artificial-intelligence-ai-stock/?.tsrc=rss"
+  },
+  {
+    "id": "nfb7b08db46",
+    "headline": "Roblox and Reddit Stocks Just Both Crashed More Than 20%, but Only One Is a Buy",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-08-02T08:05:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/02/roblox-and-reddit-stocks-just-both-crashed-more-th/?.tsrc=rss"
+  },
+  {
+    "id": "n63ba98307d",
+    "headline": "Dow Jones Futures: Trump Calls Off Iran Attacks; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AMD"
+    ],
+    "ts": "2026-08-02T03:06:59+00:00",
+    "url": "https://finance.yahoo.com/m/a6fd7cc1-160f-33be-9c9b-10601e0fcebe/dow-jones-futures%3A-trump.html?.tsrc=rss"
+  },
+  {
+    "id": "n2f50f6a081",
+    "headline": "TSMC Is Reportedly Developing Advanced Chip Packaging Tech to Challenge Intel's Dominance",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "INTC"
+    ],
+    "ts": "2026-08-01T22:00:22+00:00",
+    "url": "https://finance.yahoo.com/technology/articles/tsmc-reportedly-developing-advanced-chip-220022568.html?.tsrc=rss"
+  },
+  {
+    "id": "nd63745852c",
+    "headline": "Is Bloom Energy in Its Nvidia Moment?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "BE"
+    ],
+    "ts": "2026-08-01T18:31:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/01/is-bloom-energy-in-its-nvidia-moment/?.tsrc=rss"
+  },
+  {
+    "id": "n48e3bc2070",
+    "headline": "Here's What Morgan Stanley Says About Buying the AI Infrastructure Dip",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "INTC"
+    ],
+    "ts": "2026-08-01T16:18:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/01/what-morgan-stanley-buy-ai-infrastructure/?.tsrc=rss"
+  },
+  {
+    "id": "n4ef6000c83",
+    "headline": "The 5 Most Interesting Analyst Questions From Intel\u2019s Q2 Earnings Call",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "INTC"
+    ],
+    "ts": "2026-08-01T15:55:57+00:00",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/5-most-interesting-analyst-questions-155557123.html?.tsrc=rss"
+  },
+  {
+    "id": "n1a28f77348",
+    "headline": "Prediction: Intel Posts a Profitable Year Before 2028. Here's How It Gets There.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "INTC"
+    ],
+    "ts": "2026-08-01T15:29:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/01/prediction-intel-posts-a-profitable-year-before-20/?.tsrc=rss"
+  },
+  {
+    "id": "n7eb3fd0444",
+    "headline": "What The Bipolar Silicon Market Structure Means Moving Forward: Nividia Vs. Broadcom",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AVGO"
+    ],
+    "ts": "2026-08-01T14:15:18+00:00",
+    "url": "https://247wallst.com/investing/2026/08/01/what-the-bipolar-silicon-market-structure-means-moving-forward-nividia-vs-broadcom/?.tsrc=rss"
+  },
+  {
+    "id": "neba89197cc",
+    "headline": "How Server CPUs Could Give AMD Stock a Big Boost After August 4",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AMD"
+    ],
+    "ts": "2026-08-01T13:00:02+00:00",
+    "url": "https://www.barchart.com/story/news/3593848/how-server-cpus-could-give-amd-stock-a-big-boost-after-august-4?.tsrc=rss"
+  },
+  {
+    "id": "n297b1e6270",
+    "headline": "Bloom Energy Is Soaring: Is There a Better Way To Play The AI Power Boom?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "BE"
+    ],
+    "ts": "2026-08-01T12:35:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/01/bloom-energy-is-soaring-is-there-a-better-way-to-p/?.tsrc=rss"
+  },
+  {
+    "id": "n2a65500e0c",
+    "headline": "AI Isn\u2019t a Catch-All Trade for Stocks in This Earnings Season",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ASML"
+    ],
+    "ts": "2026-08-01T12:00:00+00:00",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/ai-isn-t-catch-trade-120000618.html?.tsrc=rss"
+  },
+  {
+    "id": "n7ec345c0eb",
+    "headline": "ARK Invest Buys $6.7 Million Of CRCL Stock, Adds CoreWeave And Solana ETF, Sells Shopify",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "CRWV"
+    ],
+    "ts": "2026-08-01T09:04:40+00:00",
+    "url": "https://stocktwits.com/news-articles/markets/equity/ark-invest-buys-circle-crwv-sells-shopify-crowdstrike/cZ8xtLFRJ5I?.tsrc=rss"
+  },
+  {
+    "id": "ncbda36c8b8",
+    "headline": "Prediction: Bloom Energy Doubles Its Revenue Again by 2029. Here's the Math.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "BE"
+    ],
+    "ts": "2026-08-01T08:31:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/01/prediction-bloom-energy-doubles-its-revenue-again/?.tsrc=rss"
+  },
+  {
     "id": "n21b21e4715",
     "headline": "Trumpflation Is Evolving Into a 3-Headed Monster, and Wall Street Will End Up Paying the Price",
     "source": "Yahoo Finance",
@@ -128,6 +298,16 @@
     ],
     "ts": "2026-07-31T21:16:01+00:00",
     "url": "https://www.fool.com/coverage/better-buy/2026/07/31/bloom-energy-or-plug-power-which-hot-fuel-cell-stock-is-a-better-buy-in-2026/?.tsrc=rss"
+  },
+  {
+    "id": "n9992cfced3",
+    "headline": "Why some investors are wrong about GPU depreciation",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "CRWV"
+    ],
+    "ts": "2026-07-31T21:15:50+00:00",
+    "url": "https://blockspace.media/short/why-some-investors-are-wrong-about-gpu-depreciation/?.tsrc=rss"
   },
   {
     "id": "n8026124940",
@@ -310,193 +490,13 @@
     "url": "https://finance.yahoo.com/m/db52ca39-3f05-39e6-be83-8f8d83dbd9af/stock-market-rises-amid.html?.tsrc=rss"
   },
   {
-    "id": "n2efb845980",
-    "headline": "Expand Energy Targets the LNG, Power and Industrial Demand Expansion",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "EQT"
-    ],
-    "ts": "2026-07-31T16:30:00+00:00",
-    "url": "https://finance.yahoo.com/energy/articles/expand-energy-targets-lng-power-163000551.html?.tsrc=rss"
-  },
-  {
-    "id": "nc2ad45a47f",
-    "headline": "The 5 Best Long-Term Investment Stocks to Buy for Steady Returns",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AVGO"
-    ],
-    "ts": "2026-07-31T16:10:11+00:00",
-    "url": "https://www.kiplinger.com/investing/stocks/best-long-term-investment-stocks?.tsrc=rss"
-  },
-  {
-    "id": "n660ae38860",
-    "headline": "Delivering Measurable AI Strategies: ICR CEO Anton Nicholas, Live at Nasdaq",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "CRWV"
-    ],
-    "ts": "2026-07-31T16:04:14+00:00",
-    "url": "https://finance.yahoo.com/technology/ai/articles/delivering-measurable-ai-strategies-icr-160414289.html?.tsrc=rss"
-  },
-  {
-    "id": "nff7f699d76",
-    "headline": "The Biggest Concern Hanging Over CoreWeave Stock Has Finally Eased",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "CRWV"
-    ],
-    "ts": "2026-07-31T16:01:17+00:00",
-    "url": "https://www.barchart.com/story/news/3579595/the-biggest-concern-hanging-over-coreweave-stock-has-finally-eased?.tsrc=rss"
-  },
-  {
-    "id": "n774f90224a",
-    "headline": "What Makes ASML (ASML) a New Strong Buy Stock",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ASML"
-    ],
-    "ts": "2026-07-31T16:00:03+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/makes-asml-asml-strong-buy-160003944.html?.tsrc=rss"
-  },
-  {
-    "id": "na6ef26e418",
-    "headline": "AMD is Down 10% Over a Month: Did Microsoft\u2019s Catalyst Just Spark the 155% Upside Expected By Wall Street Pro?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AVGO"
-    ],
-    "ts": "2026-07-31T15:50:40+00:00",
-    "url": "https://247wallst.com/investing/2026/07/31/amd-is-down-10-over-a-month-did-microsofts-catalyst-just-spark-the-155-upside-expected-by-wall-street-pro/?.tsrc=rss"
-  },
-  {
-    "id": "n306b14afa1",
-    "headline": "3 Wall Street Analysts Have Oracle Going to $400: An Alphabet Partnership Just Jump Started That 200% Upside",
+    "id": "n259cead3c7",
+    "headline": "Morgan Stanley says Bloom can withstand an Oracle project delay",
     "source": "Yahoo Finance",
     "tickers": [
       "ORCL"
     ],
-    "ts": "2026-07-31T15:49:51+00:00",
-    "url": "https://247wallst.com/investing/2026/07/31/3-wall-street-analysts-have-oracle-going-to-400-an-alphabet-partnership-just-jump-started-that-200-upside/?.tsrc=rss"
-  },
-  {
-    "id": "n42c8cdc4c3",
-    "headline": "Should You Buy AMD Stock Ahead of Q2 Earnings? Here's What to Know",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AVGO"
-    ],
-    "ts": "2026-07-31T15:21:00+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/buy-amd-stock-ahead-q2-152100876.html?.tsrc=rss"
-  },
-  {
-    "id": "n7336865552",
-    "headline": "The $2.3 Trillion Reason Amazon, Alphabet, and Microsoft May Still Be the Smartest AI Investments",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ORCL"
-    ],
-    "ts": "2026-07-31T14:47:35+00:00",
-    "url": "https://247wallst.com/investing/2026/07/31/the-2-3-trillion-reason-amazon-alphabet-and-microsoft-may-still-be-the-smartest-ai-investments/?.tsrc=rss"
-  },
-  {
-    "id": "nc7dbd81028",
-    "headline": "Vistra Corp. (VST) Earnings Expected to Grow: What to Know Ahead of Next Week's Release",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "VST"
-    ],
-    "ts": "2026-07-31T14:00:04+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/vistra-corp-vst-earnings-expected-140004358.html?.tsrc=rss"
-  },
-  {
-    "id": "n34b2f23a44",
-    "headline": "Best Momentum Stock to Buy for July 31st",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ASML"
-    ],
-    "ts": "2026-07-31T14:00:00+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/best-momentum-stock-buy-july-140000237.html?.tsrc=rss"
-  },
-  {
-    "id": "n30b3be448e",
-    "headline": "Earnings Calendar and Analysis for This Week (August 3-7)",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "APLD"
-    ],
-    "ts": "2026-07-31T13:44:00+00:00",
-    "url": "https://www.kiplinger.com/investing/stocks/17494/next-week-earnings-calendar-stocks?.tsrc=rss"
-  },
-  {
-    "id": "nbde6c50bb3",
-    "headline": "Are Oils-Energy Stocks Lagging  Alvopetro Energy (ALVOF) This Year?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "BE"
-    ],
-    "ts": "2026-07-31T13:40:04+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/oils-energy-stocks-lagging-alvopetro-134004478.html?.tsrc=rss"
-  },
-  {
-    "id": "n8ded4f2e8d",
-    "headline": "Tech Revival Buoys Wall Street Pre-Bell; Asia Rallies, Europe Up",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "SMH"
-    ],
-    "ts": "2026-07-31T11:05:57+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/tech-revival-buoys-wall-street-110557166.html?.tsrc=rss"
-  },
-  {
-    "id": "n5a05d567b4",
-    "headline": "ASML: Is a New Chinese Competitor a Major Threat? (NASDAQ: ASML)",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ASML"
-    ],
-    "ts": "2026-07-31T10:50:00+00:00",
-    "url": "https://www.fool.com/investing/2026/07/31/asml-new-chinese-competitor-major-threat-stock/?.tsrc=rss"
-  },
-  {
-    "id": "n8401cdfd81",
-    "headline": "Chip Stocks Climb as AI Rally Regains Strength",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ASML"
-    ],
-    "ts": "2026-07-31T09:06:58+00:00",
-    "url": "https://finance.yahoo.com/m/4b774a5e-1247-3891-aefd-b33a34232c1e/chip-stocks-climb-as-ai-rally.html?.tsrc=rss"
-  },
-  {
-    "id": "n23eb9e7972",
-    "headline": "Quantum Fallout: 1 Quantum Stock to Buy, 1 to Hold, and 1 to Sell on the Recent Dip",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "NVDA"
-    ],
-    "ts": "2026-07-31T09:05:00+00:00",
-    "url": "https://www.fool.com/investing/2026/07/31/quantum-fallout-quantum-stock-buy-hold-sell/?.tsrc=rss"
-  },
-  {
-    "id": "necae641bee",
-    "headline": "MU, SKHY, NVDA, AMD, INTC Extend Rally Premarket, But Chip Stocks Still On Track For Worst Month Since 2002",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "NVDA"
-    ],
-    "ts": "2026-07-31T08:50:17+00:00",
-    "url": "https://stocktwits.com/news-articles/markets/equity/mu-skhy-nvda-amd-intc-extend-rally-premarket-but-chip-stocks-still-on-track-for-worst-month-since-2002/cZN4TMURJ2D?.tsrc=rss"
-  },
-  {
-    "id": "nd8aa3ffa2e",
-    "headline": "Will Warren Buffett and Greg Abel Make Alphabet Berkshire Hathaway's Next Apple?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "NVDA"
-    ],
-    "ts": "2026-07-31T08:50:00+00:00",
-    "url": "https://www.fool.com/investing/2026/07/31/warren-buffett-greg-abel-alphabet-berkshire/?.tsrc=rss"
+    "ts": "2026-07-31T16:33:00+00:00",
+    "url": "https://www.thestreet.com/investing/stocks/morgan-stanley-says-bloom-can-withstand-an-oracle-project-delay?.tsrc=rss"
   }
 ]
