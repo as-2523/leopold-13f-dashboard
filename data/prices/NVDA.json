@@ -1,19 +1,11 @@
 {
   "ticker": "NVDA",
-  "current_price": 206.64,
-  "prev_close": 200.75,
-  "day_change_pct": 2.93,
+  "current_price": 211.94,
+  "prev_close": 206.64,
+  "day_change_pct": 2.56,
   "week_52_high": 236.54,
   "week_52_low": 164.07,
   "history": [
-    {
-      "date": "2026-03-25",
-      "open": 176.8938,
-      "high": 181.009,
-      "low": 176.6441,
-      "close": 178.472,
-      "volume": 162602100
-    },
     {
       "date": "2026-03-26",
       "open": 175.865,
@@ -720,13 +712,21 @@
     },
     {
       "date": "2026-08-03",
-      "open": NaN,
-      "high": NaN,
-      "low": NaN,
-      "close": NaN,
-      "volume": 127547828
+      "open": 197.69,
+      "high": 208.74,
+      "low": 196.85,
+      "close": 206.64,
+      "volume": 128406900
+    },
+    {
+      "date": "2026-08-04",
+      "open": 211.3,
+      "high": 213.06,
+      "low": 209.05,
+      "close": 211.94,
+      "volume": 133610200
     }
   ],
-  "as_of": "2026-08-04T09:17:27.033401+00:00",
+  "as_of": "2026-08-05T09:15:12.107864+00:00",
   "stale": false
 }
