@@ -1,5 +1,145 @@
 [
   {
+    "id": "nb7e849a5e5",
+    "headline": "Taiwan indicts nine over alleged illegal export of AI servers to China",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-08-24T06:24:57+00:00",
+    "url": "https://finance.yahoo.com/technology/ai/articles/taiwan-indicts-9-over-alleged-062457847.html?.tsrc=rss"
+  },
+  {
+    "id": "n65f481d369",
+    "headline": "Billionaire Investor Stanley Druckenmiller Sold Broadcom, Intel, and Micron and Bought Another Chip Stock That Expects to Double Data Center Sales in 2027",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AVGO"
+    ],
+    "ts": "2026-08-24T06:05:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/24/billionaire-stanley-druckenmiller-sold-micron-2027/?.tsrc=rss"
+  },
+  {
+    "id": "n0d3338d31d",
+    "headline": "This Week\u2019s Big Events Are Priced In for Stocks: Will Bitcoin Agree?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-08-24T05:15:00+00:00",
+    "url": "https://beincrypto.com/bitcoin-priced-in-reaction-stocks/?.tsrc=rss"
+  },
+  {
+    "id": "n1420d76716",
+    "headline": "Nvidia Is Coming for OpenAI and DeepSeek With $6 Billion Poolside Deal to Build a Powerful Open-Weight AI Model: Report",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-08-24T04:21:55+00:00",
+    "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-coming-openai-deepseek-6-042155320.html?.tsrc=rss"
+  },
+  {
+    "id": "naf0373bc71",
+    "headline": "$92 Billion Nvidia Earnings Could Make or Break the AI Trade",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-08-24T03:40:00+00:00",
+    "url": "https://beincrypto.com/nvidia-earnings-92-billion-ai-trade/?.tsrc=rss"
+  },
+  {
+    "id": "n573a8f4f07",
+    "headline": "How S&P 500, Nasdaq, Dow Futures Are Moving As Trump\u2019s \u2018Economic D-Day\u2019 On Iran, Nvidia Earnings Loom",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-08-24T03:29:02+00:00",
+    "url": "https://stocktwits.com/news-articles/markets/equity/how-s-and-p-500-nasdaq-dow-futures-are-moving-as-trump-s-economic-d-day-on-iran-nvidia-earnings-loom/cZYKTMXRJn2?.tsrc=rss"
+  },
+  {
+    "id": "n964a9845e3",
+    "headline": "Broadcom Has Seen Its Biggest Customer Drop a Key Chip Before. History Says What the Stock Did Next.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AVGO"
+    ],
+    "ts": "2026-08-24T02:46:01+00:00",
+    "url": "https://www.fool.com/investing/2026/08/23/broadcom-has-seen-its-biggest-customer-drop-a-key-chip-before-history-says-what-the-stock-did-next/?.tsrc=rss"
+  },
+  {
+    "id": "n1c0280ca01",
+    "headline": "Oracle vs. Amazon: Which Is the Better AI Cloud Stock to Own for the Next 5 Years?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ORCL"
+    ],
+    "ts": "2026-08-23T20:13:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/23/oracle-vs-amazon-which-is-the-better-ai-cloud-stoc/?.tsrc=rss"
+  },
+  {
+    "id": "nbdee1f196d",
+    "headline": "Vistra Is the Quietest Big Winner of the AI Power Boom. Here's Why.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "VST"
+    ],
+    "ts": "2026-08-23T19:39:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/23/vistra-is-the-quietest-big-winner-of-the-ai-power/?.tsrc=rss"
+  },
+  {
+    "id": "n2a3e20360c",
+    "headline": "Broadcom vs. Marvell Technology: 1 Critical Metric Decides the Better Custom AI Chip Stock",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AVGO"
+    ],
+    "ts": "2026-08-23T17:26:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/23/broadcom-vs-marvell-technology-1-critical-metric-d/?.tsrc=rss"
+  },
+  {
+    "id": "naad6e36922",
+    "headline": "Should You Buy Oracle Stock Before September? The Answer Might Surprise You.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ORCL"
+    ],
+    "ts": "2026-08-23T17:10:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/23/should-buy-oracle-stock-september-answer-surprise/?.tsrc=rss"
+  },
+  {
+    "id": "n380af1dc0a",
+    "headline": "AMD Is Investing More Than $10 Billion in Taiwan to Build Advanced Chip Packaging With TSMC. Here's What Lisa Su Is Actually Buying With That Money.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AMD"
+    ],
+    "ts": "2026-08-23T15:50:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/23/amd-is-investing-more-than-xx-billion-in-taiwan-to/?.tsrc=rss"
+  },
+  {
+    "id": "n645b5ebbb9",
+    "headline": "Applied Digital vs. TeraWulf: Which AI Data Center Stock Is the Better Buy?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "APLD"
+    ],
+    "ts": "2026-08-23T13:40:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/23/applied-digital-vs-terawulf-which-ai-data-center/?.tsrc=rss"
+  },
+  {
+    "id": "n794d6338ef",
+    "headline": "Forget Broadcom: Nvidia (NVDA) Is Still the Top Semiconductor Stock for 2027 and Beyond",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AVGO"
+    ],
+    "ts": "2026-08-23T09:30:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/23/forget-broadcom-nvidia-nvda-is-still-the-top-semic/?.tsrc=rss"
+  },
+  {
     "id": "ne0ae8025fb",
     "headline": "Got $500? 1 Cryptocurrency to Buy Hand Over Fist in the Second Half of 2026",
     "source": "Yahoo Finance",
@@ -358,145 +498,5 @@
     ],
     "ts": "2026-08-21T18:29:00+00:00",
     "url": "https://www.fool.com/investing/2026/08/21/coreweave-vs-nebius-group-which-artificial-intelli/?.tsrc=rss"
-  },
-  {
-    "id": "n85d590fd84",
-    "headline": "Michael Burry Says the AI Buildout Is Repeating 2008: \u2018The Shenanigans Are Apparent Today\u2019",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ORCL"
-    ],
-    "ts": "2026-08-21T18:10:47+00:00",
-    "url": "https://247wallst.com/investing/2026/08/21/michael-burry-says-the-ai-buildout-is-repeating-2008-the-shenanigans-are-apparent-today/?.tsrc=rss"
-  },
-  {
-    "id": "n99a85c69b8",
-    "headline": "FuelCell Energy Jumps 5%, Plug Power Climbs 4%, Bloom Energy Slips as the Hydrogen Trade Splits",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "BE"
-    ],
-    "ts": "2026-08-21T18:04:43+00:00",
-    "url": "https://247wallst.com/investing/2026/08/21/fuelcell-energy-jumps-5-plug-power-climbs-4-bloom-energy-slips-as-the-hydrogen-trade-splits/?.tsrc=rss"
-  },
-  {
-    "id": "n021459c0f0",
-    "headline": "BCA Research Sees a Dangerous Risk in CoreWeave (CRWV) and Nebius (NBIS)",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "CRWV"
-    ],
-    "ts": "2026-08-21T17:50:54+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/bca-research-sees-dangerous-risk-175054863.html?.tsrc=rss"
-  },
-  {
-    "id": "nb0dda94268",
-    "headline": "What Do Corning (GLW) AI Fiber Deals Mean For Its Growth Story?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "GLW"
-    ],
-    "ts": "2026-08-21T17:11:13+00:00",
-    "url": "https://finance.yahoo.com/technology/ai/articles/corning-glw-ai-fiber-deals-171113311.html?.tsrc=rss"
-  },
-  {
-    "id": "n59a4afd279",
-    "headline": "Bloom Energy vs. Palantir: Which \"Story Stock\" Actually Has More Room to Run?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "BE"
-    ],
-    "ts": "2026-08-21T16:25:00+00:00",
-    "url": "https://www.fool.com/investing/2026/08/21/bloom-energy-vs-palantir-which-story-stock-actuall/?.tsrc=rss"
-  },
-  {
-    "id": "nd2baa705f9",
-    "headline": "Why Bloom Energy Stock Crashed This Week",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "BE"
-    ],
-    "ts": "2026-08-21T15:30:51+00:00",
-    "url": "https://www.fool.com/investing/2026/08/21/why-bloom-energy-stock-crashed-this-week/?.tsrc=rss"
-  },
-  {
-    "id": "ndbfc170340",
-    "headline": "AI Disrupts Glass Fiber Manufacturing: Predictive Maintenance, Digital Twins, and a $6 Billion Infrastructure Deal Signal a New Industrial Era",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "GLW"
-    ],
-    "ts": "2026-08-21T15:23:00+00:00",
-    "url": "https://finance.yahoo.com/technology/ai/articles/ai-disrupts-glass-fiber-manufacturing-152300178.html?.tsrc=rss"
-  },
-  {
-    "id": "n2349689001",
-    "headline": "B. Riley keeps $75 Applied Digital target after Polaris Forge 2 site visit",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "APLD"
-    ],
-    "ts": "2026-08-21T15:21:18+00:00",
-    "url": "https://blockspace.media/insight/applied-digital-75-target-polaris-forge/?.tsrc=rss"
-  },
-  {
-    "id": "nfcb557d65b",
-    "headline": "Hyperscale Data Center Market Surges to $608.54 billion at a CAGR 24.6% by 2030 | Report by MarketsandMarkets\u2122",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ORCL"
-    ],
-    "ts": "2026-08-21T14:15:00+00:00",
-    "url": "https://finance.yahoo.com/technology/articles/hyperscale-data-center-market-surges-141500721.html?.tsrc=rss"
-  },
-  {
-    "id": "n096a1166a6",
-    "headline": "Nvidia in talks to invest in Cloverleaf Infrastructure",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ORCL"
-    ],
-    "ts": "2026-08-21T13:16:09+00:00",
-    "url": "https://qz.com/nvidia-cloverleaf-infrastructure-investment-data-center-power-082126?.tsrc=rss"
-  },
-  {
-    "id": "n4267dee11e",
-    "headline": "HRT Taps CoreWeave for NVIDIA Vera Rubin: Could This Be a Win for CRWV?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "CRWV"
-    ],
-    "ts": "2026-08-21T13:14:00+00:00",
-    "url": "https://finance.yahoo.com/technology/ai/articles/hrt-taps-coreweave-nvidia-vera-131400177.html?.tsrc=rss"
-  },
-  {
-    "id": "n4ce5e16cde",
-    "headline": "\u2018It\u2019s Done\u2019: Investor Warns Warren Buffett\u2019s Berkshire Can\u2019t Beat the S&P 500 \u2014 Bets on PayPal and Intel Instead",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "INTC"
-    ],
-    "ts": "2026-08-21T12:31:11+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/done-investor-warns-warren-buffett-123111231.html?.tsrc=rss"
-  },
-  {
-    "id": "n0e9a358e7d",
-    "headline": "Constellation Energy vs. Vistra: Who Leads the AI Power Revenue Race?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "VST"
-    ],
-    "ts": "2026-08-21T12:18:04+00:00",
-    "url": "https://www.fool.com/coverage/charts/2026/08/21/constellation-energy-vs-vistra-who-leads-the-ai-power-revenue-race/?.tsrc=rss"
-  },
-  {
-    "id": "ne84d10a38e",
-    "headline": "Bloom Energy Calls Its Fuel Cells \"Lego Blocks.\" Here's Why That Word Choice Is the Whole Investment Thesis.",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "BE"
-    ],
-    "ts": "2026-08-21T11:25:00+00:00",
-    "url": "https://www.fool.com/investing/2026/08/21/bloom-energy-calls-its-fuel-cells-lego-blocks-here/?.tsrc=rss"
   }
 ]
