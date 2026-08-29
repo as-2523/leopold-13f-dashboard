@@ -1,8 +1,8 @@
 {
   "ticker": "ASML",
-  "current_price": 1700.4648,
+  "current_price": 1696.16,
   "prev_close": 1735.01,
-  "day_change_pct": -1.99,
+  "day_change_pct": -2.24,
   "week_52_high": 1999.96,
   "week_52_low": 716.2,
   "history": [
@@ -720,13 +720,13 @@
     },
     {
       "date": "2026-08-28",
-      "open": 1734.12,
-      "high": 1740.0,
-      "low": 1692.88,
-      "close": 1700.4648,
-      "volume": 876602
+      "open": NaN,
+      "high": NaN,
+      "low": NaN,
+      "close": NaN,
+      "volume": 1249306
     }
   ],
-  "as_of": "2026-08-28T18:51:29.418359+00:00",
+  "as_of": "2026-08-29T12:45:32.203646+00:00",
   "stale": false
 }
