@@ -1,5 +1,135 @@
 [
   {
+    "id": "ne47f4a58aa",
+    "headline": "'All about acceleration': After Nvidia earnings, the tech trade is getting more segmented",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-08-30T11:49:05+00:00",
+    "url": "https://finance.yahoo.com/markets/article/all-about-acceleration-after-nvidia-earnings-the-tech-trade-is-getting-more-segmented-114905135.html?.tsrc=rss"
+  },
+  {
+    "id": "n4fad25b478",
+    "headline": "Nvidia Stock Won't Be Overvalued by 2028: My Case for Buying NVDA Today",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-08-30T11:35:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/30/nvidia-stock-overvalued-2028-buy-nvda/?.tsrc=rss"
+  },
+  {
+    "id": "n9be02be99c",
+    "headline": "If You Invest $10,000 in the Vanguard U.S. Momentum Factor ETF (VFMO) Today, Here's What History Says You Could Have in 20 Years",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-08-30T11:23:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/30/if-you-invest-10000-in--vanguard-us-momentum-vfmo/?.tsrc=rss"
+  },
+  {
+    "id": "nd2b8e78eac",
+    "headline": "RTX's $289 Billion Backlog Is Mainly Commercial, Not Defense. Here's Why That Split Is the Real Story.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-08-30T11:07:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/30/rtxs-289-billion-backlog-is-now-majority-commercia/?.tsrc=rss"
+  },
+  {
+    "id": "nf5c0fd6dd8",
+    "headline": "The Stock Market Is Doing Something That's Been Witnessed Just 3 Times Over Nearly 156 Years -- and This Signal Has Proven Disastrous for Wall Street",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-08-30T10:56:01+00:00",
+    "url": "https://www.fool.com/investing/2026/08/30/stock-market-doing-something-witnessed-3-times-over-156-years-disastrous-for-wall-street/?.tsrc=rss"
+  },
+  {
+    "id": "na92d1f0029",
+    "headline": "Here's My 3-Part Plan for Turning a Bloom Energy Stake Into Real Retirement Income",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "BE"
+    ],
+    "ts": "2026-08-30T10:20:01+00:00",
+    "url": "https://www.fool.com/investing/2026/08/30/here-s-my-3-part-plan-for-turning-a-bloom-energy-stake-into-real-retirement-income/?.tsrc=rss"
+  },
+  {
+    "id": "nc14d8dca29",
+    "headline": "Here's How Much You'd Have if You Invested $250 in Intel Stock in 2010",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "INTC"
+    ],
+    "ts": "2026-08-30T09:16:42+00:00",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/heres-much-youd-invested-250-091642013.html?.tsrc=rss"
+  },
+  {
+    "id": "n6ed56afc83",
+    "headline": "Billionaire Stanley Druckenmiller Sold Broadcom and Bought These Artificial Intelligence (AI) Giants Instead",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AVGO"
+    ],
+    "ts": "2026-08-29T20:20:00+00:00",
+    "url": "https://www.fool.com/investing/2026/08/29/billionaire-stanley-druckenmiller-sold-broadcom-an/?.tsrc=rss"
+  },
+  {
+    "id": "nc4559eb83c",
+    "headline": "Oracle vs. Microsoft: Big Tech\u2019s AI Cloud Battle Has a New Underdog",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ORCL"
+    ],
+    "ts": "2026-08-29T18:30:02+00:00",
+    "url": "https://www.barchart.com/story/news/4339635/oracle-vs-microsoft-big-techs-ai-cloud-battle-has-a-new-underdog?.tsrc=rss"
+  },
+  {
+    "id": "n5f4c6793c5",
+    "headline": "Intel vs. AMD: Why the Market Share Number Is Misleading",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AMD"
+    ],
+    "ts": "2026-08-29T18:30:02+00:00",
+    "url": "https://www.barchart.com/story/news/4339639/intel-vs-amd-why-the-market-share-number-is-misleading?.tsrc=rss"
+  },
+  {
+    "id": "neff84da668",
+    "headline": "Is Oracle Stock Underperforming the S&P 500?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ORCL"
+    ],
+    "ts": "2026-08-29T16:44:53+00:00",
+    "url": "https://www.barchart.com/story/news/4338731/is-oracle-stock-underperforming-the-s-p-500?.tsrc=rss"
+  },
+  {
+    "id": "ncbd4acb6da",
+    "headline": "5 big analyst AI moves: Downgrades for SAP and Intuit; AMD lifted to Strong Buy",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AMD"
+    ],
+    "ts": "2026-08-29T14:44:01+00:00",
+    "url": "https://finance.yahoo.com/technology/ai/articles/5-big-analyst-ai-moves-144401731.html?.tsrc=rss"
+  },
+  {
+    "id": "nb6820cee85",
+    "headline": "Nobody's Talking About This Energy Company, but It's Quietly Signing the Power Deals Feeding the AI Build-Out",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "BE"
+    ],
+    "ts": "2026-08-29T12:55:01+00:00",
+    "url": "https://www.fool.com/investing/2026/08/29/nobody-s-talking-about-this-energy-company-but-it-s-quietly-signing-the-power-deals-feeding-the-ai-build-out/?.tsrc=rss"
+  },
+  {
     "id": "nc0d85d6527",
     "headline": "Will EA\u2019s \u20ac250 Million Bundesliga Rights Deal Reshape Its Live-Services Football Narrative (EA)?",
     "source": "Yahoo Finance",
@@ -368,135 +498,5 @@
     ],
     "ts": "2026-08-28T15:07:08+00:00",
     "url": "https://www.trefis.com/articles/613548/advanced-micro-devices-stock-ran-the-roadmap-it-had-already-published/2026-08-28?.tsrc=rss"
-  },
-  {
-    "id": "n64cd0522a2",
-    "headline": "Bloom Energy vs. NuScale Power: Which Energy Innovator Stock Is a Better Buy in 2026?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "BE"
-    ],
-    "ts": "2026-08-28T15:03:01+00:00",
-    "url": "https://www.fool.com/coverage/better-buy/2026/08/28/bloom-energy-vs-nuscale-power-which-energy-innovator-stock-is-a-better-buy-in-2026/?.tsrc=rss"
-  },
-  {
-    "id": "n121c46f849",
-    "headline": "Mizuho is bullish on Broadcom ahead of Sept. 2 earnings, citing 30-quarter streak",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AVGO"
-    ],
-    "ts": "2026-08-28T15:00:20+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/mizuho-bullish-broadcom-ahead-sept-150020670.html?.tsrc=rss"
-  },
-  {
-    "id": "n679e486885",
-    "headline": "Intel's Comeback Is Being Paid For By Intel",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "INTC"
-    ],
-    "ts": "2026-08-28T14:54:36+00:00",
-    "url": "https://www.trefis.com/articles/613537/intels-comeback-is-being-paid-for-by-intel/2026-08-28?.tsrc=rss"
-  },
-  {
-    "id": "nd1dc08835e",
-    "headline": "What Makes ASML (ASML) The Best-Positioned Business Within The AI Cohort?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ASML"
-    ],
-    "ts": "2026-08-28T14:34:08+00:00",
-    "url": "https://finance.yahoo.com/technology/ai/articles/makes-asml-asml-best-positioned-143408648.html?.tsrc=rss"
-  },
-  {
-    "id": "nc43a977bca",
-    "headline": "Nvidia Warns Of AI Power Bottleneck \u2014 And Bloom Energy Could Benefit",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "BE"
-    ],
-    "ts": "2026-08-28T14:16:35+00:00",
-    "url": "https://www.benzinga.com/markets/prediction-markets/26/08/61493971/nvidia-ai-power-bloom-energy?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral&.tsrc=rss"
-  },
-  {
-    "id": "nbcb5a98a57",
-    "headline": "\u2018Insiders Only Buy for One Reason\u2019: Intel\u2019s CEO Just Bet $10 Million on His Company\u2019s Stock. It\u2019s Now Even Cheaper to Get In.",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "INTC"
-    ],
-    "ts": "2026-08-28T14:08:19+00:00",
-    "url": "https://247wallst.com/investing/2026/08/28/insiders-only-buy-for-one-reason-intels-ceo-just-bet-10-million-on-his-companys-stock-its-now-even-cheaper-to-get-in/?.tsrc=rss"
-  },
-  {
-    "id": "ne6ed85bd1c",
-    "headline": "Prediction: Applied Digital Stock Will Jump 156% in 3 Years. Here\u2019s the Math.",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "APLD"
-    ],
-    "ts": "2026-08-28T13:50:01+00:00",
-    "url": "https://www.fool.com/investing/2026/08/28/prediction-applied-digital-stock-will-jump-156-in-3-years-here-s-the-math/?.tsrc=rss"
-  },
-  {
-    "id": "n3c1daad866",
-    "headline": "GE Vernova vs. Bloom Energy: Which AI-Power Bet Has More Upside Ahead?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "BE"
-    ],
-    "ts": "2026-08-28T13:50:00+00:00",
-    "url": "https://www.fool.com/investing/2026/08/28/ge-vernova-vs-bloom-energy-which-ai-power-bet-has/?.tsrc=rss"
-  },
-  {
-    "id": "n90f862df85",
-    "headline": "Wall Street Analysts Think Oracle (ORCL) Is a Good Investment: Is It?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ORCL"
-    ],
-    "ts": "2026-08-28T13:30:03+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-think-oracle-133003375.html?.tsrc=rss"
-  },
-  {
-    "id": "nb4abe44bc5",
-    "headline": "Does Nvidia or Broadcom Have The Greater Core Vulnerability?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AVGO"
-    ],
-    "ts": "2026-08-28T13:27:40+00:00",
-    "url": "https://247wallst.com/investing/2026/08/28/does-nvidia-or-broadcom-have-the-greater-core-vulnerability/?.tsrc=rss"
-  },
-  {
-    "id": "n4a2584838d",
-    "headline": "Marvell Falls 7% as Google AI Payoff Lands in Fiscal 2029, Intel Slips, NVIDIA Barely Budges",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "INTC"
-    ],
-    "ts": "2026-08-28T12:59:27+00:00",
-    "url": "https://247wallst.com/investing/2026/08/28/marvell-falls-7-as-google-ai-payoff-lands-in-fiscal-2029-intel-slips-nvidia-barely-budges/?.tsrc=rss"
-  },
-  {
-    "id": "nc5f6b4230a",
-    "headline": "Cathie Wood Just Sold Another $18 Million of AMD Stock",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AMD"
-    ],
-    "ts": "2026-08-28T12:14:54+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-just-sold-another-121454057.html?.tsrc=rss"
-  },
-  {
-    "id": "n9ffe1ae2d2",
-    "headline": "Bloom Energy (BE) Is Up 7.6% After Launching Power Connect To Speed Data Center Deployments",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "BE"
-    ],
-    "ts": "2026-08-28T08:19:49+00:00",
-    "url": "https://finance.yahoo.com/energy/articles/bloom-energy-7-6-launching-081949773.html?.tsrc=rss"
   }
 ]
