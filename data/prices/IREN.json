@@ -1,8 +1,8 @@
 {
   "ticker": "IREN",
-  "current_price": 35.745,
+  "current_price": 37.115,
   "prev_close": 35.45,
-  "day_change_pct": 0.83,
+  "day_change_pct": 4.7,
   "week_52_high": 76.87,
   "week_52_low": 25.31,
   "history": [
@@ -716,17 +716,17 @@
       "high": 38.048,
       "low": 34.81,
       "close": 35.45,
-      "volume": 89605900
+      "volume": 89874200
     },
     {
       "date": "2026-08-31",
-      "open": 35.82,
-      "high": 36.59,
-      "low": 35.54,
-      "close": 35.745,
-      "volume": 9248963
+      "open": 35.81,
+      "high": 37.316,
+      "low": 35.511,
+      "close": 37.115,
+      "volume": 39526300
     }
   ],
-  "as_of": "2026-08-31T14:10:17.990824+00:00",
+  "as_of": "2026-09-01T11:50:00.878387+00:00",
   "stale": false
 }
