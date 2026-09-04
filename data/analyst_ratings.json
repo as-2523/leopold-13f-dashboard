@@ -191,9 +191,9 @@
     "hold": 3,
     "sell": 2,
     "strong_buy": 6,
-    "target_mean": 2145.807,
-    "target_high": 2863.98,
-    "target_low": 898.43225,
+    "target_mean": 2148.052,
+    "target_high": 2866.9766,
+    "target_low": 899.3723,
     "recent_upgrades": [],
     "recent_downgrades": []
   },
@@ -286,5 +286,5 @@
     "recent_downgrades": []
   },
   "_note": "Analyst ratings from Yahoo Finance. Not investment advice.",
-  "_as_of": "2026-09-03T11:27:38.336216+00:00"
+  "_as_of": "2026-09-04T11:30:28.940166+00:00"
 }
