@@ -1,5 +1,155 @@
 [
   {
+    "id": "na6263ab3fe",
+    "headline": "The Stock Market Is Doing Something for Only the 2nd Time in Nearly 156 Years, and History Says It Foreshadows Disaster for Wall Street",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-09-06T10:56:01+00:00",
+    "url": "https://www.fool.com/investing/2026/09/06/stock-market-is-doing-something-only-2nd-time-in-156-years-history-says-disaster-for-wall-street/?.tsrc=rss"
+  },
+  {
+    "id": "nc30779c085",
+    "headline": "Nvidia\u2019s Hugging Face Deal Is a Hedge against Broadcom\u2019s Custom Silicon Threat",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-09-06T10:51:11+00:00",
+    "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-hugging-face-deal-hedge-105111039.html?.tsrc=rss"
+  },
+  {
+    "id": "nf5c75e303e",
+    "headline": "6 Hyperscalers Driving the AI Revolution Are Projected to Spend $1.3 Trillion on Capex in 2027. Only 1 Is Forecast to Have Positive Free Cash Flow.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-09-06T10:42:00+00:00",
+    "url": "https://www.fool.com/investing/2026/09/06/hyperscalers-driving-ai-capex-cash-flow/?.tsrc=rss"
+  },
+  {
+    "id": "nfd3a795ec0",
+    "headline": "Prediction: Nvidia Stock Will Double in Under a Year",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-09-06T10:25:00+00:00",
+    "url": "https://www.fool.com/investing/2026/09/06/prediction-nvidia-stock-will-double-in-under-a-yea/?.tsrc=rss"
+  },
+  {
+    "id": "na330f04b8e",
+    "headline": "I Own Both Oracle and NuScale for Different Reasons. Here's How They Fit Together.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ORCL"
+    ],
+    "ts": "2026-09-06T10:12:00+00:00",
+    "url": "https://www.fool.com/investing/2026/09/06/i-own-both-oracle-and-nuscale-for-different-reason/?.tsrc=rss"
+  },
+  {
+    "id": "nd1a18715ba",
+    "headline": "Nvidia's $12.9B Hugging Face deal shows why IPOs are now optional",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-09-06T10:03:00+00:00",
+    "url": "https://pitchbook.com/news/articles/nvidias-hugging-deal-ipos-are-optional?.tsrc=rss"
+  },
+  {
+    "id": "nd4cbecc548",
+    "headline": "Intel (INTC) Enters Trusted AI Standards as Enterprise Infrastructure Role Grows",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "INTC"
+    ],
+    "ts": "2026-09-06T04:18:32+00:00",
+    "url": "https://finance.yahoo.com/technology/ai/articles/intel-intc-enters-trusted-ai-041832719.html?.tsrc=rss"
+  },
+  {
+    "id": "n33474582f8",
+    "headline": "Intel\u2019s AI Tailwinds Are Real. Mizuho Cut the Target Anyway.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "INTC"
+    ],
+    "ts": "2026-09-05T22:58:25+00:00",
+    "url": "https://finance.yahoo.com/technology/ai/articles/intel-ai-tailwinds-real-mizuho-225825483.html?.tsrc=rss"
+  },
+  {
+    "id": "n0aa181cfc2",
+    "headline": "Why Intel Stock Climbed This Week",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "INTC"
+    ],
+    "ts": "2026-09-05T22:40:17+00:00",
+    "url": "https://www.fool.com/investing/2026/09/05/why-intel-stock-climbed-this-week/?.tsrc=rss"
+  },
+  {
+    "id": "nf6fc5a84a1",
+    "headline": "AMD Committed Up to $5 Billion to Anthropic, and Anthropic's IPO Prospectus Is Reportedly Days Away",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AMD"
+    ],
+    "ts": "2026-09-05T22:03:01+00:00",
+    "url": "https://www.fool.com/investing/2026/09/05/amd-committed-up-to-usd5-billion-to-anthropic-and-anthropic-s-ipo-prospectus-is-reportedly-days-away/?.tsrc=rss"
+  },
+  {
+    "id": "nb09a95b734",
+    "headline": "ASML vs. Taiwan Semiconductor: Which Semiconductor Monopoly Is the Safer Investment?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ASML"
+    ],
+    "ts": "2026-09-05T19:20:00+00:00",
+    "url": "https://www.fool.com/investing/2026/09/05/asml-vs-taiwan-semiconductor-which-semiconductor/?.tsrc=rss"
+  },
+  {
+    "id": "ndce75a2b9c",
+    "headline": "Broadcom vs. Nvidia: 1 Critical Metric Shows Which Artificial Intelligence (AI) Chipmaker Is the Better Buy After Earnings",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AVGO"
+    ],
+    "ts": "2026-09-05T19:05:00+00:00",
+    "url": "https://www.fool.com/investing/2026/09/05/broadcom-vs-nvidia-1-critical-metric-shows-which-a/?.tsrc=rss"
+  },
+  {
+    "id": "nc0effb6c21",
+    "headline": "With AI Revenue Set to Surge 400% Over the Next 2 Years, Broadcom Stock Looks Like a Buy on Recent Dip",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AVGO"
+    ],
+    "ts": "2026-09-05T17:45:00+00:00",
+    "url": "https://www.fool.com/investing/2026/09/05/ai-revenue-set-surge-broadcom-stock-buy-dip/?.tsrc=rss"
+  },
+  {
+    "id": "ne907d7c076",
+    "headline": "Broadcom (AVGO) AI Revenue Soars, But Wall Street Wants More",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AVGO"
+    ],
+    "ts": "2026-09-05T14:58:38+00:00",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/broadcom-avgo-ai-revenue-soars-145838390.html?.tsrc=rss"
+  },
+  {
+    "id": "n322621007c",
+    "headline": "I Love Bloom Energy for 1 Reason, and It's Not the Backlog",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "BE"
+    ],
+    "ts": "2026-09-05T10:50:00+00:00",
+    "url": "https://www.fool.com/investing/2026/09/05/i-love-bloom-energy-for-1-reason-and-its-not-the-b/?.tsrc=rss"
+  },
+  {
     "id": "nab8abacf0a",
     "headline": "Palantir Billionaire Peter Thiel Just Bought Shares of This AI Stock That\u2019s Climbed 200,000% Since Its IPO -- And It\u2019s His Top Position.",
     "source": "Yahoo Finance",
@@ -300,6 +450,16 @@
     "url": "https://www.barchart.com/story/news/4450066/broadcom-crushed-earnings-and-the-stock-fell-anyway-investors-are-ignoring-a-230-billion-signal?.tsrc=rss"
   },
   {
+    "id": "n9aa8848b41",
+    "headline": "ASML Rockets 4% as TSMC's Tool Hunger Nearly Doubles",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ASML"
+    ],
+    "ts": "2026-09-04T17:10:57+00:00",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/asml-rockets-4-tsmcs-tool-171057023.html?.tsrc=rss"
+  },
+  {
     "id": "nde9a526d17",
     "headline": "Why Intel Stock Popped Today",
     "source": "Yahoo Finance",
@@ -338,165 +498,5 @@
     ],
     "ts": "2026-09-04T15:21:01+00:00",
     "url": "https://finance.yahoo.com/markets/stocks/articles/dell-earning-report-bullish-intel-152101599.html?.tsrc=rss"
-  },
-  {
-    "id": "nb9e9118f01",
-    "headline": "Intel Climbs 4%, AMD Rises 3%, NVIDIA Ticks Up as Chip Stocks Shrug Off Rising Rate Hike Odds",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AMD"
-    ],
-    "ts": "2026-09-04T15:12:07+00:00",
-    "url": "https://247wallst.com/investing/2026/09/04/intel-climbs-4-as-chip-stocks-shrug-off-rising-rate-hike-odds-nvidia-and-amd-move-higher/?.tsrc=rss"
-  },
-  {
-    "id": "nc4782eeb94",
-    "headline": "CoreWeave (CRWV) Could Be 21% Overvalued After The Rescale Cloud Deal",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "CRWV"
-    ],
-    "ts": "2026-09-04T14:12:49+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/coreweave-crwv-could-21-overvalued-141249513.html?.tsrc=rss"
-  },
-  {
-    "id": "n2bfcd29ac0",
-    "headline": "Cathie Wood Cuts AMD and Puts $53 Million Into Nvidia",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AMD"
-    ],
-    "ts": "2026-09-04T13:34:12+00:00",
-    "url": "https://finance.yahoo.com/technology/ai/articles/cathie-wood-cuts-amd-puts-133412523.html?.tsrc=rss"
-  },
-  {
-    "id": "n6b86e4701e",
-    "headline": "EQT to acquire McGill and Partners, a leading specialty (re)insurance broker for USD 2.0 billion, from Warburg Pincus",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "EQT"
-    ],
-    "ts": "2026-09-04T13:15:00+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/eqt-acquire-mcgill-partners-leading-131500545.html?.tsrc=rss"
-  },
-  {
-    "id": "n8d8ad5f08c",
-    "headline": "ORCL Eyes Breakout as AMD and Intel Test Key Support",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AMD"
-    ],
-    "ts": "2026-09-04T13:12:34+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/orcl-eyes-breakout-amd-intel-131234796.html?.tsrc=rss"
-  },
-  {
-    "id": "n2ca50b98ec",
-    "headline": "CoreWeave vs. Nebius: Which AI Infrastructure Stock Is the Better Buy?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "CRWV"
-    ],
-    "ts": "2026-09-04T12:30:00+00:00",
-    "url": "https://www.fool.com/investing/2026/09/04/coreweave-vs-nebius-which-ai-infrastructure-stock/?.tsrc=rss"
-  },
-  {
-    "id": "n0234e6cc1b",
-    "headline": "Not Nvidia. Not Palantir. This AI Stock Could Have the Most Upside.",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "NVDA"
-    ],
-    "ts": "2026-09-04T11:20:00+00:00",
-    "url": "https://www.fool.com/investing/2026/09/04/not-nvidia-not-palantir-this-ai-stock-could-have-t/?.tsrc=rss"
-  },
-  {
-    "id": "n0f1918a1e8",
-    "headline": "Nuclear Stock Face-Off: Is NuScale Power or Oklo the Better Buy Right Now?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "NVDA"
-    ],
-    "ts": "2026-09-04T11:03:00+00:00",
-    "url": "https://www.fool.com/investing/2026/09/04/nuclear-stock-face-off-nuscale-oklo-better-buy/?.tsrc=rss"
-  },
-  {
-    "id": "n4cf6f13cc1",
-    "headline": "AVGO Stock\u2019s 27% Selloff Is Sending A Signal \u2013 But Morningstar Sees AI Demand Getting Stronger Through 2030",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AVGO"
-    ],
-    "ts": "2026-09-04T10:58:59+00:00",
-    "url": "https://stocktwits.com/news-articles/markets/equity/broadcom-stock-avgo-ai-growth-morningstar-2028-outlook/cZsDRi8RJwY?.tsrc=rss"
-  },
-  {
-    "id": "nda409b6c96",
-    "headline": "Why this veteran tech CEO is impressed by Nvidia's Jensen Huang buying Hugging Face for $12.9 billion",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "NVDA"
-    ],
-    "ts": "2026-09-04T10:43:13+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/article/why-this-veteran-tech-ceo-is-impressed-by-nvidias-jensen-huang-buying-hugging-face-for-129-billion-104313626.html?.tsrc=rss"
-  },
-  {
-    "id": "naaad886865",
-    "headline": "Update: Market Chatter: Nvidia Increases Equity Investments to $99 Billion",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "NVDA"
-    ],
-    "ts": "2026-09-04T10:27:04+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/market-chatter-nvidia-increases-equity-102704254.html?.tsrc=rss"
-  },
-  {
-    "id": "nf61e9e37c3",
-    "headline": "Broadcom CEO Says AI Demand Could Be \u2018Significantly\u2019 Higher \u2014 But Land, Power, Chips and Substrates Are Holding Back Data Center Deployments",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AVGO"
-    ],
-    "ts": "2026-09-04T10:11:07+00:00",
-    "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-ceo-says-ai-demand-101107191.html?.tsrc=rss"
-  },
-  {
-    "id": "n08e4cb104f",
-    "headline": "If I Were in My 20s, I'd Buy This Spectacular Nasdaq-100 Index Fund and Hold It Forever",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "NVDA"
-    ],
-    "ts": "2026-09-04T10:02:00+00:00",
-    "url": "https://www.fool.com/investing/2026/09/04/if-in-my-20s-buy-nasdaq-100-index-fund-hold-foreve/?.tsrc=rss"
-  },
-  {
-    "id": "n2622dc1607",
-    "headline": "Jim Cramer Backs CRWV: 'If You're Going For Neoclouds, Only One I Like Is CoreWeave'",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "CRWV"
-    ],
-    "ts": "2026-09-04T09:25:24+00:00",
-    "url": "https://stocktwits.com/news-articles/markets/equity/jim-cramer-backs-crwv-if-you-re-going-for-neoclouds-only-one-i-like-is-core-weave/cZswCCZRJwN?.tsrc=rss"
-  },
-  {
-    "id": "n6c17651f0e",
-    "headline": "Broadcom's Artificial Intelligence (AI) Chip Sales Surged 221% to $16.7 Billion Last Quarter: Is the Stock a Screaming Buy Right Now?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AVGO"
-    ],
-    "ts": "2026-09-04T07:00:00+00:00",
-    "url": "https://www.fool.com/investing/2026/09/04/broadcoms-artificial-intelligence-ai-chip-sales-su/?.tsrc=rss"
-  },
-  {
-    "id": "ncca1375b63",
-    "headline": "ORCL Stock Spikes On New HPE Equipment Deal: Retail Turns Bullish Ahead Of Q1 Report",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ORCL"
-    ],
-    "ts": "2026-09-04T04:54:34+00:00",
-    "url": "https://stocktwits.com/news-articles/markets/equity/orcl-stock-spikes-on-new-hpe-equipment-deal-retail-turns-bullish-ahead-of-q1-report/cZswsqcRJwe?.tsrc=rss"
   }
 ]
