@@ -1,19 +1,11 @@
 {
   "ticker": "SEI",
-  "current_price": 67.67,
-  "prev_close": 63.96,
-  "day_change_pct": 5.8,
+  "current_price": 64.15,
+  "prev_close": 67.67,
+  "day_change_pct": -5.2,
   "week_52_high": 86.19,
   "week_52_low": 28.43,
   "history": [
-    {
-      "date": "2026-05-01",
-      "open": 73.1021,
-      "high": 74.5995,
-      "low": 72.0639,
-      "close": 72.2037,
-      "volume": 2893600
-    },
     {
       "date": "2026-05-04",
       "open": 72.8725,
@@ -725,8 +717,16 @@
       "low": 65.22,
       "close": 67.67,
       "volume": 5145000
+    },
+    {
+      "date": "2026-09-10",
+      "open": 65.57,
+      "high": 67.7,
+      "low": 63.801,
+      "close": 64.15,
+      "volume": 2855400
     }
   ],
-  "as_of": "2026-09-10T11:32:55.924222+00:00",
+  "as_of": "2026-09-11T11:34:18.500969+00:00",
   "stale": false
 }
