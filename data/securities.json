@@ -20,7 +20,7 @@
     "exchange": "NYQ",
     "sector": "Technology",
     "market_cap": 432877174784,
-    "pe_ratio": 23.968102,
+    "pe_ratio": 23.517998,
     "description": "Oracle Corporation offers products and services that build, run and support enterprise information technology frameworks worldwide. Its Oracle cloud software as a service offering includes various cloud software applications, including Oracle Fusion cloud enterprise resource planning ERP, Oracle Fusion cloud enterprise performance management EPM, Oracle Fusion cloud supply chain and manufacturing management SCM, Oracle Fusion cloud human capital management HCM, and NetSuite applications suite, O"
   },
   "AVGO": {
@@ -28,7 +28,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 1728006324224,
-    "pe_ratio": 46.054707,
+    "pe_ratio": 46.231163,
     "description": "Broadcom Inc. designs, develops, and supplies various semiconductor devices and infrastructure software solutions internationally. The company operates in two segments: Semiconductor Solutions and Infrastructure Software. The company offers networking connectivity, such as custom silicon solutions, ethernet switching & routing, ethernet NIC controllers, physical layer devices, and fiber optic components; wireless device connectivity, including RF semiconductor devices, connectivity solutions, cu"
   },
   "AMD": {
@@ -59,8 +59,8 @@
     "name": "Corning Incorporated",
     "exchange": "NYQ",
     "sector": "Technology",
-    "market_cap": 143335014400,
-    "pe_ratio": 75.29411,
+    "market_cap": 143043723264,
+    "pe_ratio": 77.03703,
     "description": "Corning Incorporated operates in optical communications, display, specialty materials, automotive, and life sciences businesses in the United States, Canada, Mexico, Japan, Taiwan, China, South Korea, Germany, and internationally. The company provides optical fibers and cables; and hardware and equipment products, such as cable assemblies, fiber optic hardware and connectors, optical components and couplers, closures, network interface devices, and other accessories for the telecommunications in"
   },
   "BE": {
@@ -84,7 +84,7 @@
     "exchange": "NYQ",
     "sector": "Utilities",
     "market_cap": 49801551872,
-    "pe_ratio": 24.81271,
+    "pe_ratio": 24.9798,
     "description": "Vistra Corp., together with its subsidiaries, operates as an integrated retail electricity and power generation company in the United States. The company operates through five segments: Retail, Texas, East, West, and Asset Closure. The company retails electricity and natural gas to residential, commercial, and industrial customers across states in the United States and the District of Columbia. It is also involved in electricity generation, wholesale energy purchases and sales, commodity risk ma"
   },
   "TLNE": {
@@ -172,7 +172,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 1101452017664,
-    "pe_ratio": 22.074694,
+    "pe_ratio": 22.024843,
     "description": "Micron Technology, Inc. designs, develops, manufactures, and sells memory and storage products in the United States, Taiwan, Japan, Mainland China, Hong Kong, Europe, and internationally. It operates through the Cloud Memory Business Unit; Core Data Center Business Unit; Mobile and Client Business Unit; and Automotive and Embedded Business Unit segments. The company provides memory products, including dynamic random access memory components and modules, CXL-based memory, LPDDR components and mod"
   },
   "TSM": {
@@ -180,7 +180,7 @@
     "exchange": "NYQ",
     "sector": "Technology",
     "market_cap": 2246988005376,
-    "pe_ratio": 31.55426,
+    "pe_ratio": 31.94985,
     "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europe, the Middle East, Africa, Japan, the United States, and internationally. It provides various wafer fabrication processes, such as processes to manufacture complementary metal- oxide-semiconductor (CMOS) logic, mixed-signal, radio frequency, embedded memory, bipolar CMOS mixed-signal, and others. T"
   },
   "TSEM": {
@@ -188,7 +188,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 23908368384,
-    "pe_ratio": 81.9845,
+    "pe_ratio": 83.2756,
     "description": "Tower Semiconductor Ltd., an independent semiconductor foundry, provides technology, development, and process platforms for integrated circuits in the United States, Japan, rest of Asia, and Europe. The company provides customizable process technologies, including SiGe, SiPho, mixed signal CMOS, RF CMOS, CMOS image sensor, non-imaging sensors, wafers, and integrated power management. It also offers a design enablement platform for a design cycle, as well as transfer optimization and development "
   },
   "ONTO": {
@@ -196,7 +196,7 @@
     "exchange": "NYQ",
     "sector": "Technology",
     "market_cap": 17191577600,
-    "pe_ratio": 101.17267,
+    "pe_ratio": 105.34083,
     "description": "Onto Innovation Inc. engages in the design, development, manufacture, and support of process control tools that perform macro-defect inspection and metrology in the United States, Taiwan, South Korea, Japan, China, Southeast Asia, Asia, and Europe. The company offers lithography systems and process control analytical software; and automated and integrated metrology systems, silicon wafer all-surface inspection, macro defect inspection, automated defect classification and pattern analysis, yield "
   },
   "EQT": {
@@ -204,7 +204,7 @@
     "exchange": "NYQ",
     "sector": "Energy",
     "market_cap": 33821650944,
-    "pe_ratio": 12.752359,
+    "pe_ratio": 12.545243,
     "description": "EQT Corporation engages in the exploration, production, gathering, and transmission of hydrocarbons and natural gas. The company sells natural gas, natural gas liquids, and oil to marketers, utilities, and industrial customers located in the Appalachian Basin. It also provides marketing services and contractual pipeline capacity management services, as well as engages in risk management and hedging activities. In addition, it owns and operates propane storage and distribution terminals. The comp"
   },
   "MRVL": {
@@ -212,7 +212,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 212184170496,
-    "pe_ratio": 75.191086,
+    "pe_ratio": 78.17881,
     "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China, India, Israel, Japan, Singapore, South Korea, Taiwan, Vietnam, and internationally. The company develops and scales system-on-a-chip architectures, integrating analog, mixed-signal, and digital signal processing functionality. It offers a portfolio of ethernet solutions, including spanning controll"
   },
   "WYFI": {
