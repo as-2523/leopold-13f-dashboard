@@ -1,5 +1,175 @@
 [
   {
+    "id": "n80d2f9de09",
+    "headline": "Dow Jones Futures: Can The Market Rally Take Flight? Robinhood, Sandisk, AMD, Moderna Surge Into Buy Areas",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AMD"
+    ],
+    "ts": "2026-09-20T11:24:28+00:00",
+    "url": "https://finance.yahoo.com/m/832159c8-6dc5-38e6-b838-d7db7090ca09/dow-jones-futures%3A-can-the.html?.tsrc=rss"
+  },
+  {
+    "id": "n70cdda72a1",
+    "headline": "Will President Trump Crash the Stock Market? History Says This Could Come Next.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-09-20T10:20:00+00:00",
+    "url": "https://www.fool.com/investing/2026/09/20/will-president-trump-crash-the-stock-market-histor/?.tsrc=rss"
+  },
+  {
+    "id": "n527013142f",
+    "headline": "Prediction: Anthropic's IPO Will Be a Big Winner for Alphabet and Amazon Investors",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-09-20T09:35:00+00:00",
+    "url": "https://www.fool.com/investing/2026/09/20/prediction-anthropics-ipo-will-be-a-big-winner-for/?.tsrc=rss"
+  },
+  {
+    "id": "n2cc7a56485",
+    "headline": "Nvidia Stock Hasn't Set a Record in 4 Months. History Says These Stalls Have Ended 2 Ways.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-09-20T09:28:01+00:00",
+    "url": "https://www.fool.com/investing/2026/09/20/nvidia-stock-hasn-t-set-a-record-in-4-months-history-says-these-stalls-have-ended-2-ways/?.tsrc=rss"
+  },
+  {
+    "id": "n4d9f0d4cc0",
+    "headline": "The 10-Year Treasury Yield Just Topped 5% for the Second Time in Almost 20 Years. Is This Turning Point a Warning for Your Portfolio?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-09-20T09:09:00+00:00",
+    "url": "https://www.fool.com/investing/2026/09/20/10-year-treasury-yield-5-percent-warning-portfolio/?.tsrc=rss"
+  },
+  {
+    "id": "n9a9c06e468",
+    "headline": "Stock Market Investors Just Got Bad News From the Federal Reserve. History Says This Will Happen Next.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "NVDA"
+    ],
+    "ts": "2026-09-20T09:08:01+00:00",
+    "url": "https://www.fool.com/investing/2026/09/20/stock-market-investors-bad-news-federa-reserve-this-happen-next/?.tsrc=rss"
+  },
+  {
+    "id": "nffc91bd6b0",
+    "headline": "Plug Power vs. Bloom Energy: Which Hydrogen-Adjacent Stock Actually Has a Real Business Model?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "BE"
+    ],
+    "ts": "2026-09-20T06:25:00+00:00",
+    "url": "https://www.fool.com/investing/2026/09/20/plug-power-vs-bloom-energy-which-hydrogen-adjacent/?.tsrc=rss"
+  },
+  {
+    "id": "nd3ecc9b570",
+    "headline": "Oracle (ORCL) Cloud Revenue Jumps 121% and its Backlog Hits $664 Billion. Can it Actually Deliver?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ORCL"
+    ],
+    "ts": "2026-09-20T04:54:35+00:00",
+    "url": "https://finance.yahoo.com/technology/ai/articles/oracle-orcl-cloud-revenue-jumps-045435586.html?.tsrc=rss"
+  },
+  {
+    "id": "n6ee8457d3b",
+    "headline": "Jim Cramer sends a blunt message to AMD stock investors",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AMD"
+    ],
+    "ts": "2026-09-20T03:33:00+00:00",
+    "url": "https://www.thestreet.com/investing/stocks/jim-cramer-sends-a-blunt-message-to-amd-stock-investors?.tsrc=rss"
+  },
+  {
+    "id": "n1897b11f36",
+    "headline": "Oracle Has Committed Hundreds of Billions to AI Data Centers. These 2 Industrial Stocks Will Power Them.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ORCL"
+    ],
+    "ts": "2026-09-20T00:20:00+00:00",
+    "url": "https://www.fool.com/investing/2026/09/19/oracle-has-committed-hundreds-of-billions-to-ai-da/?.tsrc=rss"
+  },
+  {
+    "id": "nb850018efd",
+    "headline": "Bloom Energy Is Riding the Data Center Boom to a $25 Billion Backlog. Plug Power Is Passing on It. Here's Why.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "BE"
+    ],
+    "ts": "2026-09-19T22:25:00+00:00",
+    "url": "https://www.fool.com/investing/2026/09/19/bloom-energy-is-riding-the-data-center-boom-to-a-2/?.tsrc=rss"
+  },
+  {
+    "id": "ndc4ed3fadb",
+    "headline": "Could Oracle's Debt Load Derail Its AI Cloud Ambitions?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ORCL"
+    ],
+    "ts": "2026-09-19T22:09:00+00:00",
+    "url": "https://www.fool.com/investing/2026/09/19/will-oracle-debt-load-derail-its-ai-cloud-ambition/?.tsrc=rss"
+  },
+  {
+    "id": "n554e7ac078",
+    "headline": "Intel Can Supply Only About Half of What Its Customers Want. That's a Better Problem Than It Sounds.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "INTC"
+    ],
+    "ts": "2026-09-19T22:01:01+00:00",
+    "url": "https://www.fool.com/investing/2026/09/19/intel-can-supply-only-about-half-of-what-its-customers-want-that-s-a-better-problem-than-it-sounds/?.tsrc=rss"
+  },
+  {
+    "id": "n44e05acc23",
+    "headline": "Cathie Wood Sold Palantir and AMD, Then Poured $3.35 Million Into Archer Aviation. Is ARK Betting Big on Flying Taxis?",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "AMD"
+    ],
+    "ts": "2026-09-19T20:25:00+00:00",
+    "url": "https://www.fool.com/investing/2026/09/19/cathie-wood-sold-palantir-and-amd-then-poured-335/?.tsrc=rss"
+  },
+  {
+    "id": "n094b4c2e5a",
+    "headline": "CoreWeave (CRWV) Is Charging More for AI Compute, and Customers Keep Paying",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "CRWV"
+    ],
+    "ts": "2026-09-19T19:32:52+00:00",
+    "url": "https://finance.yahoo.com/technology/ai/articles/coreweave-crwv-charging-more-ai-193252050.html?.tsrc=rss"
+  },
+  {
+    "id": "n19eb0640f8",
+    "headline": "The Unexpected Rival Threatening to Shake Up CoreWeave's Market",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "CRWV"
+    ],
+    "ts": "2026-09-19T17:47:00+00:00",
+    "url": "https://www.fool.com/investing/2026/09/19/surprise-rival-threatening-to-shake-up-coreweave/?.tsrc=rss"
+  },
+  {
+    "id": "n5894cd1003",
+    "headline": "Amodei, Altman, and Musk Called for an AI Slowdown. Here\u2019s Why It\u2019s a Warning Sign for ASML Shareholders.",
+    "source": "Yahoo Finance",
+    "tickers": [
+      "ASML"
+    ],
+    "ts": "2026-09-19T17:30:02+00:00",
+    "url": "https://www.barchart.com/story/news/4696328/amodei-altman-and-musk-called-for-an-ai-slowdown-heres-why-its-a-warning-sign-for-asml-shareholders?.tsrc=rss"
+  },
+  {
     "id": "naeb331ce59",
     "headline": "A $1,000 Monthly Investment in the Schwab U.S. Dividend Equity ETF (SCHD) Could Build Serious Passive Income Over 20 Years",
     "source": "Yahoo Finance",
@@ -328,175 +498,5 @@
     ],
     "ts": "2026-09-18T14:00:56+00:00",
     "url": "https://finance.yahoo.com/markets/stocks/articles/oracles-ceo-just-sold-1-140056942.html?.tsrc=rss"
-  },
-  {
-    "id": "ndad4c66503",
-    "headline": "Prediction: AMD\u2019s Biggest Growth\u00a0Opportunity May Still\u00a0Be Ahead",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AMD"
-    ],
-    "ts": "2026-09-18T14:00:28+00:00",
-    "url": "https://247wallst.com/investing/2026/09/18/prediction-amds-biggest-growth-opportunity-may-still-be-ahead/?.tsrc=rss"
-  },
-  {
-    "id": "ned6416edb2",
-    "headline": "CoreWeave's $104 billion backlog comes with a costly catch",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "CRWV"
-    ],
-    "ts": "2026-09-18T13:54:48+00:00",
-    "url": "https://finance.yahoo.com/technology/ai/articles/coreweaves-104-billion-backlog-comes-135448034.html?.tsrc=rss"
-  },
-  {
-    "id": "n0224163fb8",
-    "headline": "Oracle, CoreWeave Dump on AI's $3.6 Trillion Financing Bill",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "CRWV"
-    ],
-    "ts": "2026-09-18T13:43:26+00:00",
-    "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61868516/oracle-coreweave-ai-financing-3-6-trillion?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral&.tsrc=rss"
-  },
-  {
-    "id": "n7f2d5affe0",
-    "headline": "Are Oils-Energy Stocks Lagging  Bloom Energy (BE) This Year?",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "BE"
-    ],
-    "ts": "2026-09-18T13:40:03+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/oils-energy-stocks-lagging-bloom-134003066.html?.tsrc=rss"
-  },
-  {
-    "id": "n52c707fde0",
-    "headline": "XLK, Oracle and AMD Forecast: Tech Stocks Eye Breakouts",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AMD"
-    ],
-    "ts": "2026-09-18T13:36:46+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/xlk-oracle-amd-forecast-tech-133646780.html?.tsrc=rss"
-  },
-  {
-    "id": "n581b317e6f",
-    "headline": "Broadcom Inc. (AVGO) is Attracting Investor Attention: Here is What You Should Know",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AVGO"
-    ],
-    "ts": "2026-09-18T13:00:05+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/broadcom-inc-avgo-attracting-investor-130005059.html?.tsrc=rss"
-  },
-  {
-    "id": "n5841277e0b",
-    "headline": "Here\u2019s When Nividia\u2019s Dominance Fades, Opening Broadcom\u2019s Era of Dominance",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AVGO"
-    ],
-    "ts": "2026-09-18T12:19:11+00:00",
-    "url": "https://247wallst.com/investing/2026/09/18/heres-when-nividias-dominance-fades-opening-broadcoms-era-of-dominance/?.tsrc=rss"
-  },
-  {
-    "id": "n70e88eb706",
-    "headline": "My Top Natural Gas Stock Pick for 2027 and Beyond: EQT Corporation",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "EQT"
-    ],
-    "ts": "2026-09-18T11:26:00+00:00",
-    "url": "https://www.fool.com/investing/2026/09/18/my-top-natural-gas-stock-pick-for-2027-and-beyond/?.tsrc=rss"
-  },
-  {
-    "id": "n8f1971e642",
-    "headline": "This Underrated Investment Has Built More Wealth Than Most Investors Realize -- and History Says Now Is a Smart Time to Buy",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "NVDA"
-    ],
-    "ts": "2026-09-18T11:20:00+00:00",
-    "url": "https://www.fool.com/investing/2026/09/18/underrated-investors-history-says-smart-time-buy/?.tsrc=rss"
-  },
-  {
-    "id": "nad57e75c4c",
-    "headline": "Meta Vs. Oracle: The Laggards of AI Capex Payback Velocity",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ORCL"
-    ],
-    "ts": "2026-09-18T11:15:19+00:00",
-    "url": "https://247wallst.com/investing/2026/09/18/meta-vs-oracle-the-laggards-of-ai-capex-payback-velocity/?.tsrc=rss"
-  },
-  {
-    "id": "n8bf52b2f61",
-    "headline": "Easing Oil Prices, Tech Rally Lift Wall Street Pre-Bell; Asia Up, Europe Off",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "SMH"
-    ],
-    "ts": "2026-09-18T11:14:14+00:00",
-    "url": "https://finance.yahoo.com/markets/articles/easing-oil-prices-tech-rally-111414374.html?.tsrc=rss"
-  },
-  {
-    "id": "n15c138554a",
-    "headline": "Dow Jones Futures: After S&P 500, Nasdaq Rebound, What's Next? Moderna, AMD, SpaceX Flash Buy Signals.",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AMD"
-    ],
-    "ts": "2026-09-18T11:12:27+00:00",
-    "url": "https://finance.yahoo.com/m/1921e6e5-7c6c-3cc6-ae73-750d397323c3/dow-jones-futures%3A-after-s%26p.html?.tsrc=rss"
-  },
-  {
-    "id": "n6be610cbce",
-    "headline": "Intel, Netflix, Berkshire Hathaway, and More Stocks That Explain Today\u2019s Market",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "INTC"
-    ],
-    "ts": "2026-09-18T11:05:00+00:00",
-    "url": "https://finance.yahoo.com/m/dcd0f202-0845-3945-921f-f151203b3bfe/intel%2C-netflix%2C-berkshire.html?.tsrc=rss"
-  },
-  {
-    "id": "ne3439e7ba0",
-    "headline": "CoreWeave Prices Upsized $3.7 Billion Convertible Senior Notes Offering",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "CRWV"
-    ],
-    "ts": "2026-09-18T11:00:00+00:00",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/coreweave-prices-upsized-3-7-110000523.html?.tsrc=rss"
-  },
-  {
-    "id": "n8f12eb70a7",
-    "headline": "GMKtec Unveils EVO-X5 Pro at IFA 2026 with AMD Ryzen(TM) AI Max Processors, Introducing the World's First Desktop AI Supercomputer Capable of Running a 300B-Parameter LLM Fully Offline",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "AMD"
-    ],
-    "ts": "2026-09-18T10:57:00+00:00",
-    "url": "https://finance.yahoo.com/technology/ai/articles/gmktec-unveils-evo-x5-pro-105700375.html?.tsrc=rss"
-  },
-  {
-    "id": "ndd5ad8bd35",
-    "headline": "1 Top Dividend ETF Worth Loading Up On With $1,000 Right Now",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "NVDA"
-    ],
-    "ts": "2026-09-18T10:35:00+00:00",
-    "url": "https://www.fool.com/investing/2026/09/18/top-dividend-etf-worth-loading-up-right-now-fdvv/?.tsrc=rss"
-  },
-  {
-    "id": "n36c9d7ca7b",
-    "headline": "Population Health Management Market by Component, Functionality, End User, Organization Size - Global Forecast to 2031",
-    "source": "Yahoo Finance",
-    "tickers": [
-      "ORCL"
-    ],
-    "ts": "2026-09-18T10:35:00+00:00",
-    "url": "https://finance.yahoo.com/healthcare/articles/population-health-management-market-component-103500530.html?.tsrc=rss"
   }
 ]
