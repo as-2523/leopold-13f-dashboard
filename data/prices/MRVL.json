@@ -1,19 +1,11 @@
 {
   "ticker": "MRVL",
-  "current_price": 244.25,
-  "prev_close": 240.76,
-  "day_change_pct": 1.45,
+  "current_price": 257.38,
+  "prev_close": 244.25,
+  "day_change_pct": 5.38,
   "week_52_high": 329.88,
   "week_52_low": 70.69,
   "history": [
-    {
-      "date": "2026-05-12",
-      "open": 165.4192,
-      "high": 168.6884,
-      "low": 157.921,
-      "close": 164.4594,
-      "volume": 21367800
-    },
     {
       "date": "2026-05-13",
       "open": 169.0483,
@@ -724,9 +716,17 @@
       "high": 244.44,
       "low": 235.96,
       "close": 244.25,
-      "volume": 23546400
+      "volume": 23635600
+    },
+    {
+      "date": "2026-09-21",
+      "open": 251.4,
+      "high": 261.18,
+      "low": 244.99,
+      "close": 257.38,
+      "volume": 21377300
     }
   ],
-  "as_of": "2026-09-21T13:03:20.712146+00:00",
+  "as_of": "2026-09-22T11:53:10.530262+00:00",
   "stale": false
 }
