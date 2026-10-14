@@ -1,8 +1,8 @@
 {
   "ticker": "INTC",
-  "current_price": 100.4678,
+  "current_price": 102.81,
   "prev_close": 101.35,
-  "day_change_pct": -0.87,
+  "day_change_pct": 1.44,
   "week_52_high": 142.35,
   "week_52_low": 32.89,
   "history": [
@@ -716,17 +716,17 @@
       "high": 103.19,
       "low": 100.71,
       "close": 101.35,
-      "volume": 73728400
+      "volume": 74171900
     },
     {
       "date": "2026-10-13",
-      "open": 99.54,
-      "high": 101.08,
-      "low": 98.225,
-      "close": 100.4678,
-      "volume": 22102270
+      "open": 99.59,
+      "high": 102.88,
+      "low": 98.23,
+      "close": 102.81,
+      "volume": 87718300
     }
   ],
-  "as_of": "2026-10-13T14:25:13.963727+00:00",
+  "as_of": "2026-10-14T12:09:34.664881+00:00",
   "stale": false
 }
