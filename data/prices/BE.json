@@ -1,19 +1,11 @@
 {
   "ticker": "BE",
-  "current_price": 263.45,
-  "prev_close": 262.28,
-  "day_change_pct": 0.45,
+  "current_price": 239.34,
+  "prev_close": 263.45,
+  "day_change_pct": -9.15,
   "week_52_high": 351.28,
   "week_52_low": 75.7,
   "history": [
-    {
-      "date": "2026-06-05",
-      "open": 280.0,
-      "high": 280.41,
-      "low": 252.08,
-      "close": 263.61,
-      "volume": 11653200
-    },
     {
       "date": "2026-06-08",
       "open": 265.5,
@@ -724,9 +716,17 @@
       "high": 264.14,
       "low": 248.35,
       "close": 263.45,
-      "volume": 12621700
+      "volume": 12685900
+    },
+    {
+      "date": "2026-10-14",
+      "open": 257.5,
+      "high": 258.52,
+      "low": 235.7,
+      "close": 239.34,
+      "volume": 18230400
     }
   ],
-  "as_of": "2026-10-14T12:09:36.778182+00:00",
+  "as_of": "2026-10-15T11:45:39.950093+00:00",
   "stale": false
 }
