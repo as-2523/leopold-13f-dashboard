@@ -176,13 +176,13 @@
     "recent_downgrades": []
   },
   "AMD": {
-    "buy": 41,
+    "buy": 42,
     "hold": 10,
     "sell": 0,
     "strong_buy": 5,
-    "target_mean": 636.208,
+    "target_mean": 627.6549,
     "target_high": 1250.0,
-    "target_low": 365.0,
+    "target_low": 200.0,
     "recent_upgrades": [],
     "recent_downgrades": []
   },
@@ -191,9 +191,9 @@
     "hold": 3,
     "sell": 1,
     "strong_buy": 7,
-    "target_mean": 2155.565,
-    "target_high": 2890.1812,
-    "target_low": 869.8449,
+    "target_mean": 2155.3225,
+    "target_high": 2889.8562,
+    "target_low": 869.747,
     "recent_upgrades": [],
     "recent_downgrades": []
   },
@@ -286,5 +286,5 @@
     "recent_downgrades": []
   },
   "_note": "Analyst ratings from Yahoo Finance. Not investment advice.",
-  "_as_of": "2026-10-17T10:59:28.182231+00:00"
+  "_as_of": "2026-10-18T11:25:58.462924+00:00"
 }
