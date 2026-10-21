@@ -1,19 +1,11 @@
 {
   "ticker": "ONTO",
-  "current_price": 226.28,
-  "prev_close": 220.7,
-  "day_change_pct": 2.53,
+  "current_price": 219.62,
+  "prev_close": 226.28,
+  "day_change_pct": -2.94,
   "week_52_high": 386.46,
   "week_52_low": 118.97,
   "history": [
-    {
-      "date": "2026-06-11",
-      "open": 282.56,
-      "high": 303.8,
-      "low": 280.02,
-      "close": 303.53,
-      "volume": 1359900
-    },
     {
       "date": "2026-06-12",
       "open": 306.37,
@@ -725,8 +717,16 @@
       "low": 224.665,
       "close": 226.28,
       "volume": 796300
+    },
+    {
+      "date": "2026-10-20",
+      "open": 220.2,
+      "high": 225.12,
+      "low": 214.648,
+      "close": 219.62,
+      "volume": 1174500
     }
   ],
-  "as_of": "2026-10-20T11:53:07.904328+00:00",
+  "as_of": "2026-10-21T12:04:43.596220+00:00",
   "stale": false
 }
