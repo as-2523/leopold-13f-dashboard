@@ -33,10 +33,10 @@
     "recent_downgrades": []
   },
   "NVDA": {
-    "buy": 58,
+    "buy": 57,
     "hold": 2,
     "sell": 1,
-    "strong_buy": 10,
+    "strong_buy": 9,
     "target_mean": 328.95346,
     "target_high": 515.0,
     "target_low": 180.0,
@@ -110,7 +110,7 @@
     "recent_downgrades": []
   },
   "LITE": {
-    "buy": 21,
+    "buy": 22,
     "hold": 4,
     "sell": 0,
     "strong_buy": 5,
@@ -121,18 +121,18 @@
     "recent_downgrades": []
   },
   "SNDK": {
-    "buy": 18,
-    "hold": 4,
+    "buy": 20,
+    "hold": 3,
     "sell": 1,
-    "strong_buy": 3,
-    "target_mean": 2105.2917,
-    "target_high": 3600.0,
-    "target_low": 1000.0,
+    "strong_buy": 4,
+    "target_mean": 2029.0416,
+    "target_high": 3000.0,
+    "target_low": 870.0,
     "recent_upgrades": [],
     "recent_downgrades": []
   },
   "TSEM": {
-    "buy": 4,
+    "buy": 5,
     "hold": 1,
     "sell": 0,
     "strong_buy": 0,
@@ -143,7 +143,7 @@
     "recent_downgrades": []
   },
   "ONTO": {
-    "buy": 10,
+    "buy": 11,
     "hold": 0,
     "sell": 0,
     "strong_buy": 2,
@@ -154,8 +154,8 @@
     "recent_downgrades": []
   },
   "ORCL": {
-    "buy": 37,
-    "hold": 6,
+    "buy": 36,
+    "hold": 7,
     "sell": 1,
     "strong_buy": 8,
     "target_mean": 235.8034,
@@ -165,10 +165,10 @@
     "recent_downgrades": []
   },
   "AVGO": {
-    "buy": 44,
+    "buy": 45,
     "hold": 4,
     "sell": 0,
-    "strong_buy": 7,
+    "strong_buy": 8,
     "target_mean": 530.14166,
     "target_high": 660.0,
     "target_low": 215.88,
@@ -176,10 +176,10 @@
     "recent_downgrades": []
   },
   "AMD": {
-    "buy": 42,
-    "hold": 10,
+    "buy": 44,
+    "hold": 11,
     "sell": 0,
-    "strong_buy": 5,
+    "strong_buy": 4,
     "target_mean": 640.208,
     "target_high": 1250.0,
     "target_low": 365.0,
@@ -187,10 +187,10 @@
     "recent_downgrades": []
   },
   "ASML": {
-    "buy": 40,
-    "hold": 3,
+    "buy": 38,
+    "hold": 4,
     "sell": 1,
-    "strong_buy": 7,
+    "strong_buy": 6,
     "target_mean": 2141.547,
     "target_high": 2837.6116,
     "target_low": 863.8231,
@@ -199,18 +199,18 @@
   },
   "INTC": {
     "buy": 14,
-    "hold": 31,
-    "sell": 3,
+    "hold": 32,
+    "sell": 2,
     "strong_buy": 1,
-    "target_mean": 107.21429,
-    "target_high": 165.0,
+    "target_mean": 95.04651,
+    "target_high": 160.0,
     "target_low": 70.0,
     "recent_upgrades": [],
     "recent_downgrades": []
   },
   "GLW": {
-    "buy": 11,
-    "hold": 5,
+    "buy": 12,
+    "hold": 4,
     "sell": 0,
     "strong_buy": 0,
     "target_mean": 182.76471,
@@ -231,19 +231,19 @@
     "recent_downgrades": []
   },
   "EQT": {
-    "buy": 20,
-    "hold": 5,
+    "buy": 21,
+    "hold": 4,
     "sell": 0,
-    "strong_buy": 3,
-    "target_mean": 65.78261,
+    "strong_buy": 4,
+    "target_mean": 65.90909,
     "target_high": 77.0,
     "target_low": 52.0,
     "recent_upgrades": [],
     "recent_downgrades": []
   },
   "MU": {
-    "buy": 40,
-    "hold": 5,
+    "buy": 44,
+    "hold": 4,
     "sell": 0,
     "strong_buy": 9,
     "target_mean": 1561.9111,
@@ -264,8 +264,8 @@
     "recent_downgrades": []
   },
   "WYFI": {
-    "buy": 7,
-    "hold": 2,
+    "buy": 8,
+    "hold": 1,
     "sell": 0,
     "strong_buy": 2,
     "target_mean": 40.45455,
@@ -275,7 +275,7 @@
     "recent_downgrades": []
   },
   "MRVL": {
-    "buy": 38,
+    "buy": 39,
     "hold": 5,
     "sell": 0,
     "strong_buy": 8,
@@ -286,5 +286,5 @@
     "recent_downgrades": []
   },
   "_note": "Analyst ratings from Yahoo Finance. Not investment advice.",
-  "_as_of": "2026-10-31T12:51:24.928801+00:00"
+  "_as_of": "2026-11-01T13:39:12.463909+00:00"
 }
