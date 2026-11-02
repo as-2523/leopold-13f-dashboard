@@ -1,19 +1,11 @@
 {
   "ticker": "CRWV",
-  "current_price": 54.87,
-  "prev_close": 60.74,
-  "day_change_pct": -9.66,
+  "current_price": 53.0601,
+  "prev_close": 54.87,
+  "day_change_pct": -3.3,
   "week_52_high": 138.25,
   "week_52_low": 51.24,
   "history": [
-    {
-      "date": "2026-06-25",
-      "open": 105.28,
-      "high": 106.54,
-      "low": 98.42,
-      "close": 98.76,
-      "volume": 21772100
-    },
     {
       "date": "2026-06-26",
       "open": 95.18,
@@ -725,8 +717,16 @@
       "low": 53.48,
       "close": 54.87,
       "volume": 53299500
+    },
+    {
+      "date": "2026-11-02",
+      "open": 55.59,
+      "high": 55.738,
+      "low": 52.05,
+      "close": 53.0601,
+      "volume": 19514726
     }
   ],
-  "as_of": "2026-11-01T13:38:59.784170+00:00",
+  "as_of": "2026-11-02T16:20:09.099376+00:00",
   "stale": false
 }
