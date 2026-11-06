@@ -1,8 +1,8 @@
 {
   "ticker": "LITE",
-  "current_price": 560.1505,
+  "current_price": 509.7,
   "prev_close": 626.75,
-  "day_change_pct": -10.63,
+  "day_change_pct": -18.68,
   "week_52_high": 1143.0,
   "week_52_low": 215.35,
   "history": [
@@ -716,17 +716,17 @@
       "high": 651.08,
       "low": 598.7,
       "close": 626.75,
-      "volume": 9498300
+      "volume": 9546900
     },
     {
       "date": "2026-11-05",
-      "open": 593.92,
+      "open": 594.195,
       "high": 596.82,
-      "low": 556.26,
-      "close": 560.1505,
-      "volume": 1450284
+      "low": 506.689,
+      "close": 509.7,
+      "volume": 9929500
     }
   ],
-  "as_of": "2026-11-05T14:48:46.111815+00:00",
+  "as_of": "2026-11-06T14:27:08.960137+00:00",
   "stale": false
 }

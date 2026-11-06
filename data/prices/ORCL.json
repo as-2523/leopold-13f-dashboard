@@ -1,10 +1,10 @@
 {
   "ticker": "ORCL",
-  "current_price": 119.35,
+  "current_price": 115.16,
   "prev_close": 123.73,
-  "day_change_pct": -3.54,
+  "day_change_pct": -6.93,
   "week_52_high": 250.25,
-  "week_52_low": 114.5,
+  "week_52_low": 111.66,
   "history": [
     {
       "date": "2026-07-01",
@@ -716,17 +716,17 @@
       "high": 129.85,
       "low": 121.78,
       "close": 123.73,
-      "volume": 111747000
+      "volume": 111828100
     },
     {
       "date": "2026-11-05",
       "open": 123.0,
       "high": 124.24,
-      "low": 118.3601,
-      "close": 119.35,
-      "volume": 5231615
+      "low": 111.66,
+      "close": 115.16,
+      "volume": 56591200
     }
   ],
-  "as_of": "2026-11-05T14:48:27.904539+00:00",
+  "as_of": "2026-11-06T14:26:52.611362+00:00",
   "stale": false
 }
