@@ -1,19 +1,11 @@
 {
   "ticker": "APLD",
-  "current_price": 14.17,
-  "prev_close": 16.61,
-  "day_change_pct": -14.69,
+  "current_price": 15.55,
+  "prev_close": 14.17,
+  "day_change_pct": 9.74,
   "week_52_high": 50.725,
   "week_52_low": 13.115,
   "history": [
-    {
-      "date": "2026-07-01",
-      "open": 35.895,
-      "high": 37.42,
-      "low": 35.07,
-      "close": 35.52,
-      "volume": 18655200
-    },
     {
       "date": "2026-07-02",
       "open": 35.51,
@@ -724,9 +716,17 @@
       "high": 16.03,
       "low": 13.115,
       "close": 14.17,
-      "volume": 49624100
+      "volume": 49926600
+    },
+    {
+      "date": "2026-11-06",
+      "open": 15.49,
+      "high": 15.8,
+      "low": 14.71,
+      "close": 15.55,
+      "volume": 34306900
     }
   ],
-  "as_of": "2026-11-06T14:27:03.856657+00:00",
+  "as_of": "2026-11-07T13:20:51.947550+00:00",
   "stale": false
 }
