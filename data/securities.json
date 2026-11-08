@@ -75,7 +75,7 @@
     "name": "Solaris Energy Infrastructure, Inc.",
     "exchange": "NYQ",
     "sector": "Energy",
-    "market_cap": 5813185024,
+    "market_cap": 5768969728,
     "pe_ratio": 62.793476,
     "description": "Solaris Energy Infrastructure, Inc. provides modular and scalable equipment-based solutions for power generation, control and distribution, and management of raw materials used in the completion of oil and natural gas wells in the United States. It operates in Solaris Power Solutions and Solaris Logistics Solutions segments. The Solaris Power Solutions segment delivers power generation, control, and distribution solutions; and offers support to data center, energy, and other commercial and indus"
   },
@@ -124,7 +124,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 3789497600,
-    "pe_ratio": 72.253624,
+    "pe_ratio": 90.21865,
     "description": "Core Scientific, Inc. provides infrastructure for high-density colocation services and digital asset mining in the United States. It operates through three segments: Colocation, Digital Asset Self-Mining, and Digital Asset Hosted Mining. The company offers space, power, cooling, facilities operations, security, and other services to third-party customers to support workloads for machine learning and artificial intelligence; deployment, monitoring, troubleshooting, optimization, and maintenance o"
   },
   "IREN": {
@@ -132,7 +132,7 @@
     "exchange": "NMS",
     "sector": "Financial Services",
     "market_cap": 9183093760,
-    "pe_ratio": -5.4335814,
+    "pe_ratio": -5.4889026,
     "description": "IREN Limited operates as a vertically integrated AI cloud services platform in Australia and Canada. It develops, owns, and operates data centers, including the associated land, grid connections, and substations, as well as buildings and cooling. The company also owns and operates compute layers, such as GPUs, CPUs, storage, servers, and networking deployed within that data center infrastructure; and software layers comprising managed services and enterprise support that enables customers to dep"
   },
   "CLSK": {
