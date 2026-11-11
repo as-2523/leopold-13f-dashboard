@@ -26,7 +26,7 @@
     "hold": 1,
     "sell": 0,
     "strong_buy": 3,
-    "target_mean": 27.19048,
+    "target_mean": 27.2381,
     "target_high": 38.0,
     "target_low": 16.0,
     "recent_upgrades": [],
@@ -81,9 +81,9 @@
     "hold": 1,
     "sell": 0,
     "strong_buy": 7,
-    "target_mean": 31.16095,
+    "target_mean": 31.56273,
     "target_high": 50.0,
-    "target_low": 13.0,
+    "target_low": 19.0,
     "recent_upgrades": [],
     "recent_downgrades": []
   },
@@ -103,7 +103,7 @@
     "hold": 0,
     "sell": 1,
     "strong_buy": 4,
-    "target_mean": 202.7619,
+    "target_mean": 202.4762,
     "target_high": 306.0,
     "target_low": 106.0,
     "recent_upgrades": [],
@@ -114,9 +114,9 @@
     "hold": 4,
     "sell": 0,
     "strong_buy": 5,
-    "target_mean": 1066.594,
+    "target_mean": 1069.194,
     "target_high": 1425.0,
-    "target_low": 635.0,
+    "target_low": 685.0,
     "recent_upgrades": [],
     "recent_downgrades": []
   },
@@ -147,9 +147,9 @@
     "hold": 0,
     "sell": 0,
     "strong_buy": 2,
-    "target_mean": 368.33334,
+    "target_mean": 354.0,
     "target_high": 450.0,
-    "target_low": 305.0,
+    "target_low": 240.0,
     "recent_upgrades": [],
     "recent_downgrades": []
   },
@@ -191,9 +191,9 @@
     "hold": 4,
     "sell": 1,
     "strong_buy": 6,
-    "target_mean": 2145.1401,
-    "target_high": 2842.3723,
-    "target_low": 865.27234,
+    "target_mean": 2127.5315,
+    "target_high": 2819.0405,
+    "target_low": 858.16974,
     "recent_upgrades": [],
     "recent_downgrades": []
   },
@@ -268,9 +268,9 @@
     "hold": 1,
     "sell": 0,
     "strong_buy": 2,
-    "target_mean": 40.45455,
+    "target_mean": 38.63636,
     "target_high": 50.0,
-    "target_low": 32.0,
+    "target_low": 30.0,
     "recent_upgrades": [],
     "recent_downgrades": []
   },
@@ -286,5 +286,5 @@
     "recent_downgrades": []
   },
   "_note": "Analyst ratings from Yahoo Finance. Not investment advice.",
-  "_as_of": "2026-11-10T15:03:52.566776+00:00"
+  "_as_of": "2026-11-11T14:35:28.623226+00:00"
 }
