@@ -1,8 +1,8 @@
 {
   "ticker": "TSM",
-  "current_price": 402.78,
-  "prev_close": 405.61,
-  "day_change_pct": -0.7,
+  "current_price": 398.73,
+  "prev_close": 405.49,
+  "day_change_pct": -1.67,
   "week_52_high": 487.47,
   "week_52_low": 266.82,
   "history": [
@@ -716,17 +716,17 @@
       "high": 411.77,
       "low": 393.91,
       "close": 405.49,
-      "volume": 11331300
+      "volume": 11389800
     },
     {
       "date": "2026-11-13",
-      "open": 394.62,
-      "high": 408.085,
-      "low": 402.63,
-      "close": 402.78,
-      "volume": 1457384
+      "open": 407.6,
+      "high": 408.09,
+      "low": 391.5,
+      "close": 398.73,
+      "volume": 10712000
     }
   ],
-  "as_of": "2026-11-13T14:44:51.077590+00:00",
+  "as_of": "2026-11-14T13:41:27.052145+00:00",
   "stale": false
 }
