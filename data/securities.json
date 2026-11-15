@@ -36,7 +36,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 875905024000,
-    "pe_ratio": 125.0726,
+    "pe_ratio": 114.11539,
     "description": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers artificial intelligence (AI) accelerators, microprocessors, and graphics processing units (GPUs) as standalone devices or as incorporated into accelerated processing units, chipsets, and data center and professional GPUs; and embedded processors and semi-custom system-on-chip (SoC) products, microprocessor and SoC develo"
   },
   "ASML": {
@@ -68,7 +68,7 @@
     "exchange": "NYQ",
     "sector": "Industrials",
     "market_cap": 56763133952,
-    "pe_ratio": 122.28662,
+    "pe_ratio": 116.35758,
     "description": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, an energy server platform to convert fuel, such as natural gas, biogas, hydrogen, or a blend of these fuels, into electricity through a non-combustion electrochemical process. The company also provides Bloom Electrolyzer for producing hydrogen. It sells its products through direct and indirect sales"
   },
   "SEI": {
@@ -100,7 +100,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 29546958848,
-    "pe_ratio": -31.604496,
+    "pe_ratio": -29.96988,
     "description": "CoreWeave, Inc. operates as a cloud infrastructure technology company in the United States, Denmark, Middle East and Asia Pacific. The company offers CoreWeave Cloud platform that comprises proprietary software and cloud services that deliver the automation and efficiency needed to manage complex artificial intelligence (AI) infrastructure at scale. It also offers data and storage solutions, such as Local Object Transport Accelerator; infrastructure control solutions, including CoreWeave Kuberne"
   },
   "APLD": {
@@ -116,7 +116,7 @@
     "exchange": "NYQ",
     "sector": "Industrials",
     "market_cap": 77809164288,
-    "pe_ratio": 39.160854,
+    "pe_ratio": 37.770096,
     "description": "Vertiv Holdings Co designs, manufactures, and services critical digital infrastructure technologies and life cycle services for data centers, communication networks, and commercial and industrial environments in the Americas, the Asia Pacific, Europe, the Middle East, and Africa. The company offers AC and DC power management products, low/medium voltage switchgear, busbar, thermal management products, air cooled and liquid cooled thermal management products, integrated modular solutions, racks, "
   },
   "CORZ": {
@@ -212,7 +212,7 @@
     "exchange": "NMS",
     "sector": "Technology",
     "market_cap": 141047300096,
-    "pe_ratio": 54.05517,
+    "pe_ratio": 51.56579,
     "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China, India, Israel, Japan, Singapore, South Korea, Taiwan, Vietnam, and internationally. The company develops and scales system-on-a-chip architectures, integrating analog, mixed-signal, and digital signal processing functionality. It offers a portfolio of ethernet solutions, including spanning controll"
   },
   "WYFI": {
@@ -220,7 +220,7 @@
     "exchange": "NCM",
     "sector": "Technology",
     "market_cap": 427063520,
-    "pe_ratio": 21.778292,
+    "pe_ratio": 65.82897,
     "description": "WhiteFiber, Inc. provides artificial intelligence (AI) infrastructure solutions. It operates through two segments, cloud services and colocation services. The company designs, develops, and operates data centers. It also offers hosting, colocation, and cloud-based high-performance computing (HPC) graphics processing unit (GPU) services. In addition, the company provides data center infrastructure and cloud services for enterprises, research institutions, and AI and machine learning (ML) driven b"
   }
 }
