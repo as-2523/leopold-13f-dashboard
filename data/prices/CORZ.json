@@ -1,19 +1,11 @@
 {
   "ticker": "CORZ",
-  "current_price": 13.635,
-  "prev_close": 13.58,
-  "day_change_pct": 0.41,
+  "current_price": 13.85,
+  "prev_close": 13.51,
+  "day_change_pct": 2.52,
   "week_52_high": 30.46,
   "week_52_low": 10.59,
   "history": [
-    {
-      "date": "2026-07-14",
-      "open": 23.27,
-      "high": 23.48,
-      "low": 21.95,
-      "close": 22.09,
-      "volume": 6777500
-    },
     {
       "date": "2026-07-15",
       "open": 22.17,
@@ -722,11 +714,19 @@
       "date": "2026-11-17",
       "open": 13.58,
       "high": 14.24,
-      "low": 13.095,
-      "close": 13.635,
-      "volume": 4271643
+      "low": 13.09,
+      "close": 13.51,
+      "volume": 12095700
+    },
+    {
+      "date": "2026-11-18",
+      "open": 13.75,
+      "high": 14.18,
+      "low": 13.4263,
+      "close": 13.85,
+      "volume": 3776716
     }
   ],
-  "as_of": "2026-11-17T16:17:29.010259+00:00",
+  "as_of": "2026-11-18T15:51:16.394030+00:00",
   "stale": false
 }
