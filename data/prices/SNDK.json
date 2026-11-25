@@ -1,19 +1,11 @@
 {
   "ticker": "SNDK",
-  "current_price": 77.92,
-  "prev_close": 87.71,
-  "day_change_pct": -11.16,
+  "current_price": 69.06,
+  "prev_close": 77.95,
+  "day_change_pct": -11.4,
   "week_52_high": 294.29874,
   "week_52_low": 23.4625,
   "history": [
-    {
-      "date": "2026-07-21",
-      "open": 188.9588,
-      "high": 199.4549,
-      "low": 186.2056,
-      "close": 198.675,
-      "volume": 114367408
-    },
     {
       "date": "2026-07-22",
       "open": 190.75,
@@ -711,14 +703,14 @@
       "volume": 0
     },
     {
-      "date": "2026-11-24",
-      "open": 82.74,
-      "high": 83.82,
-      "low": 74.87,
-      "close": 77.92,
-      "volume": 65526105
+      "date": "2026-11-25",
+      "open": 71.315,
+      "high": 72.6,
+      "low": 67.02,
+      "close": 69.06,
+      "volume": 72917529
     }
   ],
-  "as_of": "2026-11-24T17:59:09.042749+00:00",
+  "as_of": "2026-11-25T17:27:30.180642+00:00",
   "stale": false
 }
