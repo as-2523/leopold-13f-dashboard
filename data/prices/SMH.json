@@ -1,8 +1,8 @@
 {
   "ticker": "SMH",
-  "current_price": 404.9,
+  "current_price": 422.46,
   "prev_close": 426.75,
-  "day_change_pct": -5.12,
+  "day_change_pct": -1.01,
   "week_52_high": 671.83,
   "week_52_low": 338.06,
   "history": [
@@ -716,17 +716,17 @@
       "high": 442.97,
       "low": 418.41,
       "close": 426.75,
-      "volume": 14849400
+      "volume": 14876600
     },
     {
       "date": "2026-11-25",
-      "open": 402.83,
-      "high": 408.7751,
-      "low": 393.8801,
-      "close": 404.9,
-      "volume": 8376938
+      "open": 402.67,
+      "high": 422.97,
+      "low": 393.88,
+      "close": 422.46,
+      "volume": 14007200
     }
   ],
-  "as_of": "2026-11-25T17:27:07.351445+00:00",
+  "as_of": "2026-11-26T17:07:32.551788+00:00",
   "stale": false
 }
